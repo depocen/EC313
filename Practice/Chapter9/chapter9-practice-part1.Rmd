@@ -1,0 +1,201 @@
+---
+output: pdf_document
+header-includes: 
+  - \usepackage[utf8]{inputenc}
+  - \usepackage{graphicx}
+  - \usepackage{caption}
+  - \usepackage[margin=1in]{geometry}
+  - \usepackage{amsmath,amssymb}
+  - \usepackage{multicol}
+  - \usepackage{array}
+  - \usepackage{tabulary}
+  - \usepackage{tikz}
+  - \usetikzlibrary{arrows,calc}
+  - \usepackage{relsize}
+  - \usetikzlibrary{decorations.pathreplacing}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\newcommand{\class}{EC 313, Summer 2019}
+\newcommand{\term}{Xiang LI (GE)}
+\newcommand{\examnum}{Chapter 9 - PART 1 - Practice}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{\class} & \textbf{Name: } & \makebox[2in]{\hrulefill}\\
+\textbf{\term} &&\\
+\textbf{\examnum} & \textbf{UO ID: } & \makebox[2in]{\hrulefill}\\
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+
+
+
+
+\textbf{QUESTION 1: TRUE, FALSE}
+
+(1) The IS curve shifts up with an increase in G, up with an increase in T, and up with an increase in x
+
+\vspace{.3in}
+
+(2)  If $(u-u_n)$ is greater than zero, then $Y-Y_n$ is greater than zero.
+
+\vspace{.3in}
+(3) If $(u-u_n)$ is equal to zero, the output is at potential.
+
+\vspace{.3in}
+(4) If $(u-u_n)$ is less than zero, the output gap is negative. 
+
+\vspace{.3in}
+(5) If the output gap is positive, inflation is higher than expected inflation.
+
+\vspace{.3in}
+(6) Okun’s law says that if output growth increases by one percentage point, the rate of unemployment drops by one percentage point.
+
+\vspace{.3in}
+(7) At the natural rate of unemployment, inflation is neither rising nor falling.
+
+\vspace{.3in}
+(8) In a medium-run equilibrium, the rate of inflation is stable.
+
+\vspace{.3in}
+
+
+
+
+
+\vspace{.5in}
+\textbf{QUESTION 2} 
+
+The medium-run equilibrium is characterized by four conditions:
+
+Output is equal to potential output $Y = Y_n$; 
+
+The unemployment rate is equal to the natural rate $u = u_n$;
+
+The real policy interest rate is equal to the natural rate of interest $r_n$ where aggregate demand equals $Y_n$;
+
+The expected rate of inflation $p^e$ is equal to the actual rate of inflation $p$.
+
+(1) If the level of expected inflation is formed so $\pi = \pi(-1)$, characterize the behavior of inflation in a medium-run equilibrium.
+
+\vspace{.5in}
+
+(2) If the level of expected inflation is $\bar{\pi}$ , what is the level of actual inflation in the medium-run equilibrium?
+
+\vspace{.5in}
+
+(3) Write the IS relation as $Y = C(Y-T) + I(Y, r + x) + G$. Suppose rn is 2%. If x increases from 3 to 5%, how must the central bank change $r_n$ to maintain the existing medium-run equilibrium. 
+
+\vspace{.5in}
+
+(4) Suppose G increases. How must the central bank change $r_n$ to maintain the existing medium-run equilibrium?
+
+\vspace{.5in}
+
+(5) Suppose T decreases. How must the central bank change $r_n$ to maintain the existing medium-run equilibrium? 
+
+\vspace{.5in}
+
+(6) Discuss: In the medium run, a fiscal expansion leads to an increase in the natural rate of interest.
+
+\vspace{.5in}
+
+
+
+
+
+\vspace{.5in}
+\textbf{QUESTION 3} 
+
+The PC curve is written as $\pi_t - \pi_t^e = \frac{\alpha}{L} (Y_t - Y_n)$. This tells us that when output is above potential, inflation is higher than its expectation. Appealing to the labor market and the production function, explain why this is the case.
+
+\vspace{2in}
+
+\vspace{.5in}
+\textbf{QUESTION 4} 
+
+Is the natural rate of interest $r_n$ determined entirely by labor market conditions? Why or why not?
+
+\vspace{2in}
+
+
+\vspace{.5in}
+\textbf{QUESTION 5} 
+
+(1) Suppose that the federal government decides to eliminate the minimum wage, so that employers are allowed to pay their workers any nominal wage. Show how this affects equilibrium in the labor market by drawing a graph. Be sure to label the axes, curves, and equilibrium points. If a curve shifts, briefly explain why.
+
+\begin{tikzpicture}[scale=1.2]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+
+
+(2) What happens to the natural rate of unemployment after this policy change? Explain intuitively why that makes sense.
+
+\vspace{2in}
+
+\newpage
+(3) Consider the typical IS-LM-PC set-up from Chapter 9:
+
+\begin{equation*}
+\begin{split}
+Y_t & = C(Y_t-T_t) +I(Y_t, r_t+x_t)+G_t \\
+r_t & = \bar{r} \\
+\pi_t - \pi^e_t & = \frac{\alpha}{L_t}(Y_t - Y_n)
+\end{split}
+\end{equation*}
+
+Consider the case of adaptive inflation expectations, where $\pi^e_t = \pi_{t-1}$. Graphically show how the elimination of the minimum wage affects short and medium run equilibriums. Assume that the economy was originally in short run equilibrium with $Y_t = Y_n$. Be sure to label the axes,curves and equilibrium points. Briefly explain why any shifts occur.
+
+\begin{tikzpicture}[scale=1]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=1]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+
+(4) Before the economy adjusts to medium run equilibrium, what happens to inflation? Briefly explain.
+
+\vspace{2in}
+
+\newpage
+(5) Suppose that the central bank wants to stabilize inflation at its original level before the policy change. What actions does it need to take to achieve this goal? Display these actions on the IS-LM-PC graphs below.
+
+\begin{tikzpicture}[scale=1]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=1]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+
+
+
+(6) After the economy adjusts to medium run equilibrium, what can we say about consumption, investment, and government spending relative to before the policy
+change occurred?
+
+\vspace{2in}
+
+
+

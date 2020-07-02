@@ -1,0 +1,202 @@
+---
+output: pdf_document
+header-includes: 
+  - \usepackage[utf8]{inputenc}
+  - \usepackage{graphicx}
+  - \usepackage{caption}
+  - \usepackage[margin=1in]{geometry}
+  - \usepackage{amsmath,amssymb}
+  - \usepackage{multicol}
+  - \usepackage{array}
+  - \usepackage{tabulary}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\newcommand{\class}{EC 313, Summer 2019}
+\newcommand{\term}{Xiang LI (GE)}
+\newcommand{\examnum}{Chapter 5 - Practice}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{\class} & \textbf{Name: } & \makebox[2in]{\hrulefill}\\
+\textbf{\term} &&\\
+\textbf{\examnum} & \textbf{UO ID: } & \makebox[2in]{\hrulefill}\\
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+
+
+
+
+\textbf{QUESTION 1: TRUE, FALSE, UNCERTAIN}
+
+(1) The main determinants of investment are the level of sales and the interest rate.
+
+\vspace{.3in}
+
+(2) If all the exogenous variables in the IS relation are constant, then a higher level of output can be achieved only by lowering the interest rate. 
+
+\vspace{.3in}
+
+(3) The IS curve is downward sloping because goods market equilibrium implies that an increase in taxes leads to a lower level of output.
+
+\vspace{.3in}
+
+(4) The LM curve is horizontal at the central bank’s policy choice of the interest rate. 
+
+\vspace{.3in}
+
+(5) The real money supply is constant along the LM curve. 
+
+\vspace{.3in}
+
+(6) If the nominal money supply is $400 billion and the price level rises from an index value of 100 to an index value of 103; the real money supply rises. 
+
+\vspace{.3in}
+
+(7) An increase in government spending leads to a decrease in investment in the IS-LM model.
+
+\vspace{.3in}
+
+
+
+\vspace{.5in}
+\textbf{QUESTION 2}
+
+(1) Use an IS-LM diagram, graphically show the effects on output of a decrease in government spending. Can you tell what happens to investment? Why?
+
+\vspace{2in}
+
+
+
+\newpage
+
+Now consider the following IS-LM model: 
+
+\begin{align*}
+\begin{split}
+C & = c_0 + c_1 (Y-T)\\
+I & = b_0 + b_1 Y - b_2 i\\
+Z & = C+I+G \\
+i & = \bar{i}
+\end{split}
+\end{align*}
+
+(2) Solve for equilibrium output when the interest rate is $\bar{i}$. Assume $c_1 + b_1 < 1$. 
+
+\vspace{2in}
+
+(3) Solve for equilibrium level of investment.
+
+\vspace{2in}
+
+
+(4) Let’s go behind the scene in the money market. Use the equilibrium in the money market $M/P = d_1Y - d_2i$ to solve for the equilibrium level of the real money supply when $i = \bar{i}$. How does the real money supply vary with government spending?
+
+\vspace{2in}
+
+
+
+
+\newpage
+\textbf{QUESTION 3}
+
+Consider first the goods market model with constant investment that we saw in Chapter 3. Consumption is given by: $C=c_0 + c_1 (Y-T)$, and $I, G, T$ are given
+
+(1) Solve for equilibrium output. What is the value of the mul-tiplier for a change in autonomous spending?
+
+\vspace{2in}
+
+Now let investment depend on both sales and the interest rate: $I=b_0+b_1Y-b_2i$
+
+(2) Solve for equilibrium output using the methods learned in Chapter 3. At a given interest rate, why is the effect of a change in autonomous spending bigger than what it was in part (1)? Why? (Assume $c_1 + b_1 < 1$)
+
+\vspace{2in}
+
+(3) Suppose the central bank chooses an interest rate of $\bar{i}$. Solve for equilibrium output at that interest rate.
+
+\vspace{2in}
+
+\newpage
+(4) Draw the equilibrium of this economy using an IS-LM diagram.
+
+\vspace{2in}
+
+
+
+\textbf{QUESTION 4}
+
+Consider the following numerical example of the IS-LM model: 
+
+\begin{align*}
+\begin{split}
+C & = 200 + 0.25 Y_D\\
+I & = 150 + 0.25 Y - 1000 i\\
+G & = 250 \\
+T & = 200 \\
+i & = 0.05
+\end{split}
+\end{align*}
+
+(1) Derive the IS relation. (Hint: You want an equation with Y on the left side and everything else on the right.)
+
+\vspace{2in}
+
+(2)  The central bank sets an interest rate of 5%. How is that decision represented in the equations?
+
+\vspace{1in}
+
+(3) What is the level of real money supply when the interest rate is 5%? Use the expression: $\frac{M}{P}= 2Y - 8000i$
+
+\vspace{2in}
+
+
+\newpage
+(4) Solve for the equilibrium values of C and I, and verify the value you obtained for Y by adding C, I, and G.
+
+\vspace{2in}
+
+(5) Now suppose that the central bank cuts the interest rate to 3%. How does this change the LM curve? Solve for Y, I, and C, and describe in words the effects of an expansionary monetary policy. What is the new equilibrium value of M/P supply?
+
+\vspace{2in}
+
+(6) Return to the initial situation in which the interest rate set by the central bank is 5%. Now suppose that government spending increases to G = 400. Summarize the effects of an expansionary fiscal policy on Y, I, and C. What is the effect of the expansionary fiscal policy on the real money supply?
+
+\vspace{2in}
+
+
+
+
+
+\newpage
+\textbf{QUESTION 5}
+
+In 2001, the Fed pursued an expansionary monetary policy and reduced interest rates. At the same time, President George W. Bush pushed through legislation that lowered income taxes. Illustrate the effect of such a policy mix on output. 
+
+\vspace{2in}
+
+
+
+
+
+
+\vspace{.5in}
+\textbf{QUESTION 6}
+
+What policy mix of monetary and fiscal policy is needed to meet the objectives given here? 
+
+(1) Increase Y while keeping $\bar{i}$ constant. Would investment (I) change?
+
+\vspace{2in}
+
+
+
+(2) Decrease a fiscal deficit while keeping Y constant. Why must $\bar{i}$ also change?
+
+\vspace{2in}
+
+
+
+

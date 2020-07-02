@@ -1,0 +1,222 @@
+---
+output: pdf_document
+header-includes: 
+  - \usepackage[utf8]{inputenc}
+  - \usepackage{graphicx}
+  - \usepackage{caption}
+  - \usepackage[margin=1in]{geometry}
+  - \usepackage{amsmath,amssymb}
+  - \usepackage{multicol}
+  - \usepackage{array}
+  - \usepackage{tabulary}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\newcommand{\class}{EC 313, Summer 2019}
+\newcommand{\term}{Xiang LI (GE)}
+\newcommand{\examnum}{Chapter 3 - Practice}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{\class} & \textbf{Name: } & \makebox[2in]{\hrulefill}\\
+\textbf{\term} &&\\
+\textbf{\examnum} & \textbf{UO ID: } & \makebox[2in]{\hrulefill}\\
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+
+
+
+\textbf{QUESTION 1} 
+
+Suppose you are measuring annual U.S. GDP by adding up the final value of all goods and services produced in the economy. Determine the effect on GDP of each of the following transactions. 
+
+(1)  A seafood restaurant buys $100 worth of fish from a fisherman.
+\vspace{0.3in}
+
+(2)  A family spends $100 on a fish dinner at a seafood restaurant.
+\vspace{0.3in}
+
+(3) Delta Air Lines buys a new jet from Boeing for $200 million
+\vspace{0.3in}
+
+(4) The Greek national airline buys a new jet from Boeing for $200 million.
+\vspace{0.3in}
+
+(5)  Delta Air Lines sells one of its jets to Jennifer Lawrence for $100 million.
+\vspace{0.3in}
+
+
+
+
+\vspace{0.5in}
+\textbf{QUESTION 2} 
+
+Consider the following equations that govern our economy where G and I are exogenous variables, $t_1$ is between 0 and 1, $c_1 - c_1 * t_1 < 1$ and $t_0$ is positive:
+
+\begin{align*}
+\begin{split}
+Z & \equiv C+I+G \\
+C & = c_0 +c_1 Y_D \\
+T & = t_0 + t_1 Y
+\end{split}
+\end{align*}
+
+(1) Solve for equilibrium output in terms of the exogenous variables.
+
+\vspace{2in}
+
+(2) What is the multiplier? Is the multiplier higher or lower when $t_1$ is 0 or when $t_1$ is positive?
+
+\vspace{2in}
+
+(3) Suppose $c_0$ increases by \$300 million. What is the change in equilibrium Y when $t_1 = 0.2$ and $c_1 = 0.5$? What about when $c_1 = 0.5$ and $t_1 = 0$?
+
+\vspace{2in}
+
+
+\vspace{0.5in}
+\textbf{QUESTION 3: True, False, or Indeterminate}
+
+(1) We assume that the MPC is constant because in the real world, we expect rich and poor people to behave in the same way when given additional income. 
+
+\vspace{0.3in}
+
+(2) The largest component of GDP is consumption.
+
+\vspace{0.3in}
+
+(3) The propensity to consume has to be positive, but otherwise it can take on any positive value.
+
+\vspace{0.3in}
+
+(4) Fiscal policy describes the choice of government spend-ing and taxes and is treated as exogenous in our goods market model. 
+
+\vspace{0.3in}
+
+
+(5) The equilibrium condition for the goods market states that consumption equals output. 
+
+\vspace{0.3in}
+
+(6) An increase of one unit in government spending leads to an increase of one unit in equilibrium output. 
+
+\vspace{0.3in}
+
+(7) An increase in the propensity to consume leads to a decrease in output. 
+\vspace{0.3in}
+
+
+
+
+
+
+\vspace{0.5in}
+\textbf{QUESTION 4}
+
+Why do we assume $c_1$ is between 0 and 1? 
+
+\vspace{0.3in}
+
+
+
+\vspace{0.5in}
+\textbf{QUESTION 5}
+
+Consider a typical goods market set-up with one change from the model we learned
+in class: Investment $I$ is no longer exogenous, while $G$, $T$, $c_0$, $c_1$, $b_0 > 0$ and $b_1 \in (0, 1)$ are exogenous. 
+
+\begin{align*}
+\begin{split}
+Z & \equiv C+I+G \\
+Y & = C+I+G \\
+C & = c_0 +c_1 Y_D \\
+Y_D & = Y-T \\
+I & = b_0 + b_1 (Y-T)
+\end{split}
+\end{align*}
+
+(1) Solve for equilibrium output, $Y$ (express $Y$ as a function of the exogenous variables)
+
+\vspace{2in}
+
+(2) What is the multiplier? Is it higher when $b_1$ is 0 or positive? Why?
+
+\vspace{2in}
+
+(3) Assume that $c_1 + b_1 < 1$. Draw the goods market equilibrium and (a) label each curve, (b) label the slope of each curve, (c) label the equilibrium point, and (d) explain the role of autonomous spending in this graph.
+
+\vspace{2in}
+
+
+
+
+
+\vspace{0.5in}
+\textbf{QUESTION 6}
+
+The typical goods market we outlined in class yields the following equilibrium output: $Y=\frac{1}{1-c_1}[c_0+I+G-c_1T]$. Assume that $c_1 = 0.5$.
+
+(1) If $G$ increases by 1 unit to $G\prime$, what is the increase in equilibrium output from $Y$ to $Y\prime$?
+
+\vspace{2in}
+
+(2) If instead of a G increase, T increases by 1 unit to $T\prime$, what is the decrease in equilibrium output from Y to $Y\prime$?
+
+\vspace{2in}
+
+
+(3) Suppose the government wants to run a balanced budget. This means government
+spending (G) must always equal taxes (T) so if G increases by 1 unit, then T must also increase by 1 unit. What is the balanced budget multiplier when $c_1 = 0.5$ and G increases by 1 unit? Hint: If you increase G by 1 unit and T by 1 unit, what is the net effect on equilibrium output?
+
+\vspace{2in}
+
+
+
+\vspace{0.5in}
+\textbf{QUESTION 7}
+
+For both political and macroeconomic reasons, governments are often reluctant to run budget deficits. Here, we examine whether policy changes in G and T that maintain a balanced budget are macroeconomically neutral. Put another way, we examine whether it is possible to affect output through changes in G and T so that the government budget remains balanced. Starting from $Y=\frac{1}{1-c_1}[c_0+\bar{I}+G-c_1T]$.
+
+(1) By how much does Y increase when G increases by one unit? 
+
+\vspace{0.3in}
+
+(2) By how much does Y decrease when T increases by one unit?
+
+\vspace{0.3in}
+
+(3) Suppose that the economy starts with a balanced budget: G = T. If the increase in G is equal to the increase in T, then the budget remains in balance. Suppose that G and T increase by one unit each. Using your answers to parts (1) and (2), what is the change in equilibrium GDP? 
+
+\vspace{0.3in}
+
+
+\vspace{0.5in}
+\textbf{QUESTION 8}
+
+Suppose that the economy is characterized by the following equations:
+
+\begin{align*}
+\begin{split}
+Z & = 160+0.6 Y_D\\
+I & = 150 \\
+G & = 150 \\
+T & = 100 
+\end{split}
+\end{align*}
+
+(1) Solve for variables: Equilibrium GDP ($Y$), Disposable income ($Y_D$),  Consumption spending ($C$)
+
+\vspace{2in}
+
+(2) Solve for equilibrium output. Compute total demand. Is it equal to production? Explain.
+
+\vspace{0.5in}
+
+(3) Assume that G is now equal to 110. Solve for equilibrium output. Compute total demand. Is it equal to production? Explain.
+
+\vspace{0.5in}
+
+

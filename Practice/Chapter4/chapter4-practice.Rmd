@@ -1,0 +1,135 @@
+---
+output: pdf_document
+header-includes: 
+  - \usepackage[utf8]{inputenc}
+  - \usepackage{graphicx}
+  - \usepackage{caption}
+  - \usepackage[margin=1in]{geometry}
+  - \usepackage{amsmath,amssymb}
+  - \usepackage{multicol}
+  - \usepackage{array}
+  - \usepackage{tabulary}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\newcommand{\class}{EC 313, Summer 2019}
+\newcommand{\term}{Xiang LI (GE)}
+\newcommand{\examnum}{Chapter 4 - Practice}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{\class} & \textbf{Name: } & \makebox[2in]{\hrulefill}\\
+\textbf{\term} &&\\
+\textbf{\examnum} & \textbf{UO ID: } & \makebox[2in]{\hrulefill}\\
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+
+
+
+
+\textbf{QUESTION 1: TRUE, FALSE or UNCERTAIN}
+
+(1) The demand for money does not depend on the interest rate because only bonds earn interest. 
+
+
+(2) The central bank can increase the supply of money by sell-ing bonds in the market for bonds.
+
+
+
+(3) Bond prices and interest rates always move in opposite directions. 
+
+
+\vspace{0.5in}
+\textbf{QUESTION 2}
+
+In this chapter, you learned that an increase in the interest rate
+makes bonds more attractive, so it leads people to hold more of their wealth in bonds as opposed to money. However, you also learned that an increase in the interest rate reduces the price of bonds. How can an increase in the interest rate make bonds more attractive and reduce their price? 
+
+\vspace{0.5in}
+
+
+\vspace{0.5in}
+\textbf{QUESTION 3} 
+
+Consider the basic model for interest rate determination:
+
+\begin{align*}
+\begin{split}
+M^d & = \$ Y L(i)\\
+M^s & = M \\
+\end{split}
+\end{align*}
+
+where $L(i)=0.275-i, M=20, \$ Y=100$
+
+(1) What is the equilibrium rate of interest?
+
+\vspace{0.5in}
+
+
+(2) Suppose the Fed wants to increase the equilibrium interest rate from the value you calculated in part (a) to 15%. By how much do they need to decrease the money supply to achieve this goal? 
+
+\vspace{0.5in}
+
+
+
+\vspace{0.5in}
+\textbf{QUESTION 4}
+
+Discuss how contractionary monetary policy impacts the equilibrium interest rate using the bond market to motivate the change in the interest rate.
+
+\vspace{0.5in}
+
+
+
+\vspace{0.5in}
+\textbf{QUESTION 5}
+
+At the current interest rate, the supply is greater than the demand for money. Does the price of bonds tend to increase or decrease? 
+
+\vspace{0.5in}
+
+\vspace{0.5in}
+\textbf{QUESTION 6}
+
+The demand for money is given by $M^d=\$Y(0.3-i)$, where $\$Y=100$ and the supply of money is $20. Find the equilibrium interest rate. Show calculation. 
+
+\vspace{0.5in}
+
+
+\vspace{0.5in}
+\textbf{QUESTION 7}
+
+Suppose that money demand is given by $M^d=\$ Y (0.25-i)$, where $\$Y=\$100$. Also, suppose that the supply of money is $20.
+
+(1) What is the equilibrium interest rate?
+
+\vspace{0.5in}
+
+(2) If the Federal Reserve Bank wants to increase the equilib-rium interest rate i by 10 percentage points from its value in part (1), at what level should it set the supply of money?
+
+\vspace{0.5in}
+
+
+
+\vspace{0.5in}
+\textbf{QUESTION 8}
+
+Suppose that money demand is given by $M^d=\$Y(0.25-i)$, where $\$Y=\$100$ billion.
+
+(1)  If the Federal Reserve Bank sets an interest rate target of 5%, what is the money supply the Federal Reserve must create?
+
+\vspace{0.5in}
+
+(2)  If the Federal Reserve Bank wants to increase i from 5 to 10%, what is the new level of the money supply the Federal Reserve must set?
+
+\vspace{0.5in}
+
+
+
+
+
+

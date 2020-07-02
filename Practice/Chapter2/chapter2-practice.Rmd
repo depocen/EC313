@@ -1,0 +1,222 @@
+---
+output: pdf_document
+header-includes: 
+  - \usepackage[utf8]{inputenc}
+  - \usepackage{graphicx}
+  - \usepackage{caption}
+  - \usepackage[margin=1in]{geometry}
+  - \usepackage{amsmath,amssymb}
+  - \usepackage{multicol}
+  - \usepackage{array}
+  - \usepackage{tabulary}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\newcommand{\class}{EC 313, Summer 2019}
+\newcommand{\term}{Xiang LI (GE)}
+\newcommand{\examnum}{Chapter 2 - Practice}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{\class} & \textbf{Name: } & \makebox[2in]{\hrulefill}\\
+\textbf{\term} &&\\
+\textbf{\examnum} & \textbf{UO ID: } & \makebox[2in]{\hrulefill}\\
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+
+
+\textbf{QUESTION 1} 
+
+During a given year, the following activities occur: 
+
+(i) A silver mining company pays its workers $200,000 to mine 75 pounds of silver. The silver is then sold to a jew-elry manufacturer for 300,000 dollars.
+
+(ii) The jewelry manufacturer pays its workers $250,000 to make silver necklaces, which the manufacturer sells directly to consumers for 1,000,000 dollars.
+
+(1)  Using the production-of-final-goods approach, what is GDP in this economy?
+
+\vspace{0.3in}
+
+(2) What is the value added at each stage of production? Using the value-added approach, what is GDP?
+
+\vspace{0.3in}
+
+(3) What are the total wages and profits earned? Using the income approach, what is GDP?
+
+\vspace{0.3in}
+
+
+\vspace{0.5in}
+\textbf{QUESTION 2} 
+
+Assume there is an economy, in which only Cars (C) are produced. Nominal GDP is denoted by nGDP, real GDP using 2012 dollars is written as rGDP ($2012). 
+
+(1) Fill in the table below
+```{r table-1, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+require(pander)
+panderOptions('table.split.table', Inf)
+#set.caption("My great data")
+my.data <- "
+  Year | Quantity of Cars  | Price of cars | nGDP | rGDP($2012) | rGDP($2013) | rGDP($2014)
+  2012 | 8  | $100|  |         |        | $2,400
+  2013 | 10 | $150|  |  $1,000 | $1,500 |  
+  2014 | 15 | $300|  |  $1,500 |        | "
+df <- read.delim(textConnection(my.data),header=FALSE,sep="|",strip.white=TRUE,stringsAsFactors=FALSE)
+names(df) <- unname(as.list(df[1,])) # put headers on
+df <- df[-1,] # remove first row
+row.names(df)<-NULL
+pander(df, style = 'rmarkdown')
+```
+
+\vspace{2in}
+
+(2) Calculate real GDP growth from 2012 to 2013 using Real GDP calculated with 2012 prices (rGDP $2012)
+
+\vspace{0.3in}
+
+(3) Calculate real GDP growth from 2012 to 2013 using Real GDP calculated with 2013 prices (rGDP $2013)
+
+\vspace{0.3in}
+
+(4) Calculate real GDP growth from 2012 to 2013 using Real GDP calculated with 2014 prices (rGDP $2014)
+
+\vspace{0.3in}
+
+(5) What do you infer from your result in (2)-(4)?
+
+\vspace{0.3in}
+
+(6) Fill in the table below.
+
+\begin{center}
+\begin{tabular}{||c | p{3cm} | p{3cm}  | p{3cm}  | p{3cm}||} 
+\hline
+ Year & $\frac{nGDP}{rGDP(\$2012)}$ & $\frac{nGDP}{rGDP(\$2013)}$ &  $\frac{nGDP}{rGDP(\$2014)}$  & $\pi$ \\ [1.0 ex] 
+\hline\hline
+ 2012		&  &  &  	& NA \\ 
+\hline
+2013		&    	& 	& 			 &    \\
+\hline
+2014		&  			&  		&  & \\
+\hline\hline
+\end{tabular}
+\end{center} 
+\vspace{2in}
+
+\vspace{0.5in}
+
+\textbf{QUESTION 3}
+
+Consider the following information about two imaginary countries Westeros and the country Essos. The currency shared by Westeros and Essos is named the Gold Dragon (GD) and each country's GDP is quoted for the same year. 
+
+Westeros has a nominal GDP of 10,000 GD. Esso has a nominal GDP of 20,000 GD. Can I conclude that the standard of living in Westeros is lower than the standard of living in Essos? Why or why not? 
+
+\vspace{0.3in}
+
+\vspace{0.5in}
+
+\textbf{QUESTION 4}
+
+Explain whether it is possible for nominal GDP to increase and real GDP to decrease in the same period.
+
+\vspace{0.3in}
+
+\vspace{0.5in}
+
+\textbf{QUESTION 5} 
+
+Will the CPI and GDP deflator always move together? Explain.
+
+\vspace{0.3in}
+
+\vspace{0.5in}
+
+\textbf{QUESTION 6: TRUE, FALSE, or UNCERTAIN}
+
+(1) The rate of unemployment tends to fall during expansions and rise during recessions. 
+
+\vspace{0.3in}
+
+(2) If the Japanese CPI is currently at 108 and the U.S. CPI is at 104, then the Japanese rate of inflation is higher than the U.S. rate of inflation.
+
+\vspace{0.3in}
+
+(3) Periods of negative GDP growth are called recessions.
+
+\vspace{0.3in}
+
+(4) The Phillips curve is a relation between the level of prices and the level of unemployment.
+
+\vspace{0.3in}
+
+
+
+
+\vspace{0.5in}
+
+\textbf{QUESTION 7} 
+
+The Consumer Price Index represents the average price of goods that households consume. Many thousands of goods are included in such an index. Here consumers are represented as buying only food (pizza) and gas as their basket of goods. Here is a representa-tion of the kind of data the Bureau of Economic Analysis collects to construct a consumer price index. In the base year, 2008, both the prices of goods purchased and the quantity of goods purchased are collected. In subsequent years, only prices are collected. Each year, the agency collects the price of that good and constructs an index of prices that represents two exactly equivalent concepts. 
+
+The data: In an average week in 2008, the Bureau of Economic
+Analysis surveys many consumers and determines that the average consumer purchases 2 pizzas and 6 gallons of gas in a week. The price per pizza and per gallon in subsequent years are found below. Prices change over time
+
+```{r table-3, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+require(pander)
+panderOptions('table.split.table', Inf)
+#set.caption("My great data")
+my.data <- "
+  Year  | Price of pizzas| Price of gas
+  2008  | $10            | $3 
+  2009  | $11            | $3.3   
+  2010  | $11.55         | $3.47    
+  2011  | $11.55         | $3.5 
+  2012  | $11.55         | $2.5
+  2012  | $11.55         | $3.47 "
+df <- read.delim(textConnection(my.data),header=FALSE,sep="|",strip.white=TRUE,stringsAsFactors=FALSE)
+names(df) <- unname(as.list(df[1,])) # put headers on
+df <- df[-1,] # remove first row
+row.names(df)<-NULL
+pander(df, style = 'rmarkdown')
+```
+
+
+(1) What is the cost of the consumer price basket in 2008? 
+
+\vspace{0.3in}
+
+(2) What is the cost of the consumer price basket in 2009 and in subsequent years?
+
+\vspace{0.5in}
+
+(3) Set the value of the index number equal to 100 in 2008. Represent the cost of the consumer price basket as an index number in the year 2008 to 2013.  Calculate the annual rate of inflation using the percent change in the value of the index number between each year from 2009 through 2013. You would find it helpful to fill in the table below. 
+
+```{r table-4, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+require(pander)
+panderOptions('table.split.table', Inf)
+#set.caption("My great data")
+my.data <- "
+  Year  | CPI (2008=100) | inflation rate
+  2008  | 100            | NA
+  2009  |             |  
+  2010  |           |     
+  2011  |           | 
+  2012  |           |  
+  2012  |           | "
+df <- read.delim(textConnection(my.data),header=FALSE,sep="|",strip.white=TRUE,stringsAsFactors=FALSE)
+names(df) <- unname(as.list(df[1,])) # put headers on
+df <- df[-1,] # remove first row
+row.names(df)<-NULL
+pander(df, style = 'rmarkdown')
+```
+
+\vspace{2in}
+
+\textbf{QUESTION 8}
+
+The three factors economists care about when analyzing the health of an economy are Output Growth, the Unemployment Rate, and the Inflation Rate. What is the correlation between Output Growth and Unemployment Rate that we can characterize from data for the U.S. since 1960? What about correlation between unemployment and inflation?  
+
+\vspace{0.3in}

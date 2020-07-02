@@ -1,0 +1,317 @@
+---
+output: pdf_document
+header-includes: 
+  - \usepackage[utf8]{inputenc}
+  - \usepackage{graphicx}
+  - \usepackage{caption}
+  - \usepackage[margin=1in]{geometry}
+  - \usepackage{amsmath,amssymb}
+  - \usepackage{multicol}
+  - \usepackage{array}
+  - \usepackage{tabulary}
+  - \usepackage{tikz}
+  - \usetikzlibrary{arrows,calc}
+  - \usepackage{relsize}
+  - \usetikzlibrary{decorations.pathreplacing}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\newcommand{\class}{EC 313, Summer 2019}
+\newcommand{\term}{Xiang LI (GE)}
+\newcommand{\examnum}{Chapter 9 - PART 2 - Practice}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{\class} & \textbf{Name: } & \makebox[2in]{\hrulefill}\\
+\textbf{\term} &&\\
+\textbf{\examnum} & \textbf{UO ID: } & \makebox[2in]{\hrulefill}\\
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+
+
+
+
+\textbf{QUESTION 1: TRUE, FALSE}
+
+(1) The central bank can always act to keep output equal to potential output.
+\vspace{.3in}
+
+(2)  It is easier for the central bank to keep output at potential output if expectations of inflation are anchored.
+\vspace{.3in}
+
+(3) A large increase in the price of oil increases the natural rate of unemployment.
+\vspace{.3in}
+
+
+
+\textbf{QUESTION 2} 
+
+When people have adaptive inflation expectations and the natural rate of interest is below the lower bound on the real interest rate, the economy can fall into a deflationary spiral. Briefly explain how the above situation can lead to a severe recession that the central bank is powerless to stop.
+
+\vspace{1.5in}
+
+
+\textbf{QUESTION 3} 
+
+Consider the IS-LM-PC model with adaptive inflation expectations. If the output has been above potential for some time, so that inflation is above its target level, how does the central bank bring inflation back down to its target level?
+
+\vspace{1.5in}
+
+
+<!---
+\vspace{.5in}
+\textbf{QUESTION} 
+
+The two paths to the medium-run equilibrium explored in this chapter make two different assumptions about the formation of the level of expected inflation. One path assumes the level of expected inflation equals lagged inflation. The level of expected inflation changes over time. The other path assumes the level of expected inflation is anchored to a specific value and never changes. Begin in medium-run equilibrium where actual and expected inflation equals 2% in period t.
+
+
+(1) Suppose there is an increase in consumer confidence in period t + 1. An increase in consumer confidence will lead to higher consumption, so as the demand. How does the IS curve shift? Assume that the central bank does not change the real policy rate. How will the short-run equilibrium in period t + 1 compare to the equilibrium in period t?
+
+
+Output increases in the short run. Inflation rises beyond expected inflation as the economy moves up the PC curve. Output and inflation are higher in period t+1 than in period t.
+
+
+(2) Consider the period t + 2 equilibrium under the assumption that $\pi^e_{t+2}=\pi_{t+1}$. If the central bank leaves the real policy rate unchanged, how does actual inflation in period t + 2 compare to inflation in period t + 1? How must the central bank change the nominal policy rate to keep the real policy rate unchanged? Continue to period t + 3. Making the same assumption about the level of expected inflation and the real policy rate, how does actual inflation in period t + 3 compare to inflation in period t + 2.
+
+To leave the real policy rate unchanged, the central bank must raise the nominal policy rate by an amount equal to the increase in expected inflation. If that happens, output remains at the same level as in period t+1. BUT inflation increases again. Inflation in period t+2 is higher than inflation in period t+1 which is higher than inflation in period t. The exact same process repeats in period t+3. The central bank raises the nominal policy rate but leaves the real policy rate unchanged. The level of output in period t+3 is the same as in period t+2 and t+1 and is greater than potential output. Inflation increases again from period t+2 to period t+3.
+
+(3) Consider the period t + 2 equilibrium making the assumption that $\pi^e_{t+2}=\bar{\pi}$. If the central bank leaves the real policy rate unchanged, how does actual inflation in period t + 2 compare to inflation in period t + 1? How must the central bank change the nominal policy rate to keep the real policy rate unchanged? Continue to period t + 3. Making the same assumption about the level of expected inflation and the real policy rate, how does actual inflation in period t + 3 compare to inflation in period t + 2?
+
+Consider the period t+2 equilibrium under the assumption that $\pi^e_{t+2}=\bar{\pi}$. The central bank leaves the real (and nominal) policy rate unchanged at the original level. Output, as in period t+1, is above potential. Thus inflation is greater than expected inflation. This situation repeats in period t+3.
+
+
+(4) Compare the inflation and output outcomes in part 2 to that in part 3.
+
+The difference between the two assumptions about expected inflation is dramatic. In both parts 2 and 3, output remains above potential. But when expectations are formed using lagged inflation and the central bank keeps the real policy rate constant by matching increases in expected inflation with the same increase in the nominal policy rate, inflation accelerates. To use the language of the previous chapter, unemployment is lower than the NAIRU. When the expected rate of inflation is anchored, then inflation does not accelerate. It simply remains higher than the anchored expected rate permanently.
+
+
+(5) Which scenario, part 2 or part 3, do you think is more realistic. Discuss.
+
+Neither scenario seems completely realistic. In part b, the central bank accepts ever increasing inflation. In part c, expected inflation remains anchored at a rate which is repeatedly incorrect.
+
+(6) Suppose in period t + 4, the central bank decides to raise the real policy rate high enough to return the economy immediately to potential output and to the period t rate of inflation. Explain the difference between central bank policies using the two assumptions about expected inflation in part 2 and part 3.
+
+If inflation expectations are anchored, then from period t+3, the central bank raises the real policy rate of interest enough so output returns to potential. Then actual inflation in period t+4 equals expected inflation which, by assumption is $\bar{\pi}$. Things are much, much harder when expected inflation in not anchored. Start from period t+3 where inflation is higher than in period t. The central bank wants to restore inflation to its period t level and return expected inflation to that same original level. Thus the level of inflation must drop and its change must be negative. In period t+4, under the assumption that expected inflation equals lagged inflation, the central bank must raise the real policy rate a great deal and lower output well below potential output. The resulting recession will lead to a large reduction in inflation so the level of inflation in period t+4 is the original level of inflation. Then in period t+5, the central bank returns the real policy rate to its original level. There is no path to return to the original lower inflation medium run equilibrium that does not include a recession.
+--->
+
+
+
+\vspace{.5in}
+\textbf{QUESTION 4} 
+
+A shock to aggregate supply will also have different outcomes when there are different assumptions about the formation of the level of expected inflation. One path assumes that the level of expected inflation equals lagged inflation. The level of expected inflation changes over time. The second path assumes the level of expected inflation is anchored to a specific value and never changes. Begin in medium-run equilibrium where actual and expected inflation equal 2% in period t. 
+
+(1) Suppose there is a permanent increase in the price of oil in period t + 1. How does the PC curve shift? Assume that the central bank does not change the real policy rate. How will the short-run equilibrium in period t + 1 compare to the equilibrium in period t? What happens to output? What happens to inflation?
+
+\begin{tikzpicture}[scale=1]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=1]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=1]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+
+
+(2) Consider the period t + 2 equilibrium under the assumption that $\pi^e_{t+2} = \pi_{t+1}$. If the central bank leaves the real policy rate unchanged, how does actual inflation in period t + 2 compare to inflation in period t + 1? Continue to period t + 3. Making the same assumption about the level of expected inflation and the real policy rate, how does actual inflation in period t + 3 compare to inflation in period t + 2?
+
+\vspace{2in}
+
+(3) Consider the period t+2 equilibrium under the assumption that $\pi^e_{t+2} = \bar{\pi}$. If the central bank leaves the real policy rate unchanged, how does actual inflation in period t+2 compare to inflation in period t+1? Continue to period t+3. Making the same assumption about the level of expected inflation and the real policy rate, how does actual inflation in period t+3 compare to inflation in period t+2.
+
+\begin{tikzpicture}[scale=1]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=1]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+
+\newpage
+(4) Compare the inflation and output outcomes in part 2 to that in part 3.
+
+\vspace{1.5in}
+
+(5) In period t + 4, the central bank decides to change the real policy rate to return the economy as quickly as possible to potential output and to the inflation rate of period t. Under which path for the formation of expected inflation is the nominal policy rate of interest higher in period t + 4, the path from 2 or the path from 3. Explain why, when inflation expectations are anchored as in part 3, the central bank can change the policy rate to immediately reach the new level of potential output and the period t level of inflation in period t + 4. Make the argument that is not possible for the central bank to immediately hit both the new level of potential output and the period t level of inflation in period t + 4 when expected inflation is equal to its lagged value. 
+
+\vspace{2in}
+
+
+\textbf{QUESTION 5} 
+
+The table shwos the Nominal Interest Rate, Inflation, and the Real Interest Rate in the United Kingdom, 1929–1933. Answer the following questions based on information found in the table.  
+
+```{r table-1, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+require(pander)
+panderOptions('table.split.table', Inf)
+#set.caption("My great data")
+my.data <- "
+  Year | Unemployment rate (%)  | Output growth rate (%) | 1-year nominal interest rate (%) | inflation rate (%) | 1-year real interest rate (%)
+  1929 | 10.4 | 3.0 |  5.0 | -0.90 | 5.9        
+  1930 | 21.3 | -1.0|  3.0 | -2.8 | 5.8  
+  1931 | 22.1 | -5.0|  6.0 | -4.3 | 10.3
+  1932 | 19.9 | 0.4|  2.0 | -2.6 | 4.6
+  1933 | 16.7 |3.3|  2.0 | -2.1 | 4.1
+"
+df <- read.delim(textConnection(my.data),header=FALSE,sep="|",strip.white=TRUE,stringsAsFactors=FALSE)
+names(df) <- unname(as.list(df[1,])) # put headers on
+df <- df[-1,] # remove first row
+row.names(df)<-NULL
+pander(df, style = 'rmarkdown')
+```
+
+(1) Is there evidence of the deflation spiral from 1929 to 1933 in the United Kingdom?
+
+\vspace{.5in}
+
+(2) Is there evidence of the effect of high real interest rates on output?
+
+\vspace{.5in}
+(3) Is there evidence of a poor choice of the real policy interest rate by the central bank?
+
+\vspace{.5in}
+
+
+
+
+
+
+
+\newpage
+\vspace{.5in}
+\textbf{QUESTION 6} 
+
+Suppose the economy is operating at the zero lower bound for the nominal policy rate; there is a large government deficit and the economy is operating at potential output in period t. A newly elected government vows to cut spending and reduces the deficit in period t + 1, period t + 2 and subsequent periods. Suppose expected inflation depends on past inflation. 
+
+(1) Show the effects of the policy on output in period t + 1.
+
+\begin{tikzpicture}[scale=1]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=1]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+
+(2) Show the effects of the policy on the change in inflation in period t + 1.
+
+\vspace{1in}
+
+\newpage
+(3) What happens to the real policy rate in period t + 2? How will this affect output in period t + 2?
+
+\begin{tikzpicture}[scale=1]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=1]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+(4) How does the zero lower bound on nominal interest rates make a fiscal consolidation more difficult?
+
+\vspace{1in}
+
+
+
+
+
+
+
+\newpage
+\vspace{.5in}
+\textbf{QUESTION 7}
+
+This question is about fiscal consolidation in the IS-LM-PC Model. Consider the typical IS-LM-PC set-up from Chapter 9:
+
+\begin{equation*}
+\begin{split}
+Y_t & = C(Y-T) +I(Y, r_t+x_t)+G_t \\
+r_t & = \bar{r} \\
+\pi - \pi^e & = \frac{\alpha}{L_t}(Y - Y_n)
+\end{split}
+\end{equation*}
+
+Consider the case of static inflation expectations, where $\pi^e = \bar{\pi}$.
+
+(1) Suppose that the economy starts out in medium run equilibrium, with output equal to potential and the target interest rate equal to the natural real interest rate. Then congress decides that reducing the budget deficit is important, and performs a fiscal consolidation. They do this by decreasing spending and increasing taxes. Represent this policy change on the IS-LM-PC graphs below.
+
+\begin{tikzpicture}[scale=1]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=1]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+(2) What is the short run impact on output, the unemployment rate, and
+inflation?
+
+\vspace{1in}
+
+(3) What does the central bank do in response to the changes you mentioned
+in part (2)? Why does it act in this way? 
+
+\begin{tikzpicture}[scale=1]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=1]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+(4) When the economy returns to medium run equilibrium, what can we say about the level of inflation relative to before fiscal consolidation? How do you know?
+
+\vspace{1in}
+
+(5) When the economy is back in medium run equilibrium, what can we say about the levels of consumption and investment spending relative to what they were before the fiscal consolidation?
+
+\vspace{1in}

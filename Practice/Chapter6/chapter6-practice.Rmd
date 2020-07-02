@@ -1,0 +1,230 @@
+---
+output: pdf_document
+header-includes: 
+  - \usepackage[utf8]{inputenc}
+  - \usepackage{graphicx}
+  - \usepackage{caption}
+  - \usepackage[margin=1in]{geometry}
+  - \usepackage{amsmath,amssymb}
+  - \usepackage{multicol}
+  - \usepackage{array}
+  - \usepackage{tabulary}
+  - \usepackage{tikz}
+  - \usetikzlibrary{arrows,calc}
+  - \usepackage{relsize}
+  - \usetikzlibrary{decorations.pathreplacing}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\newcommand{\class}{EC 313, Summer 2019}
+\newcommand{\term}{Xiang LI (GE)}
+\newcommand{\examnum}{Chapter 6 - Practice}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{\class} & \textbf{Name: } & \makebox[2in]{\hrulefill}\\
+\textbf{\term} &&\\
+\textbf{\examnum} & \textbf{UO ID: } & \makebox[2in]{\hrulefill}\\
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+
+
+
+
+\textbf{QUESTION 1: TRUE, FALSE, UNCERTAIN}
+
+(1) The nominal interest rate is measured in terms of goods; the real interest rate is measured in terms of money. 
+
+\vspace{.3in}
+
+(2) As long as expected inflation remains roughly constant, the movements in the real interest rate are roughly equal to the movements in the nominal interest rate.
+
+\vspace{.3in}
+
+(3) When expected inflation increases, the real rate of interest falls.
+
+\vspace{.3in}
+
+(4) All bonds have equal risk of default and thus pay equal rates of interest.
+
+\vspace{.3in}
+
+(5) The real borrowing rate and the real policy rate always move in the same direction.
+
+\vspace{.3in}
+
+
+\vspace{.5in}
+\textbf{QUESTION 2}
+
+Consider an economy described by Figure 6-6 in the text, which is also shown below. 
+
+```{r pressure, echo=FALSE, out.width = '50%'}
+knitr::include_graphics("5.png")
+```
+
+(1) What are the units on the vertical axis 
+
+\vspace{.3in}
+
+(2) If the nominal policy interest rate is 5% and the expected rate of inflation is 3%, what is the value for the vertical in-tercept of the LM curve?
+
+\vspace{.3in}
+
+(3) Suppose the nominal policy interest rate is 5%. If expected inflation decreases from 3% to 2%, in order to keep the LM curve from shifting in Figure 6-6, what must the central bank do to the nominal policy rate of interest?
+
+\vspace{.3in}
+
+(4) If the expected rate of inflation were to decrease from 3% to 2%, does the IS curve shift?
+
+\vspace{.3in}
+
+(5) If the expected rate of inflation were to decrease from 3% to 2%, does the LM curve shift?
+
+\vspace{.3in}
+
+(6) If the risk premium on risky bonds increases from 5% to 6%, does the LM curve shift?
+
+\vspace{.3in}
+
+(7) If the risk premium on risky bonds increases from 5% to 6%, does the IS curve shift?
+
+\vspace{.3in}
+
+(8) What are the fiscal policy options that prevent an increase in the risk premium on risky bonds from decreasing the level of output?
+
+\vspace{.3in}
+
+(9) What are the monetary policy options that prevent an increase in the risk premium on risky bonds from decreasing the level of output?
+
+\vspace{.3in}
+
+
+\vspace{.5in}
+\textbf{QUESTION 3}
+
+Fill in the table below and answer the questions that relate to the data in the table.
+
+```{r table-1, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+require(pander)
+panderOptions('table.split.table', Inf)
+#set.caption("My great data")
+my.data <- "
+  Situation | Nominal policy interest rate  | expected inflation | real policy interest rate | risk premium | nominal borrowing interest rate | real borrowing interest rate
+  A | 3 | 0 |   | 0 |   | 
+  B | 4 |  | 2  | 1 |  | 
+  C | 0 | 2 |  | 4 |   | 
+  D |  |  |  | 2 |  6 | 3 
+  E | 0 | -2|   |  |   | 5
+"
+df <- read.delim(textConnection(my.data),header=FALSE,sep="|",strip.white=TRUE,stringsAsFactors=FALSE)
+names(df) <- unname(as.list(df[1,])) # put headers on
+df <- df[-1,] # remove first row
+row.names(df)<-NULL
+pander(df, style = 'rmarkdown')
+```
+
+(1) Which situations correspond to a liquidity trap?
+
+\vspace{.3in}
+
+(2) Which situations correspond to the case where the nominal policy interest rate is at the Zero Lower Bound?
+
+\vspace{.3in}
+
+(3) Which situation has the highest risk premium? What two factors in bond markets lead to a positive risk premium?
+
+\vspace{.3in}
+
+(4) it so important when the nominal policy interest rate is at the Zero Lower Bound to maintain a positive expected rate of inflation?
+
+\vspace{.3in}
+
+
+\vspace{.5in}
+\textbf{QUESTION 4}
+
+The text presents a formula where $(1+i)=(1-p)(1+x+i+p \times 0)$, where $p$ is the probability the bond does not pay at all (the bond issuer is bankrupt) and has a zero return, $i$ is the nominal policy interest rate, and $x$ is the risk premium.
+
+(1) If the probability of bankruptcy is zero, what is the rate of interest on the risky bond?
+
+\vspace{.3in}
+
+(2) Calculate the probability of bankruptcy when the nominal interest rate for a risky borrower is 8% and the nominal policy rate of interest is 3%.
+
+\vspace{.3in}
+
+(3) Calculate the nominal interest rate for a borrower when the probability of bankruptcy is 1% and the nominal policy rate of interest is 4%.
+
+\vspace{.3in}
+
+(4) Calculate the nominal interest rate for a borrower when the probability of bankruptcy is 5% and the nominal policy rate of interest is 4%
+
+\vspace{.3in}
+
+(5) The formula assumes that payment upon default is zero. In fact, it is often positive. How would you change the formula in this case?
+
+\vspace{.3in}
+
+
+
+
+\vspace{.5in}
+\textbf{QUESTION 5} 
+
+Consider the extended IS-LM set-up from Chapter 6. The IS relation is given by $Y=C(Y-T)+I(Y,r+x) + G$ and the LM relation is given by $r=\bar{r}$. Using this framework, briefly explain how an increase in lenders' risk aversion would affect equilibrium consumption, $C$.
+
+\vspace{2in}
+
+
+\vspace{.5in}
+\textbf{QUESTION 6}
+
+The real interest rate is approximated as $r_t=i_t-\pi_{t+1}^e$. Explain intuitively why an increase in expected inflation decreases the real interest rate.
+
+\vspace{1.5in}
+
+\vspace{.5in}
+\textbf{QUESTION 7}
+
+Explain how the rate of expected inflation combines with the zero lower bound on nominal interest rates to limit what the real interest rate can be.
+
+\vspace{1.5in}
+
+
+\vspace{.5in}
+\textbf{QUESTION 8}
+
+Consider an IS-LM model characterized by the following equations:
+\begin{eqnarray*}
+IS: \qquad	Y&=&C(Y-T)+ I(Y,r+x) + G\\
+LM: \qquad	r&=&\bar{r}
+\end{eqnarray*}
+
+Suppose that the financial sector bailouts in the wake of the recent financial crisis fundamentally changed banks' risk aversion. With the hope that they will be bailed out in case of emergency, banks exhibit a lower level of risk aversion.
+
+(1) How does the change in risk aversion affect equilibrium output and interest rates? In explaining, be sure to use a graph of the IS-LM model and explain why any curve shifts occur. 
+
+\vspace{2in}
+
+(2) What sorts of fiscal policy could the government engage in to return output to its original level?
+
+\vspace{2in}
+
+(3) Supposing that the government did not engage in fiscal policy, what could the central bank do to bring output back to its original equilibrium level? Display what this policy response would look like on a graph of the IS-LM model.
+
+\vspace{2in}
+
+(4) Compare equilibrium consumption $C$ and investment $I$ resulting from the fiscal policy response you described in part (2) against the monetary policy response you described in part (3).
+
+\vspace{2in}
+
+
+
+
+
+
+

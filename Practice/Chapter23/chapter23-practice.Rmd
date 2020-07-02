@@ -1,0 +1,157 @@
+---
+output: pdf_document
+header-includes: 
+  - \usepackage[utf8]{inputenc}
+  - \usepackage{graphicx}
+  - \usepackage{caption}
+  - \usepackage[margin=1in]{geometry}
+  - \usepackage{amsmath,amssymb}
+  - \usepackage{multicol}
+  - \usepackage{array}
+  - \usepackage{tabulary}
+  - \usepackage{tikz}
+  - \usetikzlibrary{arrows,calc}
+  - \usepackage{relsize}
+  - \usetikzlibrary{decorations.pathreplacing}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\newcommand{\class}{EC 313, Summer 2019}
+\newcommand{\term}{Xiang LI (GE)}
+\newcommand{\examnum}{Chapter 23 - Practice}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{\class} & \textbf{Name: } & \makebox[2in]{\hrulefill}\\
+\textbf{\term} &&\\
+\textbf{\examnum} & \textbf{UO ID: } & \makebox[2in]{\hrulefill}\\
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+
+
+
+
+\textbf{QUESTION 1: TRUE, FALSE}
+
+(1) Fighting inflation should be the Fed’s only purpose. 
+
+\vspace{.3in}
+
+(2) Inflation and money growth moved together from 1970 to 2009.
+
+\vspace{.3in}
+
+(3) Most central banks around the world have an inflation target of 4%.
+
+\vspace{.3in}
+
+(4) The Taylor rule describes how central banks adjust the policy interest rate across recessions and booms.
+
+\vspace{.3in}
+
+(5) The zero lower bound on the nominal policy rate was ex-pected to be a regular feature of monetary policy when inflation targeting began.
+
+\vspace{.3in}
+
+(6) Quantitative easing refers to central bank purchases of assets with the intention of directly affecting the yield on these assets.
+
+\vspace{.3in}
+
+\vspace{.5in}
+\textbf{QUESTION 2}
+
+The money demand relationship in Chapter 4 is $\frac{M}{P}=YL(i)$. The central bank in conjunction with the political authorities chooses an inflation target $\pi^*$.
+
+(1) Derive the target nominal interest rate in a medium-run equilibrium.
+
+\vspace{1in}
+
+(2) Consider medium run equilibria where potential output does not grow. Derive the relation between money growth and inflation. Explain.
+
+\vspace{1in}
+
+(3) Now consider medium run equilibria where potential output grows at 3% per year. Now derive the relation between money growth and inflation. Do you expect inflation to be higher or lower than money growth? Explain.
+
+\vspace{1in}
+
+(4) Consider Figure 23-1, which is on the page 10 of lecture slide. Look first at the period ending in roughly 1995. How do your results in parts (2) and (3) relate to it?
+
+\vspace{1in}
+
+(5) Focus on the case where all money is currency. We can then think of money demand as being the demand for currency. Over the past 50 years: 
+
+(i) Automatic tellers have allowed cash to be dispensed outside of regular banking hours.
+
+(ii) The use of credit cards for purchases has greatly expanded.
+
+(iii) The use of debit cards for purchases has greatly expanded.
+
+(iv) Most recently, technology has allowed for small purchases by credit and debit cards by waving the card over a pay-ment terminal near the cash register.
+
+How would each of these innovations affect the demand for currency?
+
+\vspace{1in}
+\vspace{1in}
+
+
+
+\vspace{.5in}
+\textbf{QUESTION 3}
+
+Consider a central bank that has an inflation target $\pi^*$. We studied two versions of the Phillips curve in Chapter 9. The general Phillips curve is $\pi_t - \pi^e_t = - \alpha (u_t - u_n)$. The first version of the Phillips curve in Chapter 9 was $\pi_t - \pi_{t-1} = - \alpha (u_t - u_n)$. The second version of the Phillips curve in Chapter 9 was $\pi_t - \bar{\pi} = - \alpha (u_t - u_n)$.
+
+(1) How are the two versions of the Phillips curve different?
+
+\vspace{1in}
+
+(2) In either version, in principle, the central bank is able to keep the actual rate of inflation in period t equal to the target rate of inflation $\pi^*$ in every period. How does the central bank carry out this task?
+
+\vspace{1in}
+
+(3) Suppose the expected rate of inflation is anchored (does not move) and equal to the target rate of inflation, that is $\bar{\pi} = \pi^*$. How does this situation make the central bank’s task easier?
+
+\vspace{1in}
+
+(4) Suppose the expected rate of inflation is last period’s rate of inflation rather than the target rate of inflation. How does this make the central banks task more difficult?
+
+\vspace{1in}
+
+
+(5) Use your answer to parts (3) and (4) to answer the question: Why is central bank credibility about the inflation target so useful?
+
+\vspace{1in}
+
+(6) In part (2), we asserted that the central bank could always hit its inflation target. Is this likely in practice?
+
+\vspace{1in}
+
+(7) One specific problem faced by the central bank is that the natural rate of unemployment is not known with certainty. Suppose the natural rate of unemployment $u_n$ changes frequently. How will these changes affect the central bank’s ability to hit its inflation target? Explain.
+
+\vspace{1in}
+
+
+<!---
+\vspace{.5in}
+\textbf{QUESTION}
+
+It was noted in the text that the Federal Reserve purchased, in addition to Treasury bills, large amounts of mortgage-backed securities and long-term government bonds as part of quantitative easing. Figure 23-2, which is shown on the page 33 of lecture slide shows that as of the end of 2015, there were about 4.5 trillion dollars of assets in the monetary base. These assets were roughly distributed as 0.2 trillion in Treasury securities with less than one year to maturity; 2.2 trillion in Treasury securities of more than one year to maturity; and 1.7 trillion in mortgage-backed securities. 
+
+(1) Why did the Federal Reserve Board buy the mortgage-backed securities?
+
+The Fed was increasing the price (lowering the yield) on these securities by purchasing them. The goal was to make mortgages less expensive and stimulate the purchase of new houses. The other interpretation would be that the risk premium on these securities has increased and the Fed was trying to offset part of that increase.
+
+(2) Why did the Federal Reserve Board buy the long-term Treasury bonds
+
+The Fed was trying to raise the price (lower the yield) on these securities. In terms of Chapter 14, the term premium must have been higher. By taking the supply of these longterm bonds off the market, the Fed was hoping to reduce long-term yields on government bonds. Then they wanted to have the private sector see the lower yields and be more willing to borrow for new investments.
+
+(3) What would you predict as the consequences of the following operation by the Federal Reserve Board: selling 0.5 trillion in mortgage-backed securities and buying 0.5 trillion in Treasury securities with less than one year to maturity?
+
+You would expect to see long-term bond yields rise.
+
+(4) What would you predict as the consequences of the following operation by the Federal Reserve Board: selling 0.5 trillion in Treasury securities with maturity longer than one-year and buying 0.5 trillion in Treasury securi-ties with less than one year to maturity
+
+You would expect to see the interest rates on mortgage-backed
+--->

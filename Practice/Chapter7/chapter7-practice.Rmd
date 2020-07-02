@@ -1,0 +1,121 @@
+---
+output: pdf_document
+header-includes: 
+  - \usepackage[utf8]{inputenc}
+  - \usepackage{graphicx}
+  - \usepackage{caption}
+  - \usepackage[margin=1in]{geometry}
+  - \usepackage{amsmath,amssymb}
+  - \usepackage{multicol}
+  - \usepackage{array}
+  - \usepackage{tabulary}
+  - \usepackage{tikz}
+  - \usetikzlibrary{arrows,calc}
+  - \usepackage{relsize}
+  - \usetikzlibrary{decorations.pathreplacing}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\newcommand{\class}{EC 313, Summer 2019}
+\newcommand{\term}{Xiang LI (GE)}
+\newcommand{\examnum}{Chapter 7 - Practice}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{\class} & \textbf{Name: } & \makebox[2in]{\hrulefill}\\
+\textbf{\term} &&\\
+\textbf{\examnum} & \textbf{UO ID: } & \makebox[2in]{\hrulefill}\\
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+
+
+
+
+\textbf{QUESTION 1: TRUE, FALSE}
+
+(1) The unemployment rate tends to be high in recessions and low in expansions.
+
+\vspace{.5in}
+
+(2) Workers who do not belong to unions have no bargaining power.
+
+\vspace{.5in}
+
+(3) Most workers are typically paid their reservation wage.
+
+\vspace{2in}
+
+
+
+\vspace{.5in}
+\textbf{QUESTION 2}
+
+Suppose that the markup of goods prices over marginal cost is 5%, and that the wage-setting equation is $W=P(1-u)$, where $u$ is the unemployment rate.
+
+(1) What is the real wage, as determined by the price-setting equation?
+
+\vspace{.5in}
+
+(2) What is the natural rate of unemployment? 
+
+\vspace{.in}
+
+(3) Suppose that the markup of prices over costs increases to 10%. What happens to the natural rate of unemployment? Explain the logic behind your answer.
+
+\vspace{2in}
+
+
+\vspace{.5in}
+\textbf{QUESTION 3}
+
+Explain the intuition behind the negative relationship between unemployment and the real wage that is represented by the Wage Setting (WS) relationship. Be sure to reference bargaining power. 
+
+\vspace{2in}
+
+
+\vspace{.5in}
+\textbf{QUESTION 4}
+
+Explain what happens to prices over time when firms increase output. Be sure to include the role of nominal wages in the process.
+
+\vspace{2in}
+
+\vspace{.5in}
+\textbf{QUESTION 5}
+
+Using the labor market model, explain how an increase in monopoly power affectrs equilibirum real wages and the equilibrium unemployment rate. 
+
+\vspace{2in}
+
+
+
+\vspace{.5in}
+\textbf{QUESTION 6}
+
+This questions asks about unemploymenty insurance, non-labor costs, and the labor market.
+
+(1) Suppose that the government decides to increase the duration of unemployment insurance, so that recently unmeployed individuals can receive benefits for longer. Draw a graph of how this policy change affects the labor market. Be sure to label the axes, curves, and equilibrium points. If a curve shifts, give a brief explanation of why it does.
+
+\vspace{2in}
+
+(2) For this part, assume that the policy change you considered in part (1) did not happen. Suppose instead that the price of oil decreases dramatically. Because oil or oil based products are non-labor inputs to many production processes, this decrease in non-labor income costs means that firms don't need to markup the price of their goods as much. The markup, m, falls.
+
+Draw a graph of how this change affects the labor market. Be sure to label the axes, curves, and equilibrium points. If a curve shifts, give a brief explanation of why it does.
+
+\vspace{2in}
+
+(3) Now suppose that the unemployment benefits change of part (1) and the oil price shock of part (2) occurred simultaneously. Can we be sure of the effect on equilibrium real wages and unemployment? Explain, using labor market graphs as necessary.
+
+
+
+\vspace{2in}
+
+
+
+
+
+
+
