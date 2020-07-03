@@ -1,0 +1,173 @@
+---
+output: pdf_document
+header-includes: 
+  - \usepackage[utf8]{inputenc}
+  - \usepackage{graphicx}
+  - \usepackage{caption}
+  - \usepackage[margin=1in]{geometry}
+  - \usepackage{amsmath,amssymb}
+  - \usepackage{multicol}
+  - \usepackage{array}
+  - \usepackage{tabulary}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\newcommand{\class}{EC 313, Summer 2019}
+\newcommand{\term}{Xiang LI (GE)}
+\newcommand{\examnum}{Midterm - Review Guide}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{\class} & \textbf{Name: } & \makebox[2in]{\hrulefill}\\
+\textbf{\term} &&\\
+\textbf{\examnum} & \textbf{UO ID: } & \makebox[2in]{\hrulefill}\\
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+
+
+
+This guide is intended to give you a broad overview of the topics covered so far in the course to help you prepare for the midterm exam. The items listed are not necessarily an exhaustive list of the vocabulary or ideas discussed, but understanding these topics thoroughly will provide you with a good basis for success on the midterm exam.
+
+Topics are generally listed in the order in which they were covered in class.
+
+# Overview of Important Macroeconomic Variables (Chapter 2)
+- How to calculate percentage growth in a variable
+- Gross Domestic Product (GDP)
+  - Three ways to measure:
+    - Sum of all final goods sold
+    - Sum of all value added at every stage of production
+    - Sum of all (labor and capital) income
+  - Nominal vs. Real GDP
+  - GDP Growth Rates
+    - Expansions and Recessions
+- Inflation
+  - Price Indexes
+    - GDP Deflator
+    - Consumer Price Index (CPI)
+  - Base year: the year for which the price level is the inflation reference point
+- Unemployment Rate
+  - Definitions of employment, unemployment, and the labor force
+  - Labor force participation rate
+  - Discouraged Workers
+- Okun’s Law and Phillips Curve Relationship
+  
+  
+\vspace{.5in}
+# General Methodology for Economic Inquiry
+- Endogenous vs. Exogenous Variables
+- How to Solve for Equilibrium
+  - Using Algebra
+  - Using Graphs
+- Note: When thinking about equilibrium in any of the models in this class, it is important that you understand how to solve for equilibrium using all methods above.
+  - If we don’t assume explicit functional forms (e.g. our linear consumption function), solving for equilibrium algebraically might be impossible. If this is the case on a test, I will make it clear that is the case.
+  - If I ask you to solve for equilibrium in a particular way but you feel like you can only answer it using a different method, then use the method you understand! You can at least get partial credit
+    
+    
+\vspace{.5in}
+# The Goods Market (Chapter 3)
+- Composition of GDP
+- Demand for Goods
+  - Consumption as a function of disposable income
+    - Marginal Propensity to Consume
+  - Functional Form assumptions for other variables
+    - Endogenous Investment (Q5 in practice problem)
+    - Endogenous Taxes (Q2 in practice problem)
+  - Goods Market Equilibrium
+    - Equilibrium Condition: income = production = demand (Y = Z)
+    - Solving for Equilibrium Output Algebraically
+      - Autonomous Spending
+      - Multiplier
+    - Solving for Equilibrium Output Graphically
+      - Income = Production is a 45-degree line
+      - Demand is a line with slope less than 1
+      - Keep in mind the slope might not always just be the marginal propensity to consume as it was in class! In both the endogenous investment and endogenous taxes examples the slope was different.
+      - Equilibrium is where the lines cross
+    - Changes from one equilibrium to another
+      - From a change in autonomous spending or the multiplier
+      
+      
+\vspace{.5in}
+# Financial Markets (Chapter 4)
+- Definitions of Money and Bonds
+- Tradeoffs between holding wealth as money or bonds
+  - The interest rate as the opportunity cost of money
+- Money Demand
+  - Relationship to GDP/output/income
+  - Relationship to interest rates
+- Exogenous Money Supply
+- Money Market Equilibrium
+  - Equilibrium Condition: Money Demand = Money Supply
+  - Analyzing equilibrium shifts
+    - Change in GDP
+    - Change in the money supply
+  - Open Market Operations
+    - Expansionary vs. Contractionary
+    - Interest rates as the percentage increase in value of an asset
+    - Nagative relationship between bond prices and interest rates
+    - How buying and selling bonds affects the price of bonds and thus the interest rate
+    - How interest rate targeting is achieved through modifying the money supply with open market operations
+    
+    
+    
+    
+\vspace{.5in}
+# The IS-LM Model (Chapter 5)
+- The IS-LM model brings together the equilibriums in the money market and in the goods market to determine what output and the interest rate are in general equilibrium
+  - Money Market: output is exogenous and interest rates are endogenously determined
+  - Goods Market: interest rates are exogenous and output is determined endogenously
+- The LM Relation
+  - Understanding the money market in terms of real money demand and real money supply
+  - The LM relation, $i=\bar{i}$
+  - How the central bank adjusts the money supply to keep equilibrium interest rates at the target level
+  - Graphing the LM curve on a graph of i against Y
+    - Every point on the line represents a unique equilibrium in the money market
+  - Shiting the LM curve 
+- The IS Relation
+  - Investment demand depends on sales (Y) positively and the interest rate (i) negatively
+  - Each different interest rate implies a different equilibrium output in the goods market
+  - The IS curve is negatively sloped on a graph of i against Y
+    - Each point on the curve represents a unique equilibrium in the goods market
+  - Shifting the IS curve
+    - Changes in taxes, government spending, consumer or business confidence
+      - Anything that changes the relationship between interest rates and output in the goods market
+- when both the goods market and the money market are in equilibrium
+  - Graphically it occurs when the IS and LM curves intersect
+- Expansionary vs. Contractionary monetary and fiscal policies
+- Change some exogenous variable
+  - How does this affect the relationship between i and Y as given by the IS and LM curves?
+  - Shift the curves accordingly
+  - Find the new equilibrium after all curve shifts
+  - Talk about affects to the components of demand
+- Fiscal Policy (changes to government spending or taxes)
+  - Functions through the goods market
+- Monetary Policy (changing the target interest rate)
+  - Functions through the money market
+- Policy Mixes
+
+# Financial Instability and the Extended IS-LM Model (Chapter 6)
+- Real Interest Rate
+  - equal to the nominal interest rate minus expected inflation
+  - Bounded below by the negative of expected inflation
+  - How the central bank can target the real interest rate by manipulating the nominal rate
+  - Liquidity Traps
+    - the nominal interest rate can’t fall below zero (the zero lower bound)
+    - The restrictions this places on the effectiveness of monetary policy
+    - Analyzing liquidity traps with a money market graph
+    - Note: In this class, we assume that the zero lower bound always holds. Do not report a negative interest rate as an equilibrium rate. If the interest rate would be negative, the zero lower bound implies that it would be 0% instead.
+- Risk Premium
+  - Determined by probability of default and lenders’ risk aversion
+- Extended IS-LM
+  - Investment depends on the borrowing rate, which is the real interest rate plus the risk premium
+  - The central bank targets a real interest rate
+  - Changes in the risk premium shift the IS curve
+  - The zero lower bound implies that monetary policy can’t push the real interest rate below the negative of expected inflation
+  
+
+
+    
+
+    
+

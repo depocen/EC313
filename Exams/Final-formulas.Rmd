@@ -1,0 +1,117 @@
+---
+output: pdf_document
+header-includes: 
+  - \usepackage[utf8]{inputenc}
+  - \usepackage{graphicx}
+  - \usepackage{caption}
+  - \usepackage[margin=1in]{geometry}
+  - \usepackage{amsmath,amssymb}
+  - \usepackage{multicol}
+  - \usepackage{array}
+  - \usepackage{tabulary}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\newcommand{\class}{EC 313, Summer 2019}
+\newcommand{\term}{Xiang LI (GE)}
+\newcommand{\examnum}{Final - FORMULAS}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{\class} & \textbf{Name: } & \makebox[2in]{\hrulefill}\\
+\textbf{\term} &&\\
+\textbf{\examnum} & \textbf{UO ID: } & \makebox[2in]{\hrulefill}\\
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+
+
+
+
+
+real GDP per person: $\mathbf{\frac{Y_t}{population}}$ \hspace{3.3in} $Y_t$: real GDP at t \newline
+
+real GDP growth: $\mathbf{\frac{Y_t-Y_{t-1}}{Y_{t-1}}}$ \hspace{3.3in} $Y_{t-1}$: real GDP at t-1 \newline
+
+GDP deflator: $\mathbf{P_t = \frac{nGDP}{rGDP}=\frac{\$Y_t}{Y_t}}$ \hspace{3.3in} $\$Y_t$: nominal GDP \newline
+
+inflation rate: $\mathbf{\pi_t=\frac{P_t-P_{t-1}}{P_{t-1}}}$  \newline
+
+labor force: $\mathbf{L=N+U}$ \hspace{2.7in} $U$: unemployment; $N$: empolyment \newline
+
+unemployment rate: $\mathbf{u=\frac{U}{L}}$  \newline
+
+participation rate: $\mathbf{\frac{L}{population}}$ \newline
+
+production/outoput/supply/GDP: $\mathbf{Y=C+I+G}$  \hspace{.2in} $C$: consumption; $I$: investment; $G$: gov't spending \newline
+
+demand: $\mathbf{Z \equiv C+I+G}$ \newline
+
+consumption: $\mathbf{C = c_0 + c_1 \times Y_D}$ \newline
+
+disposable income: $\mathbf{Y_D= Y-T}$ \hspace{3.3in} $Y$: income; $T$: tax \newline
+
+goods market equilibirum: $\mathbf{Y=\frac{1}{1-c_1}[c_0+I+G-c_1T]}$ \newline
+
+demand for money: $\mathbf{M^d=\$Y \times L(i)}$ \newline
+
+supply for money: $\mathbf{M^s=M}$ \newline
+
+money market equilibirum: $\mathbf{\frac{M}{P}=YL(i)}$ \newline
+
+IS relation: $\mathbf{Y=C(Y-T)+I(Y,i)+G}$ \newline
+
+LM relation: $\mathbf{i=\bar{i}}$ \newline
+
+real interest rate: $\mathbf{r_t = i_t - \pi^e_{t+1}}$  \hspace{1.4in} $i_t$: nominal interest rate; $\pi^e_{t+1}$: expected inflation \newline
+
+risk premium: $\mathbf{x=(1+i)\frac{p}{1-p}}$ \hspace{.8in} $i$: interest rate on risk-free borrowing; $p$: probability of default \newline
+
+extended IS relation: $\mathbf{Y=C(Y-T)+I(Y,r+x)+G}$ \hspace{.8in} $r$: real interest rate; $x$: risk premium \newline
+
+extended LM relation: $\mathbf{r=\bar{r}}$ \hspace{3.9in} $\bar{r}$: policy rate \newline
+
+
+wage-setting: $\mathbf{W=P^eF(u,z)}$ \hspace{.8in} $P^e$: expected prices; $u$: unemployment rate; $z$: catchall factor \newline
+
+price-setting: $\mathbf{P=(1+m)W}$ \hspace{2in} $W$: nominal wages; $P$: prices; $m$: markup \newline
+
+labor market eq.: $\mathbf{F(u_n, z)=\frac{1}{1+m}}$ \hspace{1.5in} $u_n$: natrual rate of unemployment/natural rate \newline
+
+the natural rate of unemployment: $\mathbf{u_n=\frac{m+z}{\alpha}}$ \hspace{2.8in}  $\alpha$: parameter \newline
+ 
+static expectations: $\mathbf{\pi^e_t= \bar{\pi}}$  \hspace{2.6in} $\pi^e_t$: expected inflation; $\bar{\pi}$: a constant \newline
+
+adaptive expectations: $\mathbf{\pi^e_t = (1-\theta)\bar{\pi}+\theta \pi_{t-1}}$  \hspace{2.8in} $\theta$: parameter  \newline
+
+the theoretical Phillips Curve I: $\mathbf{\pi_t = \pi^e_t + (m+z)-\alpha u_t}$ \hspace{1in} $u_t$: unemployment rate in period t \newline 
+
+the theoretical Phillips Curve II: $\mathbf{\pi_t - \pi^e_t= \frac{\alpha}{L} (Y_t-Y_n)}$  \hspace{1.3in} $Y_n$: potential/natural output \newline 
+
+the theoretical Phillips Curve III: $\mathbf{\pi_t = \pi^e_t - \alpha (u_t -u_n)}$ \hspace{1.7in} $Y_t$: output in period t\newline 
+
+the original Phillips Curve I: $\mathbf{\pi_t = \bar{\pi} + (m+z)-\alpha u_t}$ \hspace{1.7in} $\pi_t$: inflation in period t \newline
+
+the original Phillips Curve II: $\mathbf{\pi_t - \bar{\pi}= \frac{\alpha}{L} (Y_t-Y_n)}$ \hspace{2.4in} $L$: labor force \newline
+
+the original Phillips Curve III: $\mathbf{\pi_t - \bar{\pi}= -\alpha(u_t-u_n)}$ \newline
+
+the modified Phillips Curve I: $\mathbf{\pi_t = \pi_{t-1}+(m+z)-\alpha u_t}$ \hspace{1.3in} $\pi_{t-1}$: inflation in period t-1 \newline 
+
+the modified Phillips Curve II: $\mathbf{\pi_t - \pi_{t-1} = - \alpha (u_t -u_n)}$ \newline
+
+the modified Phillips Curve III: $\mathbf{\pi_t - \pi_{t-1} = \frac{\alpha}{L} (Y_t-Y_n)}$ \newline
+
+the Okun Law: $\mathbf{Y_t-Y_n = -L*(u_t-u_n)}$ \newline
+
+Inflation Targeting: $\mathbf{\pi_t = \pi^*-\alpha(u_t-u_n)}$ \hspace{.8in} $\pi^*$: inflation target; $i^*$: target nominal interest rate \newline
+
+The Taylor Rule: $\mathbf{i_t = i^* + \alpha (\pi_t - \pi^* ) - \beta(u_t - u_n)}$ 
+\hspace{.7in} $i_t$: the nominal policy rate; $\alpha, \beta$: parameters
+
+
+
+
+

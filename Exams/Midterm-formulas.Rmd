@@ -1,0 +1,75 @@
+---
+output: pdf_document
+header-includes: 
+  - \usepackage[utf8]{inputenc}
+  - \usepackage{graphicx}
+  - \usepackage{caption}
+  - \usepackage[margin=1in]{geometry}
+  - \usepackage{amsmath,amssymb}
+  - \usepackage{multicol}
+  - \usepackage{array}
+  - \usepackage{tabulary}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\newcommand{\class}{EC 313, Summer 2019}
+\newcommand{\term}{Xiang LI (GE)}
+\newcommand{\examnum}{Midterm}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{\class} & \textbf{Name: } & \makebox[2in]{\hrulefill}\\
+\textbf{\term} &&\\
+\textbf{\examnum} & \textbf{UO ID: } & \makebox[2in]{\hrulefill}\\
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+
+
+
+\textbf{FORMULAS}
+
+real GDP per person: $\mathbf{\frac{Y_t}{population}}$ \hspace{3.3in} $Y_t$: real GDP at t 
+
+real GDP growth: $\mathbf{\frac{Y_t-Y_{t-1}}{Y_{t-1}}}$ \hspace{3.3in} $Y_{t-1}$: real GDP at t-1
+
+GDP deflator: $\mathbf{P_t = \frac{nGDP}{rGDP}=\frac{\$Y_t}{Y_t}}$ \hspace{3.3in} $\$Y_t$: nominal GDP
+
+inflation rate: $\mathbf{\pi_t=\frac{P_t-P_{t-1}}{P_{t-1}}}$ 
+
+labor force: $\mathbf{L=N+U}$ \hspace{2.7in} $U$: unemployment; $N$: empolyment
+
+unemployment rate: $\mathbf{u=\frac{U}{L}}$  
+
+participation rate: $\mathbf{\frac{L}{population}}$
+
+production/outoput/supply/GDP: $\mathbf{Y=C+I+G}$  \hspace{.2in} $C$: consumption; $I$: investment; $G$: gov't spending
+
+demand: $\mathbf{Z \equiv C+I+G}$   
+
+consumption: $\mathbf{C = c_0 + c_1 \times Y_D}$
+
+disposable income: $\mathbf{Y_D= Y-T}$ \hspace{3.3in} $Y$: income; $T$: tax
+
+goods market equilibirum: $\mathbf{Y=\frac{1}{1-c_1}[c_0+I+G-c_1T]}$
+
+demand for money: $\mathbf{M^d=\$Y \times L(i)}$
+
+supply for money: $\mathbf{M^s=M}$
+
+money market equilibirum: $\mathbf{\frac{M}{P}=YL(i)}$
+
+IS relation: $\mathbf{Y=C(Y-T)+I(Y,i)+G}$
+
+LM relation: $\mathbf{i=\bar{i}}$
+
+real interest rate: $\mathbf{r_t = i_t - \pi^e_{t+1}}$  \hspace{1.4in} $i_t$: nominal interest rate; $\pi^e_{t+1}$: expected inflation
+
+risk premium: $\mathbf{x=(1+i)\frac{p}{1-p}}$ \hspace{.8in} $i$: interest rate on risk-free borrowing; $p$: probability of default
+
+extended IS relation: $\mathbf{Y=C(Y-T)+I(Y,r+x)+G}$ \hspace{.8in} $r$: real interest rate; $x$: risk premium
+
+extended LM relation: $\mathbf{r=\bar{r}}$ \hspace{3.9in} $\bar{r}$: policy rate
+

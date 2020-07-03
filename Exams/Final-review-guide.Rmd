@@ -1,0 +1,273 @@
+---
+output: pdf_document
+header-includes: 
+  - \usepackage[utf8]{inputenc}
+  - \usepackage{graphicx}
+  - \usepackage{caption}
+  - \usepackage[margin=1in]{geometry}
+  - \usepackage{amsmath,amssymb}
+  - \usepackage{multicol}
+  - \usepackage{array}
+  - \usepackage{tabulary}
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\newcommand{\class}{EC 313, Summer 2019}
+\newcommand{\term}{Xiang LI (GE)}
+\newcommand{\examnum}{Midterm - Review Guide}
+
+\noindent
+\begin{tabular*}{\textwidth}{l @{\extracolsep{\fill}} r @{\extracolsep{6pt}} l}
+\textbf{\class} & \textbf{Name: } & \makebox[2in]{\hrulefill}\\
+\textbf{\term} &&\\
+\textbf{\examnum} & \textbf{UO ID: } & \makebox[2in]{\hrulefill}\\
+\end{tabular*}
+\rule[2ex]{\textwidth}{2pt}
+
+This guide is intended to give you a broad overview of the topics covered in the course to help you prepare for the final exam. The items listed are not necessarily an exhaustive list of the vocabulary or ideas discussed, but understanding these topics thoroughly will provide you with a good basis for success on the final exam.
+
+Topics are generally listed in the order in which they were covered in class.
+  
+  
+\vspace{.5in}
+# General Methodology for Economic Inquiry
+- Endogenous vs. Exogenous Variables
+- How to Solve for Equilibrium
+  - Using Algebra
+  - Using Graphs
+- Note: When thinking about equilibrium in any of the models in this class, it is important that you understand how to solve for equilibrium using all methods above.
+  - If we don’t assume explicit functional forms (e.g. our linear consumption function), solving for equilibrium algebraically might be impossible. If this is the case on a test, I will make it clear that is the case.
+  - If I ask you to solve for equilibrium in a particular way but you feel like you can only answer it using a different method, then use the method you understand! You can at least get partial credit
+    
+    
+\vspace{.5in}
+# The Goods Market (Chapter 3)
+- Composition of GDP
+- Demand for Goods
+  - Consumption as a function of disposable income
+    - Marginal Propensity to Consume
+  - Functional Form assumptions for other variables
+    - Endogenous Investment (Q5 in practice problem)
+    - Endogenous Taxes (Q2 in practice problem)
+  - Goods Market Equilibrium
+    - Equilibrium Condition: income = production = demand (Y = Z)
+    - Solving for Equilibrium Output Algebraically
+      - Autonomous Spending
+      - Multiplier
+    - Solving for Equilibrium Output Graphically
+      - Income = Production is a 45-degree line
+      - Demand is a line with slope less than 1
+      - Keep in mind the slope might not always just be the marginal propensity to consume as it was in class! In both the endogenous investment and endogenous taxes examples the slope was different.
+      - Equilibrium is where the lines cross
+    - Changes from one equilibrium to another
+      - From a change in autonomous spending or the multiplier
+      
+      
+\vspace{.5in}
+# Financial Markets (Chapter 4)
+- Definitions of Money and Bonds
+- Tradeoffs between holding wealth as money or bonds
+  - The interest rate as the opportunity cost of money
+- Money Demand
+  - Relationship to GDP/output/income
+  - Relationship to interest rates
+- Exogenous Money Supply
+- Money Market Equilibrium
+  - Equilibrium Condition: Money Demand = Money Supply
+  - Analyzing equilibrium shifts
+    - Change in GDP
+    - Change in the money supply
+  - Open Market Operations
+    - Expansionary vs. Contractionary
+    - Interest rates as the percentage increase in value of an asset
+    - Nagative relationship between bond prices and interest rates
+    - How buying and selling bonds affects the price of bonds and thus the interest rate
+    - How interest rate targeting is achieved through modifying the money supply with open market operations
+    
+    
+    
+    
+\vspace{.5in}
+# The IS-LM Model (Chapter 5)
+- The IS-LM model brings together the equilibriums in the money market and in the goods market to determine what output and the interest rate are in general equilibrium
+  - Money Market: output is exogenous and interest rates are endogenously determined
+  - Goods Market: interest rates are exogenous and output is determined endogenously
+- The LM Relation
+  - Understanding the money market in terms of real money demand and real money supply
+  - The LM relation, $i=\bar{i}$
+  - How the central bank adjusts the money supply to keep equilibrium interest rates at the target level
+  - Graphing the LM curve on a graph of i against Y
+    - Every point on the line represents a unique equilibrium in the money market
+  - Shiting the LM curve 
+- The IS Relation
+  - Investment demand depends on sales (Y) positively and the interest rate (i) negatively
+  - Each different interest rate implies a different equilibrium output in the goods market
+  - The IS curve is negatively sloped on a graph of i against Y
+    - Each point on the curve represents a unique equilibrium in the goods market
+  - Shifting the IS curve
+    - Changes in taxes, government spending, consumer or business confidence
+      - Anything that changes the relationship between interest rates and output in the goods market
+- when both the goods market and the money market are in equilibrium
+  - Graphically it occurs when the IS and LM curves intersect
+- Expansionary vs. Contractionary monetary and fiscal policies
+- Change some exogenous variable
+  - How does this affect the relationship between i and Y as given by the IS and LM curves?
+  - Shift the curves accordingly
+  - Find the new equilibrium after all curve shifts
+  - Talk about affects to the components of demand
+- Fiscal Policy (changes to government spending or taxes)
+  - Functions through the goods market
+- Monetary Policy (changing the target interest rate)
+  - Functions through the money market
+- Policy Mixes
+
+# Financial Instability and the Extended IS-LM Model (Chapter 6)
+- Real Interest Rate
+  - equal to the nominal interest rate minus expected inflation
+  - Bounded below by the negative of expected inflation
+  - How the central bank can target the real interest rate by manipulating the nominal rate
+  - Liquidity Traps
+    - the nominal interest rate can’t fall below zero (the zero lower bound)
+    - The restrictions this places on the effectiveness of monetary policy
+    - Analyzing liquidity traps with a money market graph
+    - Note: In this class, we assume that the zero lower bound always holds. Do not report a negative interest rate as an equilibrium rate. If the interest rate would be negative, the zero lower bound implies that it would be 0% instead.
+- Risk Premium
+  - Determined by probability of default and lenders’ risk aversion
+- Extended IS-LM
+  - Investment depends on the borrowing rate, which is the real interest rate plus the risk premium
+  - The central bank targets a real interest rate
+  - Changes in the risk premium shift the IS curve
+  - The zero lower bound implies that monetary policy can’t push the real interest rate below the negative of expected inflation
+  
+  
+# The Labor Market (Chapter 7)
+- understand how output changes lead to price level changes
+- Know how the population is decided up into those in and out of the labor force and how the labor force is further divided
+- Wage Determination
+  - Reservation wages
+  - Negative relationship between the current unemployment rate and the wage that workers are willing to accept
+  - Bargaining power explanation for wage setting relationship
+  - Role of the expected price level on determining wages
+- Price Determination
+  - We assume a production function where labor is the only input and that labor has constant labor productivity
+  - The production function implies that the marginal cost of production is the wage
+  - Firms use monopoly power to charge a markup over marginal cost
+    - The markup is the percentage increase in prices above the wage
+    - As monopoly power increases, the markup increases
+  - The markup can also represent changes in non-labor input costs
+    - e.g. if the price of oil increases, we can say that the markup increases
+  - The unemployment rate does not affect firm’s willingness to pay for labor
+- Labor Market Equilibrium
+  - We assume that expected price level equals the true price level
+  - Labor market equilibrium occurs when the real wage implied by the PS relation is equal to the real wage implied by the WS relation
+  - The natural unemployment rate is the equilibrium unemployment rate
+  - Drawing this on a graph of real wage against the unemployment rate
+  - Policy and labor market changes that shift the PS and WS curves
+  - Simultaneous changes that shift both the PS and WS curves
+
+
+# The Phillips Curve (Chapter 8)
+- Deriving the **theoretical Phillips Curve** from the WS and PS relations
+- Properties of the Phillips Curve:
+  - When expected inflation increases, actual inflation increases
+  - Increases in the markup or increases in $z$ (factors that increase bargaining power) lead to an increase in inflation
+  - Increasing unemployment leads to a decrease in inflation
+- Models of Inflation Expectations
+  - Static Expectations
+    - Expected inflation is equal to some value that does not change over time, such as the long run average of inflation
+    - Results in the **Original Phillips Curve**
+    - Implies a negative relationship between the unemployment rate and the **level** of inflation
+    - Consistent with U.S. data from the 1960’s
+    - Can be explained through a wage-price spiral 
+  - Adaptive Inflation Expectations
+    - Expected inflation is at least partially dependent on previous inflation
+    - Inflation expectations are **persistent** – high inflation last year means people expect high inflation this year
+    - Results in the **Modified Phillips Curve**
+    - Implies a negative relationship between the unemployment rate and the **change** in the inflation rate
+    - Can be explained as an acceleration of the wage-price spiral
+- Reasons why the original Phillips curve broke down in the 1970’s
+- The Phillips Curve and the natural rate of unemployment
+  - When inflation is equal to expected inflation, the labor market is in equilibrium
+  - Applying this to the Phillips curve we can solve for the natural rate of unemployment
+  - Writing the Phillips curve as a function of the deviation of the unemployment rate from the natural rate
+    - What this implies under different inflation expectations
+  - Changing labor market conditions lead to temporary deviations from the natural unemployment rate, leading to changes in inflation
+
+
+# The IS-LM-PC Model (Chapter 9)
+- Modifying the Phillips Curve to include output
+  - Definition of potential output
+  - Derivation of the relationship between unemployment and the output gap
+    - Higher unemployment implies lower output
+  - Combining this with the Phillips Curve to get inflation as a function of the output gap
+    - Higher output implies higher inflation
+  - Graphing this PC curve with the deviation in inflation from is expectation on the vertical axis and real output Y on the horizontal axis
+    - Finding potential output on this graph
+- Understanding the output gap as the business cycle – deviations in output from its potential trend
+- Medium Run Equilibrium
+  - Drawing the IS-LM-PC model
+    - IS-LM graph directly above a graph of the PC curve
+  - Medium run equilibrium occurs at potential output, when the PC curve crosses the horizontal axis
+  - If the IS-LM graph implies a different level of output, then the economy is not in medium run equilibrium
+    - Inflation is different from its expectation
+    - Because the central bank cares about inflation, it will act to restore output to potential
+    - Medium-run equilibrium is achieved largely because of inflation conscious central banks
+  - the natural rate of interest is the real interest rate that achieves medium run equilibrium
+    - It is determined both by the PC curve and the IS curve
+- Role of inflation expectations
+  - Static inflation expectations
+    - If the economy is out of medium run equilibrium, the **level** of inflation is different from its expectation
+    - In returning the economy to medium run equilibrium, the inflation rate adjusts back to its expectation
+    - Makes monetary policy easier
+  - Adaptive Inflation Expectations
+    - If the economy is out of medium run equilibrium, the **rate** of inflation is **changing**
+    - In returning the economy to medium run equilibrium, the inflation rate stabilizes a **different level**
+    - If the central bank cares about the **level** of inflation, they have to push output away from potential to cause inflation to change back to its target.
+- Deflationary Spirals
+  - Occur when the natural rate of interest is too low for the central bank to achieve
+  - Decreasing inflation further constrains the central bank
+  - Leads to a worsening recession
+  - Relies on adaptive expectations
+- Shocks to the IS-LM-PC model
+  - Demand Shocks
+    - Shocks to the IS-LM part of the model are demand shocks
+    - Push economy out of medium run equilibrium
+    - Result in changes to inflation
+    - The central bank reacts (if possible) to bring the economy back to medium run equilibrium
+    - Demand shocks have no effect on potential output
+  - Supply Shocks
+    - Represented as changes to the structure of the labor market
+    - Cause the PC curve to shift
+    - Medium run equilibrium changes, so in the short run inflation begins to change
+    - The central bank reacts to bring the economy back to equilibrium
+    - Economy settles at a different level of potential output
+  - Discuss supply and demand shocks’ effects on the composition of GDP, unemployment, and real wages
+  - composition of GDP, unemployment, and real wages
+  
+    
+    
+  
+# Monetary Policy: A Summing Up (Chapter 23)
+
+- From Monetary Targeting to Inflation Targeting
+  - twofold goals of monetary policy (dual mandate)
+    - to maintain low and stable inflation
+    - to stabilize output around potential - to avoid or at least limit
+recessions or booms
+  - Monetary Targeting
+    - because of the shifts in the demand for money, the relation of the interest rate to the money supply in the short run, and the relation between money growth and inflation in the medium run is poor
+  - Inflation Targeting
+    - targeting inflation is equivalent to targeting output 
+    - central banks follow the Taylor Rule to set the policy rate so as to achieve the target rate of inflation: $i_t = i^* + \alpha (\pi_t - \pi^*) - b(u_t - u_n)$
+    - denotations of all variables in the Taylor rule 
+- Unconventional Monetary Policy
+  - the goal is to decrease the risk premium $x$, since $r$ cannot fall below its lower bound
+  - the central bank raises the risk premiums on longer-term assets by purchasing them 
+  - QE1, QE2, QE3
+
+
+    
+
