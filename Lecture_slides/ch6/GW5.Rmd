@@ -1,0 +1,53 @@
+---
+title: "Group Work V"
+author: "Xiang LI"
+date: "7/30/2019"
+header-includes:
+    - \usepackage{tikz}
+    - \usetikzlibrary{arrows,calc}
+    - \usepackage{relsize}
+    - \usetikzlibrary{decorations.pathreplacing}
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\textbf{Name:}\makebox[2in]{\hrulefill} 
+&nbsp; 
+\textbf{UO ID:}\makebox[2in]{\hrulefill}
+&nbsp; 
+
+
+(1) Graphically show what happens when the probability of default increases.
+
+\begin{tikzpicture}[scale=1.1]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+
+(2): Graphically show how a monetary policy can take the output to its initial level
+
+\begin{tikzpicture}[scale=1.1]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+\newpage
+(3): Graphically show how a fiscal policy can take the output to its initial level
+
+\begin{tikzpicture}[scale=1.1]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+
+

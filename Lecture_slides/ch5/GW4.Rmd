@@ -1,0 +1,61 @@
+---
+title: "Group Work IV"
+author: "Xiang LI"
+date: "7/29/2019"
+header-includes:
+    - \usepackage{tikz}
+    - \usetikzlibrary{arrows,calc}
+    - \usepackage{relsize}
+    - \usetikzlibrary{decorations.pathreplacing}
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\textbf{Name:}\makebox[2in]{\hrulefill} 
+&nbsp; 
+\textbf{UO ID:}\makebox[2in]{\hrulefill}
+&nbsp; 
+
+
+Q1: Deriving the IS Curve
+
+\begin{tikzpicture}[scale=1.1]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=1.1]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+\newpage
+
+Q2: Graphically show the effects of a fiscal contraction on output and on the interest rate
+
+\begin{tikzpicture}[scale=1.1]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+
+Q3: What are the effects of a monetary expansion on output and on the interest rate?
+
+\begin{tikzpicture}[scale=1.1]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+
+

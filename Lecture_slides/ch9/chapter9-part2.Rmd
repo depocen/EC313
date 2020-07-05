@@ -1,0 +1,628 @@
+---
+title: "EC313: Intermediate Macroeconomics"
+subtitle: "Chapter 9 - PART 2"
+author: "Xiang LI"
+date: "August 12, 2019"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      #countdown: 120000
+    css: [default, metropolis, metropolis-fonts]
+---
+
+<style>
+  .large { font-size: 200% }
+  .small { font-size: 50% }
+</style>
+
+<style type="text/css">
+.remark-slide-content {
+    font-size: 25px;
+    padding: 1em 1em 1em 1em;
+}
+</style>
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(knitr)
+library(tidyverse)
+# library(gdtools)
+# library(hrbrthemes)
+library(plotly)
+library(lubridate)
+library(kableExtra)
+library(htmlTable)
+library(dplyr)
+library(ggplot2)
+```
+
+
+# Chapter 9: From the Short to the Medium Run: the IS-LM-PC Model
+
+1. [The IS-LM-PC Model](#The IS-LM-PC Model)
+
+2. [Medium Run Equilibrium](#Medium Run Equilibrium)
+
+3. [Expectations and Deflation](#Expectations and Deflation)
+
+4. [Supply Shocks](# Supply Shocks)
+
+
+
+
+
+
+
+
+
+<!---
+# The Business Cycle
+
+How is the **output gap** related to the **growth of real GDP** over time?
+
+- The output gap accounts for the **business cycle**: **fluctuations** of output around its **long-run trend**
+
+- If the output gap is positive, that means the economy is (or was recently) growing at a faster rate than the long term average. We could say that economic activity is **expansionary**
+
+- If the output gap is negative, that means the economy is (or was recently) growing at a slower rate than the long term average. We could say that economic activity is **recessionary (or contraction)**
+
+- **Note**: A negative output gap doesn't necessarily imply that output **growth** is negative. It's possible that the **level** of output is below the potential level, but has been increasing at a small positive rate
+
+
+
+# The Business Cycle
+
+<img src="../ch9/image/6.png" width=500>
+
+https://fred.stlouisfed.org/series/GDPC1
+- choose level as units: the curve declines during recessions
+- choose percentage change as units: the curve is below 0% during recessions
+--->
+
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# Expectations and Deflation
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+---
+# Static Inflation Expectations 
+
+<img src="../ch9/image/2.png" width=500>
+
+- The Philips Curve: $\pi - \pi(-1) = \frac{\alpha}{L}(Y-Y_n)$
+
+--
+
+- This PC curve is developed under adaptive expectations, $\pi^e=\pi(-1)$
+
+--
+
+- How is it affected under static inflation expectations, $\pi^e=\bar{\pi}$?
+
+--
+
+- $\pi - \bar{\pi} = \frac{\alpha}{L}(Y-Y_n)$
+
+
+---
+# Static Inflation Expectations 
+
+<img src="../ch9/image/7.png" width=400>
+
+- A positive output gap generates a **higher level** of inflation rather than an **increase** in inflation
+- initially: at $A$, $Y>Y_n$, inflation is higher than expected inflation $\pi>\bar{\pi}$
+
+
+---
+# Static Inflation Expectations 
+
+<img src="../ch9/image/7.png" width=400>
+
+- As the central bank increases the policy rate to decrease output to its natural level, and the economy moves along the IS curve from $A$ to $A\prime$
+
+
+---
+# Static Inflation Expectations 
+
+<img src="../ch9/image/7.png" width=400>
+
+- eventually: at $A\prime$, the policy rate is equal to $r_n$,  output is back to potential, and inflation is back to the level of $\bar{\pi}$
+
+
+---
+# Static Inflation Expectations 
+
+- Under static expectations, it becomes a relationship between output and the deviation of inflation from its expected level. It says that for a higher level of output, there is a higher level of inflation.
+
+--
+
+- To return inflation to the level of $\bar{\pi}$ , there is no need in this case for the central bank to increase the rate **beyond** $r_n$ and push the economy past potential output, as was the case before (point C)
+
+--
+
+- Thus, the central bank has an easier job
+
+--
+
+- So long as inflation expectations remain **anchored** (say, 2%, the level the Fed anchors) to $\bar{\pi}$, it does not need to compensate for the initial boom by a recession later
+
+
+---
+# Deflationary Spiral
+
+<img src="../ch9/image/4.png" width=300>
+
+- If output is too high, the central bank increases the policy rate until output is back up to potential. If output is too low, the central bank decreases the policy rate until output is back up to potential
+
+
+---
+# Deflationary Spiral
+
+- Our description of the adjustment has made the adjustment to the medium-run equilibrium look relatively easy. 
+
+--
+
+- This is however too optimistic a pic-ture and things can go wrong. The reason is the combination of the zero lower bound and deflation
+
+--
+
+- If monetary policy is constrained by the **zero lower bound** and the economy experiences **deflation**, the economy can fall into a **deflationary spiral or deflation trap**.
+
+
+
+---
+# Deflationary Spiral
+
+Suppose the economy is initially in a recession: at $A$, $Y$ is far below $Y_n$, indicating a negative output gap; $\pi<\pi(-1)$, indicating that inflation is decreasing
+
+<img src="../ch9/image/8.png" width=300>
+
+
+
+---
+# Deflationary Spiral
+
+What the central bank should do in this case appears straightforward. It should decrease the policy rate from $r$ to $r_n$, until output has increased back to its natural level $Y_n$, and inflation is stable again.
+
+<img src="../ch9/image/8.png" width=300>
+
+
+---
+# Deflationary Spiral
+
+Because the economy is sufficiently depressed, the real policy rate needed to return output to its natural level is negative, $r_n<0$. 
+
+<img src="../ch9/image/8.png" width=300>
+
+
+---
+# Deflationary Spiral
+
+However, the zero lower bound constraint make it impossible to achieve this negative real policy rate
+
+--
+
+- $i=r+\pi^e$, and $i>0$
+
+--
+
+- $r+\pi^e > 0$ or $r>-\pi^e$ must holds
+
+--
+
+- Lower bound of real rate is the negative of expected inflation, so as the real policy rate
+
+--
+
+- If expected inflation is high enough, say 5 percent, then real policy rate cannot go below -5 percent
+
+--
+
+- But, if expected inflation is low, say 0 percent, then real policy rate cannot go below 0 percent. In this case, the lowest possible real policy rate is 0 percent
+
+
+
+
+
+
+---
+# Deflationary Spiral
+
+In order to understand what economists call a **deflation spiral**, or a **deflation trap**, let's look at the same situation again. This time, let's assume inflation is equal to zero to start with
+
+--
+
+- the economy is initially in a recession $\implies$
+
+--
+
+- the central bank can decrease the nominal policy rate to push output up
+
+--
+
+- However, the central bank can only decrease the nominal policy rate down to 0 percent, with associated level of output below potential, $Y<Y_n$
+
+--
+
+- because $\pi-\pi(-1)=\frac{\alpha}{L}(Y-Y_n)<0$ indicates $\pi<\pi(-1)$, **inflation is decreasing**
+
+
+---
+# Deflationary Spiral
+
+- therefore, inflation become negative (deflation occurs)
+
+--
+
+- because the lower bound of real policy rate is $-\pi^e$, as inflation decreases, the lower bound of real policy rate increases 
+
+--
+
+- meaning that the central bank has no choice but to raise real policy rates
+
+--
+
+- higher real policy rates indicates higher borrowing costs, causing investment and consumption to decline
+
+--
+
+- declining in demand leads to a further reduction to output, widening the negative output gap
+
+
+
+---
+# Deflationary Spiral
+
+- the wider negative output gap means that $Y-Y_n<0$ and $(Y-Y_n) \downarrow$
+
+--
+
+- Because $\pi-\pi(-1)=\frac{\alpha}{L}(Y-Y_n)$, the wider negative output gap causes inflation to decrease even faster, $\pi-\pi(-1)<0$ and $[\pi-\pi(-1)] \downarrow$
+
+--
+
+- Monetary policy is further constrained, further reducing output...
+
+--
+
+- Reduced output leads to greater deflation and the spiral continues...
+
+--
+
+- There is little the central bank can do, and the economy goes from bad to worse
+
+
+
+---
+# Deflationary Spiral
+
+<img src="../ch9/image/8.png" width=300>
+
+As indicated by the arrows, instead of converging to the medium-run eq., the economy moves away from it, with **output steadily decreasing and deflation steadily becoming larger**
+
+
+---
+# Deflationary Spiral
+We did see evidence of a deflationary spiral during the Great Depression
+
+- (3rd column) to prop up economy, nominal policy rate, measured by the one-year Treasury-bill rate, decreased from 5.3% in 1929 to 2.6% in 1933
+
+<img src="../ch9/image/11.png" width=500>
+
+- (1st column) unemployment increased
+- (2nd column) output decreased: negative output growth rate 
+- (4th column) inflation became negative and kept decreasing 
+- (5th column) real policy rate increased
+
+
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# Supply Shocks
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+---
+# Supply Shocks
+
+- We have discussed how changes to **aggregate demand** (represented by changes in the IS-LM equilibrium) affect medium-run outcomes. 
+
+--
+
+- But we left potential output and thus the **position of the PC curve** unaffected. What about changes to **aggregate supply**?
+
+--
+
+- Changes to aggregate supply can be represented as changes in the **labor market**, as that is the primary market determining how much firms are able to produce.
+
+
+---
+# Supply Shocks
+
+- Changes in the **markup** or workers' **bargaining power** can affect the **natural rate of unemployment** and thus the level of **potential output**.
+
+--
+
+- Let's consider the effect of **an increase in the price of oil** on our macroeconomic variables.
+
+--
+
+- An increase in the price of oil can be thought of as **increasing the markup** because it is a non-labor cost of production. To remain profitable, firms have to charge higher prices while keeping wages the same.
+
+
+---
+# Supply Shocks
+
+<img src="../ch9/image/9.png" width=500>
+
+- This plot represents the Nominal and the Real Price of Oil, 1970–2015
+- oil price in dollars: the price of a barrel of oil in dollars (**nominal** price)
+- real oil pruce index: the dollar price of oil divided by the price level CPI (**real** price)
+
+
+---
+# Supply Shocks
+
+<img src="../ch9/image/9.png" width=500>
+
+- Over the last 40 years, there have been two sharp increases in the **real** price of oil, the first in the 1970s and the second in the 2000s
+- What was behind the two large increases? 
+
+
+---
+# Supply Shocks
+
+- In the 1970s, the main factors were the formation of OPEC (the Organization of Petroleum Exporting Countries), a cartel of oil producers that was able to act as a **monopoly** and increase prices, and disruptions because of wars and revolutions in the Middle East. 
+
+--
+
+- In the 2000s, the main factor was quite different, namely the fast growth of emerging economies, in particular China, which led to a rapid increase in the world **demand** for oil and, by implication, a steady increase in real oil prices. 
+
+
+---
+# Supply Shocks
+
+<img src="../ch9/image/9.png" width=500>
+
+- The crisis then led to a dramatic drop in late 2008
+- Since 2014, the price has again dropped to pre-2000 levels.
+- What was behind the two large decreases? 
+
+
+---
+# Supply Shocks
+
+- The sudden drop in the price at the end of the 2008 was as a result of the crisis, which led to a large recession, and in turn to a large and sudden decrease in the **demand** for oil. 
+
+--
+
+- The causes of the more recent drop since 2014 are still being debated. Most observers believe that it is a combination of increased **supply** because of the increase in shale oil production in the United States and the partial breakdown of the OPEC **cartel**
+
+
+
+---
+# Group Work IX
+
+Q1: Initially, the economy is the medium-run equilibrium. suppose that there is a large **increase in oil prices**. Oil or oil based products are non-labor inputs to many production processes. Given wages, an increase in the price of oil increases the cost of production, forcing firms to increase prices to maintain the same profit rate. Hence, firms need to **increase the markup** on the price of their goods. What would we expect the short-and medium-run effects of such increases to be? 
+
+
+---
+# Group Work IX
+
+**Step 1**: In the first plot, label variables and draw PS-WS curves. Label the eq. by $A$. Label the eq. unemployment rate is denoted by the natural rate of unemployment $u_n$.
+
+**Step 2**: In the second plot, label variables and draw IS-LM curves. Label the eq. by $A$. Because the economy is initially in the medium-run eq., the eq. level of output that you label should be the potential output $Y_n$, and the eq. real rate that you label should be natural rate of interest $r_n$.  
+
+**Step 3**: In the third plot, label variables and draw PC curve and the flat line that represents 0 change in inflation rate. Label the eq. by $A$. Make sure the $Y_n$ is labelled where PC and the flat line cross. Also make sure the $Y_n$ is aligned with the the $Y_n$ you have labelled in the second plot. 
+
+
+---
+# Group Work IX
+
+**Step 4**: the natural rate of unemployment is determined entirely by the intersection of PS-WS curves. Using PS-WS plot, decide what happens to the natural rate of unemployment 
+
+- PS relation: $\frac{W}{P}=\frac{1}{1+m}$
+
+- WS relation: $\frac{W}{P}=F(u,z)$
+
+- WS not affected by change in $m$
+
+- Decide how you gonna shift PS curve. Label the new eq. point by $A \prime$, and the new natural rate of unemployment by $u_n \prime$
+
+
+
+
+---
+# Group Work IX
+
+- PS relation: $\frac{W}{P}=\frac{1}{1+m}$
+- WS relation: $\frac{W}{P}=F(u,z)$
+
+<img src="../ch9/image/10.png" width=400>
+
+- by PS relation, markup $m \uparrow$ $\implies$ real wage $\frac{W}{P} \downarrow$ 
+- by WS relation, real wage $\frac{W}{P} \downarrow \implies u_n \uparrow$
+- $N_n = Y_n = L(1-u_n)$, we have $u_n \uparrow \implies N_n \downarrow \implies Y_n \downarrow$
+
+
+
+---
+# Group Work IX
+
+- Putting things together: An increase in the price of oil leads to a decrease in potential output
+
+- In the **new MEDIUM run**, we should expect to see a higher natural rate of unemployment $u_n \prime$ associated with a lower natural/potential output $Y_n \prime$
+
+- We have seen $u_n \prime$ by shifting PS-WS curves. Let's keep shifting curves until we see $Y_n \prime$
+
+
+
+---
+# Group Work IX
+
+**Step 5**: potential output $Y_n$ is determined entirely by the intersection of PC curve and the flat line that represents 0 change in inflation rate.
+
+- PC: $\pi_t - \pi_{t-1} = \frac{\alpha}{L} (Y_t - Y_n)$
+
+- Decide how you gonna shift PC curve, and label $Y_n \prime$
+
+
+
+---
+# Group Work IX
+
+- **Question**: where should you label $A\prime$ in the second and third plot? 
+
+- the level of output is determined entirely by the intersection of IS-LM curves. 
+  - IS: $Y=C(Y-T)+I(Y, r+x)+G$
+  - LM: $r=\bar{r}$
+
+- If the IS curve does not shift and the central bank does not change the **real** policy rate so that there is no shift in LM curve either, then output does not change
+
+- Therefore, because at the moment, neither fiscal nor monetary policy is adopted, $A\prime$ is the same as $A$
+
+
+---
+# Group Work IX
+
+<img src="../ch9/image/12-1.png" width=300>
+
+- the same level of output is now associated with higher inflation, because at $A\prime$,  $\pi-\pi(-1)>0$ (the price of oil leads firms to increase their prices, so inflation is higher)
+
+
+---
+# Group Work IX
+
+<img src="../ch9/image/12-1.png" width=300>
+
+- $A\prime$ is **short run eq.** (where LM intersects IS)
+- In the short run, output does not change, but inflation is higher
+
+
+---
+# Group Work IX
+
+- Turn to the dynamics. If the central bank were to leave the policy rate unchanged, at $A\prime$, output would continue to exceed the now lower level of potential output $Y_n \prime$, and inflation would keep increasing.
+
+- Thus, at some point, the central bank will increase the policy rate to stabilize inflation
+
+- when inflation eventually becomes stable again, the economy reaches the new medium run eq., where the natural output is $Y_n \prime$, and natural rate of unemployment is $u_n \prime$
+
+**Step 6**: decide how you gonna shift the LM curve to adjust to the new medium run equilibrium. Label the new medium run eq. $A\prime\prime$ in both the second and the third plot. 
+
+
+---
+# Group Work IX
+
+<img src="../ch9/image/12-2.png" width=300>
+
+- the old medium-run eq.: $A$
+- the new medium-run eq.: $A\prime\prime$
+- Because potential output is lower, the increase in the price of oil is reflected in a permanently lower level of output
+
+
+
+---
+# Group Work IX
+
+<img src="../ch9/image/12-2.png" width=300>
+
+- the short-run eq.: $A\prime$
+- moving along $PC\prime$ from $A\prime$ to $A\prime\prime$: **lower output, higher inflation**
+- this is called **stagflation** (stag for stagnation, and flation for inflation)
+
+
+
+---
+# Supply Shocks
+
+This process raises a number of issues. First, IS curve does not shift. In fact, there are many channels through which the increase in the price of oil may affect demand and shift the IS curve. 
+
+- The higher price of oil may lead firms to cancel some investment projects or shift to less energy-intensive equipment. 
+
+- The increase in the price of oil also redistributes income from oil buyers to oil producers. Oil producers may spend less than oil buyers, leading to a decrease in demand
+
+- So it may well be that the IS curve shifts to the left, leading to **a decrease in output not only in the medium run, but in the short run** as well. 
+
+
+---
+# Supply Shocks
+
+A second issue has to do with the evolution of inflation. 
+
+- Note that, until output decreases to its new lower potential level, inflation continues to increase. Thus, when the economy reaches point $A\prime\prime$, inflation is higher than it was before the increase in the price of oil. 
+
+- If the central bank wants to return inflation to its initial level (say, 2%, the level the Fed anchors), it must decrease output below potential for some time to decrease inflation. 
+
+- In this case, the decrease in output along the adjustment process will exceed the medium-run decrease for some time. 
+
+- Put more simply, **the economy may go through a large recession**, with only a partial recovery
+
+
+---
+# Supply Shocks
+
+The third issue is related the formation of inflation expectations. Suppose that instead of assuming that inflation will be equal to last year’s inflation (adaptive), wage setters expect inflation to be constant (static). 
+
+- In this case, output above potential leads to high rather than increasing inflation.
+
+- Then, as output declines to its lower potential level, inflation declines as well.
+
+- When the economy reaches point $A\prime\prime$, inflation is back to where it was before the increase in the price of oil.
+
+- There is **no need for the central bank to further decrease output to decrease inflation**
+
+
+
+---
+# Supply Shocks
+
+The effects of an increase in the price of oil on output and the price level are smaller than they used to be:
+
+<img src="../ch9/image/13.png" width=400>
+
+- The first hypothesis is that, today, U.S. workers have less bargaining power than they did in the 1970s. Thus, as the price of oil has increased, workers have been more willing to accept a reduction in wages, **limiting the increase in the natural unemployment rate** (**WS curve shifts leftwards**)
+
+---
+# Supply Shocks
+
+
+- The second hypothesis has to do with monetary policy. When the price of oil increased in the 1970s, inflation expectations were not anchored. Seeing the initial increase in inflation as a result of the increase in the price of oil, wage setters assumed that inflation would continue to be high, and thus asked for higher nominal wages, which led to **further increases in inflation**. 
+
+- In contrast, in the 2000s, inflation was much more anchored (say, 2%, the level the Fed anchors). Seeing the initial increase in inflation, wage setters assumed it was a one-time increase and did not change their expectations of future inflation as much as they would have in the 1970s. Thus, the effect on inflation was much more muted
+
+
+
+
+
+---
+# IS-LM-PC Recap
+
+- The IS-LM-PC model allows us to analyze the short-run and medium-run equilibrium effects of both demand and supply shocks to the economy.
+
+- Demand shocks are factors that affect the IS-LM equilibrium, like changes to taxes, government spending, or risk premium 
+
+- Supply shocks are factors that affect a firms ability to produce by affecting the structure of the labor market, such as changes to the markup or bargaining power.
+
+- The economy moves back to medium run equilibrium largely thanks to inflation-conscious central banks.
+
+- The medium-run equilibrium is constantly being pushed around by different shocks. As such, we can think of it as something that the economy trends towards rather than something that is achieved and holds for some time.
+
+- The relationship between inflation and the output gap is largely dependent upon how people create their expectations of inflation.

@@ -1,0 +1,45 @@
+---
+title: "Group Work VI"
+author: "Xiang LI"
+date: "8/6/2019"
+header-includes:
+    - \usepackage{tikz}
+    - \usetikzlibrary{arrows,calc}
+    - \usepackage{relsize}
+    - \usetikzlibrary{decorations.pathreplacing}
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\textbf{Name:}\makebox[2in]{\hrulefill} 
+&nbsp; 
+\textbf{UO ID:}\makebox[2in]{\hrulefill}
+&nbsp; 
+
+
+(1) What happens to the natural rate of unemployment unemployment $u_n$ and the real wage if unemployment benefits increase?
+
+\begin{tikzpicture}[scale=1.1]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+
+(2): What happens to the natural rate of unemployment unemployment $u_n$ and the real wage if markup $m$ increases? 
+
+\begin{tikzpicture}[scale=1.1]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+
+
+
+

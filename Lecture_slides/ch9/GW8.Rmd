@@ -1,0 +1,60 @@
+---
+title: "Group Work VIII"
+author: "Xiang LI"
+date: "8/8/2019"
+header-includes:
+    - \usepackage{tikz}
+    - \usetikzlibrary{arrows,calc}
+    - \usepackage{relsize}
+    - \usetikzlibrary{decorations.pathreplacing}
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\textbf{Name:}\makebox[2in]{\hrulefill} 
+&nbsp; 
+\textbf{UO ID:}\makebox[2in]{\hrulefill}
+&nbsp; 
+\vspace{.3in}
+
+Q1: Initially, the economy is in the short-run equilibirum, i.e. output is above potential. Graphically show what would the central bank do so that there is no longer pressure on inflation. 
+
+\begin{tikzpicture}[scale=1.2]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=1.2]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+\newpage
+Q2: Initially, the economy is in medium run eq., i.e. output is at potential. Assume that the government, which was running a deficit, decides to reduce it by increasing taxes. 
+
+(1) Using the IS-LM-PC model, what effect does this fiscal expansion have on **short run** output, unemployment, interest rates, and inflation?
+
+\begin{tikzpicture}[scale=1.2]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=1.2]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+(2) How would the central bank react to bring the output back to potential? 
+
+

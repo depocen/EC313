@@ -1,0 +1,516 @@
+---
+title: "EC313: Intermediate Macroeconomics"
+subtitle: "Chapter 6"
+author: "Xiang LI"
+date: "July 30, 2019"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      #countdown: 120000
+    css: [default, metropolis, metropolis-fonts]
+---
+
+<style>
+  .large { font-size: 200% }
+  .small { font-size: 50% }
+</style>
+
+<style type="text/css">
+.remark-slide-content {
+    font-size: 25px;
+    padding: 1em 1em 1em 1em;
+}
+</style>
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(knitr)
+library(tidyverse)
+# library(gdtools)
+# library(hrbrthemes)
+library(plotly)
+library(lubridate)
+library(kableExtra)
+library(htmlTable)
+library(dplyr)
+library(ggplot2)
+```
+
+
+# Chapter 6: Financial Markets II: The Extended IS-LM Model
+
+1. [Nominal vs. Real Interest Rate](#[Nominal vs. Real Interest Rate)
+
+2. [Risk Premium](#Risk Premium)
+
+3. [Extended IS-LM](#Extended IS-LM)
+
+
+
+
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# Nominal vs. Real Interest Rate
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+
+---
+# Nominal vs. Real Interest Rate
+
+- You are offered a bond with an interest rate of 10%. Do you buy it?
+
+--
+
+- The answer partly depends on inflation. If inflation is 10% as well,
+than the interest you earn on that bond won't allow you to purchase any
+more goods than you otherwise would have.
+  
+--
+
+- If you knew that inflation would be 10% over the year, then you would have required an interest rate greater than 10%
+
+--
+
+- No one cares only about the number of dollars. People care about what those dollars can buy
+
+--
+
+- In other words, everyone cares about **real** interest rates 
+
+
+---
+# Nominal vs. Real Interest Rate
+
+- **Nominal interest rate**: interest rate that does not take inflation into account
+  - the ones that appear in the newspaper and on bank statements
+  - we do observe
+  
+--
+
+- **real interest rate**: is adjusted for changes in inflation
+  - it reflects more accurately the true cost of borrowing or benefits of lending 
+  - we typically do not observe
+  
+  
+  
+---
+# Nominal vs. Real Interest Rate
+
+- How do we go from nominal interest rates to real interest rates?
+
+- We must adjust the nominal interest rate to take into account expected inflation
+
+- $r_t = i_t - \pi^e_{t+1}$
+
+- the real interest rate $r_t$ is equal to the nominal interest rate $i_t$ minus expected inflation $\pi^e_{t+1}$
+
+
+
+<!---
+# Nominal vs. Real Interest Rate
+
+ Let’s go through the step-by-step derivation
+
+- Assume there is only one good in the economy, bread
+
+- Denote the one-year nominal interest rate, in terms of dollars, by $i_t$
+
+- the price of a pound of bread this year is $P_t$ dollars,
+
+- If you borrow one dollar this year, you will have to repay $(1+ i_t)P_t$ dollars next year
+
+- What you really want to know is: how much will you have to repay, in terms of pounds of bread
+
+- you do not know yet what the price of bread will be next year, but you have an expectation of it 
+
+- let $P^e_{t + 1}$ be the price of bread you expect to pay next year (e: expectation) 
+
+- How much you expect to repay next year, in terms of pounds of bread, is $\frac{(1+i_t)P_t}{P_{t+1}^e}$
+
+- denote the one-year real interest rate by $r_t$
+
+- $1+r_t = (1+i_t)\frac{P_t}{P^e_{t+1}}$
+
+- This relation looks intimidating. Two simple manipulations make it look much friendlier
+
+- denote expected inflation between t and t + 1 by $\pi^e_{t+1}$: 
+
+- then we have $\pi^e_{t+1} = \frac{P^e_{t+1}-P_t}{P_t}$
+
+- which is equivalent to $\frac{P_t}{P^e_{t+1}}=\frac{1}{1+\pi^e_{t+1}}$
+
+- $1+r_t = \frac{1+i_t}{1+\pi^e_{t+1}}$
+--->
+
+---
+# Nominal vs. Real Interest Rate
+
+<span style="color:blue"> $r_t = i_t - \pi^e_{t+1}$ </span>
+
+- $\pi^e_{t+1}=0: r_t = i_t$
+
+- Because $\pi^e_{t+1}$ is typically positive, $r_t$ is typically lower than $i_t$
+
+- for a given $i_t$, the higher the $\pi^e_{t+1}$, the lower the $r_t$
+
+
+---
+# Nominal vs. Real Interest Rate
+
+- Suppose the nominal interest rate and expected inflation both equal 10%, and you are the borrower
+
+--
+
+- For every dollar you borrow this year, you will have to repay 1.10 dollars next year
+
+--
+
+- This looks expensive. But dollars will be worth 10% less in terms of bread next year
+
+--
+
+- So, if you borrow the equivalent of one pound of bread, you will have to repay the equivalent of one pound of bread next year
+
+--
+
+- The real cost of borrowing - the real interest rate - is equal to zero
+
+---
+# Nominal vs. Real Interest Rate
+
+- Now suppose you are the lender: For every dollar you lend this year, you will receive 1.10 dollars next year
+
+--
+
+- This looks attractive, but dollars next year will be worth 10% less in terms of bread
+
+--
+
+- If you lend the equivalent of one pound of bread this year, you will get the equivalent of one pound of bread next year
+
+--
+
+- Despite the 10 percent nominal interest rate, the real interest rate is equal to zero.
+
+
+
+---
+# Nominal vs. Real Interest Rate
+
+Although the nominal interest was much lower in 2006 than it was in 1981, the real interest rate was actually higher in 2006 than it was in 1981
+
+<img src="../ch6/image/1.png" width=600>
+
+
+---
+# Zero Lower bound 
+
+- If the nominal interest rate was negative, would people hold bonds?
+
+--
+
+- No! That means that their wealth would be losing value over time. They would be better off holding money because it has a nominal return of 0%
+
+--
+
+- **zero lower bound**: the **nominal** interest rate cannot go below zero
+
+--
+
+- When the interest rate is zero, people are indifferent between money and bonds.
+
+--
+
+- **liquidity trap**: Monetary policy cannot decrease the (target) interest rates below 0%
+
+---
+# Zero Lower bound 
+
+<img src="../ch6/image/2.png" width=400>
+
+- expansionary monetary policy: an increase in the money supply - a shift of the $M^s$ line to the right - leads to a decrease in the interest rate
+
+
+---
+# Zero Lower bound 
+
+<img src="../ch6/image/2.png" width=400>
+
+- Now consider the case where the money supply is $M^s\prime$, so the equilibrium is at point B
+- The money supply increases, but with no effect on the interest rate - which remains equal to zero
+
+
+
+
+
+--- 
+---
+# Zero Lower bound 
+- Although the central bank chooses the nominal (target) rate interest, it cares about the real interest rate, and thus has to take into account expected inflation
+
+- For example, if it wants to set the real interest rate equal to $r$, it must choose the (target) nominal rate $i$ so that, given expected inflation, $\pi^e$, the real interest rate, $r = i - \pi^e$, is at the level it desires
+
+- For example, if it wants the real interest rate to be 4%, and expected inflation is 2%, it will set the nominal (target) interest rate at 6%
+
+- so, we can think of the central bank as targeting at the real interest rate, rather than the nominal rate interest
+
+
+---
+# Zero Lower bound 
+- Does the real interest rate have a zero lower bound like nominal interest rates do?
+
+--
+
+- No, but real interest rates are bounded below based on the zero lower bound and the level of expected inflation: $r_t = i_t -\pi^t_{t+1}$, and $i_t \geq 0$ $\implies$ $r_t \geq -\pi^e_{t+1}$
+
+--
+
+- So if inflation is 2%, then the real interest rate cannot fall below -2%
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# Risk Premium
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+---
+# Risk Premium
+Up until now we have assumed that everyone is able to borrow at the same interest rate, the target nominal interest rate decided by the central bank
+
+--
+
+- In the real world, this is not the case.
+
+--
+
+- the U.S. federal government borrow funds by issuing federal government bonds
+  - this can be considered as risk-free
+  - because the federal government can always repay debt (how?)
+  
+--
+
+- firms borrow funds by issung corporate bonds, and they might fail to repay the debt or pay the interest payment to their bonds holders
+
+--
+
+- households borrow from banks by taking loans, and they might fail to repay too
+
+
+---
+# Risk Premium
+
+- To compensate for this risk of default, firms and households who borrow have to pay a slightly higher interest rate than risk-free borrowing like U.S. federal government bonds
+
+--
+
+- This difference in interst rates is called the **risk premium**
+
+--
+
+- $x$: risk premium
+- $i$: interest rate on risk-free borrowing 
+- $p$: probability of default
+
+--
+
+- How large should $x$ be?
+
+
+---
+# Risk Premium
+- The risk premium needs to be at least large enough to make the risky
+bond pay at least as much as a risk free bond in expectation
+
+--
+
+- mathematically, expected return on riskless asset = Expected return on risky asset
+
+--
+
+- $1+i = (1-p) \times (1+i+x) + p \times 0$
+
+--
+
+- solve for $x$: $x=(1+i) \frac{p}{1-p}$
+
+--
+
+- As the probability of default $p$ rises, the risk premium $x$ increases
+
+---
+# Risk Premium
+
+- The risk premium tends to be larger than necessary to equate the
+expected return of a risky and a riskless asset. This is because
+economic agents tend to be **risk averse**
+
+--
+
+- If given a choice between an asset with a sure return of 5% and an
+asset that pays 10% half the time and 0% half the time, people
+tend to pick the sure thing
+
+--
+
+- The more risk averse the lender is, the higher the risk premium will
+be to compensate them for the risk that they are taking on by
+issuing the debt
+
+
+
+
+
+---
+# Risk Premium
+- U.S. government bonds: nearly riskless
+- corporate bonds rated respectively as safe (AAA) and less safe (BBB) by ratings 
+agencies
+
+<img src="../ch6/image/3.png" width=600>
+
+---
+# Risk Premium
+
+<img src="../ch6/image/3.png" width=600>
+
+- the rate on AAA corporate bonds is higher than the rate on U.S. government bonds
+- the rate on BBB corporate bonds is higher than the rate on AAA bonds
+
+
+---
+# Risk Premium
+
+<img src="../ch6/image/3.png" width=600>
+
+- 2008-2009 financial crisis: the rate on government bonds decreased, reflecting the decision of the Fed to decrease the policy rate
+- the interest rate on AAA or BBB bonds increased sharply
+
+---
+# Risk Premium
+
+<img src="../ch6/image/3.png" width=600>
+
+- we have to relax our assumption that it is the policy rate that enters the IS-LM relations
+- The rate at which many borrowers can borrow may be much higher than the policy rate
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# Extended IS-LM
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+
+---
+# Extended IS-LM
+We now incorporate the ideas of a real interest rate and risk
+premiums into the IS-LM model we developed earlier
+
+--
+
+- We assume that investment $I$ responds to the real interest rate $r$ plus the risk premium $x$
+
+- $r + x$: **borrowing rate**
+
+--
+  
+- We assume that the central bank targets a real interest rate $\bar{r}$ by taking into account expected inflation
+
+- $\bar{r}$: **policy rate**
+
+
+---
+# Extended IS-LM
+Our two equilibrium conditions are now:
+
+<span style="color:blue"> $$Y = C(Y-T) + I(Y, r+x) + G$$ </span>
+<span style="color:blue">  $$r = \bar{r}$$ </span>
+
+--
+
+- In drawing the IS-LM model, we now have the real interest rate $r$ on
+the **vertical** axis
+
+
+
+---
+# Group Work V
+
+- What happens when the probability of default increases?
+
+--
+
+- The risk premium increases!
+
+--
+
+- What happens to the IS and LM curves when the risk premium
+increases?
+
+--
+
+- The IS curve shifts to the left because higher borrowing rates
+leads to less investment demand at any real interest rate $r$
+
+
+---
+# Group Work V
+- Higher probability of default leads to lower equilibrium output Y
+
+<img src="../ch6/image/4.png" width=500>
+
+- What can policy do to cope with the lower output? 
+
+---
+# Group Work V
+- Option 1: Monetary policy 
+- A sufficient decrease in the policy rate can in principle be enough to take the economy to its initial level
+
+<img src="../ch6/image/5.png" width=500>
+
+https://fred.stlouisfed.org/series/FEDFUNDS
+
+
+
+
+--- 
+---
+# Group Work V
+- Option 2: fiscal policy
+- What fiscal policies would you suggest to return the output to its original level?
+
+--
+
+- an increase in G, or a decrease in T
+- will shift the IS curve to the right and increase output
+- But a large increase in spending or a cut in taxes may imply a large increase in the budget deficit
+
+
+<!---
+# The Financial Crisis
+## housing prices and subprime mortgages
+## financial intermediaries
+## the crash
+## policy response
+--->

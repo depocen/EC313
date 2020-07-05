@@ -1,0 +1,46 @@
+---
+title: "Group Work IX"
+author: "Xiang LI, 8/12/2019"
+date: 
+header-includes:
+    - \usepackage{tikz}
+    - \usetikzlibrary{arrows,calc}
+    - \usepackage{relsize}
+    - \usetikzlibrary{decorations.pathreplacing}
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\textbf{Name:}\makebox[2in]{\hrulefill} 
+&nbsp; 
+\textbf{UO ID:}\makebox[2in]{\hrulefill}
+
+Q1: suppose that there is a large increase in oil prices. What would we expect the short-and medium-run effects of such increases to be? 
+
+\begin{tikzpicture}[scale=.9]
+\draw [thick] (-0.3,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.3)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=.9]
+\draw [thick] (-0.3,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.3)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+\begin{tikzpicture}[scale=.9]
+\draw [thick] (-0.3,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.3)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
+
+
+
+

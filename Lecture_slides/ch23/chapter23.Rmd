@@ -1,0 +1,703 @@
+---
+title: "EC313: Intermediate Macroeconomics"
+subtitle: "Chapter 23"
+author: "Xiang LI"
+date: "August 13, 2019"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      #countdown: 120000
+    css: [default, metropolis, metropolis-fonts]
+---
+
+<style>
+  .large { font-size: 200% }
+  .small { font-size: 50% }
+</style>
+
+<style type="text/css">
+.remark-slide-content {
+    font-size: 25px;
+    padding: 1em 1em 1em 1em;
+}
+</style>
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(knitr)
+library(tidyverse)
+# library(gdtools)
+# library(hrbrthemes)
+library(plotly)
+library(lubridate)
+library(kableExtra)
+library(htmlTable)
+library(dplyr)
+library(ggplot2)
+```
+
+
+
+
+
+# What We Have Learned
+
+- In Chapter 4, we looked at money demand and money supply and the determination of the interest rate
+
+--
+
+  - We saw how the central bank can control the policy rate through changes in the
+money supply
+
+--
+
+  - We saw also that, when the policy rate reaches zero, a case known as the liquidity trap or the zero lower bound, further increases in the money supply have no effect on the policy rate.
+
+
+
+---
+# What We Have Learned
+
+- In Chapter 5 we looked at the short-run effects of monetary policy on output.
+
+--
+
+  - We saw how a decrease in the interest rate leads to an increase in spending and, in turn, to an increase in output. 
+  
+--
+
+  - We saw how monetary and fiscal policy can be used to affect both the level of output and its composition.
+
+
+
+---
+# What We Have Learned
+
+
+- In Chapter 6, we introduced two important distinctions between the nominal and the real interest rate and between the borrowing rate and the policy rate. 
+
+--
+
+  - The real interest rate is equal to the nominal interest rate minus expected inflation. 
+  
+--
+
+  - The borrowing rate is equal to the policy rate plus a risk premium.
+  
+--
+
+  - We saw that what matters for private spending decisions is the real borrowing
+rate. 
+
+
+
+---
+# What We Have Learned
+
+- In Chapter 9 we looked at the effects of monetary policy in the medium run
+
+--
+
+  - We saw that, in the medium run, monetary policy affects neither output nor the real interest rate. 
+  
+--
+
+  - Output returns to potential, and the real interest rate returns to its natural rate, also called the neutral rate 
+  
+--
+
+  - Because it does not affect either output or the real interest rate, higher money growth only leads to higher inflation. 
+
+--
+
+  - We saw how the zero lower bound may however derail this adjustment. High
+unemployment may lead to deflation, which, at the zero lower bound, leads to a higher real interest rate, which further decreases demand and further increases unemployment.
+
+
+
+---
+# Monetary Policy: A Summing Up
+
+In chapter 23, we extend the analysis to look first at the inflation targeting framework in place before the crisis, and then at the challenges to monetary policy raised by the crisis.
+
+1. [From Monetary Targeting to Inflation Targeting](#From Monetary Targeting to Inflation Targeting)
+
+2. [Unconventional Monetary Policy](#Unconventional Monetary Policy)
+
+
+
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# From Monetary Targeting to Inflation Targeting
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+
+
+
+---
+# Monetary Targeting
+
+- One can think of the goals of monetary policy as **twofold**: 
+
+--
+
+- First, to maintain low and stable inflation
+
+--
+
+- Second, to stabilize output around potential - to avoid or at least limit recessions or booms
+  
+--
+
+-  Until the 1980s, the strategy was to choose a **target rate of money growth** 
+  
+
+---
+# Monetary Targeting
+
+- In **recessions**, the central bank could **increase money growth**, leading to:
+  - a **decrease in interest rates** (think about $M^s$, $M^d$ curves)
+  - an **increase in output** (think about IS-LM curves)
+  - a **high rate of inflation** (think about Phillips Curve)
+  
+--
+
+- There is a **negative relation** between the **real money supply** and the **interest rate** in the short run
+
+--
+
+- There is a **positive relation** between the **money supply** and the **inflation** in the medium run 
+
+
+---
+# Monetary Targeting
+
+- In **booms**, the central bank could **decrease money growth**, leading to:
+  - an **increase in interest rates**
+  - a **slowdown in output**
+  - a **low rate of inflation**
+  
+--
+
+- Again, there is a **negative relation** between the **real money supply** and the **interest rate** in the short run; and there is a **positive relation** between the **money supply** and the **inflation** in the medium run 
+
+--
+
+- However, this strategy did not work well
+
+
+
+---
+# Monetary Targeting
+
+<img src="../ch23/image/1.png" width=500>
+
+This figure (Figure 23-1) plots **10-year** averages of the U.S. inflation rate against **10-year** averages of the growth rate of money from 1970 up to the crisis 
+
+
+---
+# Monetary Targeting
+
+<img src="../ch23/image/1.png" width=500>
+
+- inflation rate: constructed using CPI as the price index
+- growth rate of nominal money: constructed using the sum of currency and checkable deposits, known as M1, as the measure for the money stock.
+
+
+
+---
+# Monetary Targeting
+
+<img src="../ch23/image/1.png" width=500>
+
+- The relation between **money growth** and **inflation** turned out to be far from tight even in the **medium run**
+- True, both went up in the 1970s, and both came down later
+
+
+---
+# Monetary Targeting
+
+<img src="../ch23/image/1.png" width=500>
+
+- But note how inflation started declining in the early 1980s, whereas nominal money growth remained high for another decade and came down only in the 1990s. 
+- Average inflation from 1981 to 1990 was down to 4%, and average money growth over the same period was still running at 7.5%
+
+
+---
+# Group Work X
+
+- Q1: from Chapter 5, the real money supply (the left side) must be equal to the real demand for money (the right side): $\frac{M}{P}=YL(i)$. Let's use the following form for the right side: $YL(i)=2Y-8000i$, meaning $\frac{M}{P}=2Y-8000i$
+
+--
+
+(1) If $Y=1000, i=0.2$, what is the real money demand? What is real money supply? 
+
+--
+
+- the real money demand is $\frac{M}{P} = 2*1000-8000*0.2=400$, which is also equal to the real money supply in eq. 
+
+--
+
+(2) Given $Y$, what is the relationship between the real money supply $\frac{M}{P}$ and the interest rate $i$?
+
+--
+
+- Given $Y$, there is **negative relation** between the **real money supply** and the **interest rate**
+
+
+---
+# Group Work X
+
+(3) If, as a result of the introduction of credit cards, the real demand for money halves, meaning $\frac{M}{P}=\frac{1}{2}YL(i)$. Given $Y=1000$ and the real money supply you have obtained in the previous part, what must the interest rate be in the **short run** equilibrium? Keep in mind that in the **short run, $P$ does not change**
+
+--
+
+- $\frac{M}{P}=\frac{1}{2}(2Y-8000i)$. Given that $P$ does not move, the real money supply is 400 and output is 1000, from $400=\frac{1}{2}(2Y-8000i)$, we can solve for interest rate: $i=0.15$. The interest rate must decrease. 
+
+--
+
+- (4) Given output $Y$, does the relation you found in part 2 still holds? 
+
+--
+
+- Now, we see a decrease in the interest rate with **no change** in the real money supply. The negative relation between the real money supply and the interest rate in the short run turned out to be unreliable
+
+
+
+
+
+---
+# Group Work X
+
+$$\frac{M}{P}=YL(i)$$
+
+(5) In the **medium run, $P$ can change**. Given output $Y$, interest rate $i$, nominal money supply $M$, after the real demand for money halves, how must $P$ adjust in the **medium run** equilibrium? 
+
+--
+
+- the price level $P$ must double
+
+--
+
+(6) Does the **positive relation** between the **money supply** and the **inflation** in the medium run still hold?
+
+--
+
+- No! Even if there is no change in the money supply, there will still be a period of inflation as the price level doubles
+
+
+
+
+
+---
+# Monetary Targeting
+
+- because of the shifts in the **demand** for money, which is not whatc the central bank can control, the relation of the interest rate to the money supply in the short run is poor, and the relation between money growth and inflation in the medium run is poor too
+
+--
+
+- Throughout the 1970s and the 1980s, these frequent and large shifts in money demand created serious problems for central banks
+
+--
+
+- They found themselves torn between trying to keep a stable target for money growth and staying within announced bands (to maintain credibility), or adjusting to shifts in money demand (to stabilize output in the short run and inflation in the medium run)
+
+--
+
+- Starting in the early 1990s, a dramatic rethinking of monetary policy took place based on targeting inflation rather than money growth, and the use of an interest rate rule
+
+
+
+---
+# Inflation Targeting
+
+- If one of the main goals of the central bank is to achieve low and stable inflation, why not target inflation directly rather than money growth? 
+
+--
+
+- And if the way to affect activity in the short run is to rely on the effect of the interest rate on spending, why not focus directly on the interest rate rather than on money growth?
+
+--
+
+- Central banks committed to achieving a target inflation rate. And they decided to use the interest rate as the instrument to achieve it. 
+
+
+
+---
+# Inflation Targeting
+
+- $\pi_t = \pi^e - \alpha(u_t - u_n)$
+
+--
+
+- Let the inflation target be $\pi^*$
+
+--
+
+- Assume that, thanks to the central bank’s reputation, this target is credible, so that people **expect** inflation to be equal to the target: $\pi_t=\pi^*-\alpha(u_t - u_n)$
+
+--
+
+- if the central bank is able to hit its inflation target exactly, so $\pi_t = \pi^*$, unemployment will be equal to its natural rate, $u_t = u_n$, and output will be at potential, $Y=Y_n$
+
+
+
+---
+# Inflation Targeting
+
+$$\pi_t = \pi^* - \alpha(u_t - u_n)$$ 
+
+- there is no conflict between keeping inflation constant and keeping output at potential. 
+
+--
+
+- Keeping inflation stable is a way of keeping output at potential, thus the right approach to monetary policy
+  - some central banks, as the U.S. Fed, have a dual mandate, achieving both stable and low inflation and maintaining output close to potential
+  
+--
+
+- Inflation is not under the direct control of the central bank. 
+
+--
+
+- But the policy rate is.
+
+
+---
+# Inflation Targeting
+
+- Now, the question becomes: how to set the policy rate so as to achieve the target rate of inflation? 
+
+--
+
+- When inflation is higher than the target, increase the policy rate to decrease the pressure on prices; when it is below the target rate of inflation, decrease the policy rate
+
+--
+
+- in the 1990s, John Taylor, from Stanford University, suggested the following rule for the policy rate, a rule now known as the **Taylor rule**: 
+
+<span style="color:blue"> $$i_t = i^* + \alpha (\pi_t - \pi^*) - b(u_t - u_n)$$ </span>
+
+
+---
+# Inflation Targeting
+
+Taylor argued, the central bank should use the following rule to choose the nominal interest rate $i_t$: 
+
+<span style="color:blue"> $$i_t = i^* + \alpha (\pi_t - \pi^*) - b(u_t - u_n)$$ </span>
+
+- $u_t$: unemployment rate
+- $u_n$: the natural unemployment rate.
+- $\pi_t$: rate of inflation
+- $\pi^*$: target rate of inflation 
+- $i_t$: the nominal policy rate, the nominal interest rate controlled by the central bank
+- $i^*$: target nominal interest rate, the nominal interest rate associated with the neutral rate of interest $r_n$ and the target rate of inflation $\pi^*$, so $i^* = r_n+\pi^*$
+- $a, b$: positive coefficients chosen by the central bank. 
+
+
+
+---
+# Inflation Targeting
+
+<span style="color:blue"> $$i_t = i^* + \alpha (\pi_t - \pi^*) - b(u_t - u_n)$$ </span>
+
+- If inflation is equal to target inflation $\pi_t = \pi^*$, and the unemployment rate is equal to the natural rate of unemployment $u_t = u_n$, then the central bank should set the nominal interest rate $i_t$ equal to its target value $i^*$, i.e. 2% for the U.S.central bank
+
+- This way, the economy can stay on the same path, with inflation equal to the target inflation rate and unemployment equal to the natural rate of unemployment.
+
+
+
+---
+# Inflation Targeting
+
+<span style="color:blue"> $$i_t = i^* + \alpha (\pi_t - \pi^*) - b(u_t - u_n)$$ </span>
+
+- If inflation is higher than the target  $\pi_t > \pi^*$, the central bank should **increase** the nominal interest rate
+
+- This higher interest rate will lead to an increase unemployment, and will lead to a decrease in inflation
+
+--
+
+- The coefficient $a$ reflects how much the central bank cares about **inflation**
+
+- The higher $a$, the more the central bank will increase the interest rate in response to inflation, the more the economy will slow down, the more unemployment will increase, and the faster inflation will return to the target inflation rate
+
+
+---
+# Inflation Targeting
+
+<span style="color:blue"> $$i_t = i^* + \alpha (\pi_t - \pi^*) - b(u_t - u_n)$$ </span>
+
+- If unemployment is higher than the natural rate of unemployment  $u_t > u_n$, the central bank should **decrease** the nominal interest rate 
+
+- The lower nominal interest rate will lead to an increase output, leading to a decrease in unemployment.
+
+--
+
+- The coefficient $b$ reflects how much the central bank cares about **unemployment**
+
+- The higher $b$, the more the central bank will be willing to deviate from target inflation to keep unemployment close to the natural rate of unemployment
+
+
+---
+# Inflation Targeting
+
+<span style="color:blue"> $$i_t = i^* + \alpha (\pi_t - \pi^*) - b(u_t - u_n)$$ </span>
+
+- Once the central bank has chosen **a target rate of inflation**, it should try to achieve it by adjusting the nominal interest rate
+
+--
+
+- Taylor rule takes into account not only current inflation but also current unemployment
+
+--
+
+- by the mid-2000s, in advanced economies, most central banks had adopted some form of inflation targeting, that is, the choice of an inflation target together with the use of an interest rule.
+
+--
+
+- 
+At this stage, most central banks in advanced economies have an inflation target of about 2%, i.e. $\pi^*=2$ percent
+
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# Unconventional Monetary Policy
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+
+---
+# Unconventional Monetary Policy
+
+- When, at the start of the crisis, the interest rate reached the **zero lower bound**, central banks found themselves unable to **decrease** it further, and thus lost the use of **conventional monetary policy**
+
+--
+
+- Central banks explored other ways to affect activity, a set of measures known as **unconventional monetary policy**
+
+
+
+
+---
+# Unconventional Monetary Policy
+
+Recall Chapter 6: borrowing cost is $r+x$
+
+- $r$: real interest rate
+
+- $x$: risk premium 
+
+--
+
+- due to the zero lower bound, there exists a lower bound for $r$, i.e. $-\pi^e$
+
+--
+
+- when the central bank cannot lower $r$ anymore, it can lower $x$!
+
+
+---
+# Unconventional Monetary Policy
+
+- How could risk premium $x$ be affected by monetary policy?
+
+--
+
+- The risk premium on an asset is determined by supply and demand for the asset
+
+--
+
+- If the **demand for this asset increases**, whether because buyers become less risk averse, or because more investors just decide to buy the asset, the **premium will decrease**
+
+--
+
+- This is true whether the increased demand comes from private investors or from the central bank
+
+
+---
+# Unconventional Monetary Policy
+
+- Real interest rates on short-term bonds, i.e. 1-year Treasury bills, is the indicator of the real policy rate, which has a lower bound $-\pi^e$
+
+- central banks buy assets other than short term bonds $\implies$ 
+  - the premium on those assets with longer terms decreases $\implies$ 
+  - the corresponding borrowing rates decrease $\implies$ economic activity is stimulated
+
+- These purchases programs of the central bank are known as **quantitative easing**, or **credit easing**, policie
+
+
+
+---
+# Quantitative Easing 
+
+- Recall chapter 1: 
+  - during the crisis, housing prices declines $\implies$ 
+  - banks are less willing to issue mortgages loans by increasing interest rates on mortgages $\implies$ 
+  - premium on mortgage based bonds jumped to very high levels 
+
+- In November 2008, by buying these bonds, the Fed decreased their premium 
+
+- This is known as the first quantitative easing program (**QE1**)
+
+
+---
+# Quantitative Easing 
+
+- The second quantitative easing program, known as **QE2**, started in November 2010
+
+- the Fed started buying longer term Treasury bonds, with the intent of decreasing the term premium on these long term bonds
+
+--
+
+- The third quantitative easing program, **QE3**, started in September 2012
+
+- the Fed further purchased mortgage-based bonds, to decrease the cost of mortgages and further help the housing market to recover
+
+
+---
+# Quantitative Easing 
+
+<img src="../ch23/image/2.png" width=500>
+
+- Figure 23-2: evolution of the quantity of U.S. central bank money, 2005-2015
+- until the crisis, it was relatively flat
+- as a result of quantitative easing, the quantity of central bank money more than quadrupled between 2005 and 2015.
+
+
+
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# Class Overview
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+---
+# Class Overview
+
+- Throughout this class we have discussed theoretical economic models in order to conduct positive analysis of policy decisions.
+
+--
+
+- These theoretical models are sets of assumptions that simplify reality in order to get at the key driving factors behind economic activities.
+
+--
+
+- The conclusions we have come to are logically derived from those assumptions. If our assumptions are accurate, then our conclusions should be accurate as well.
+
+--
+
+- If a real world scenario appears where the result is different from what our model predicted, we should first look to the assumptions we made.
+
+--
+
+- Throughout the class, we have justified our assumptions mostly using intuitive stories.
+
+
+
+
+---
+# Class Models
+
+- The Goods Market
+  - Captures the idea of the spending multiplier: an increase in demand increases production, which increases income, which further increases demand...
+  - Affected directly by fiscal policy as changes in taxes or government spending change the demand for goods and services.
+  
+--
+
+- Financial Markets
+  - Captures how agents' demand for money depends on the interest rate and the level of transactions.
+  - By manipulating the money supply, the central bank can achieve any positive nominal interest rate.
+
+
+
+---
+# Class Models
+
+- The IS-LM Model
+  - Puts together the goods market model (IS) and the financial markets model (LM) to determine general equilibrium demand for output.
+  - Explains how changes in the interest rate can affect equilibrium output by changing the cost of borrowing and thus the demand for capital investment.
+  - Can be extended to include a more robust financial sector that results in higher borrowing rates that are based on the risk premium.
+  - Explains short-run fuctuations in output. Short run because it assumes that prices don't change.
+  
+---
+# Class Models
+
+- The Labor Market and the Phillips Curve
+  - Captures the negative relationship between unemployment and real wages.
+  - Determines the natural rate of unemployment: the unemployment rate that the economy will trend towards in the medium run.
+  - Can be used to derive a theoretical Phillips Curve that relates unemployment and inflation.
+  
+--
+
+- The IS-LM-PC Model
+  - Combines the IS-LM model with the labor market to understand the effects of both demand and supply shocks over the short and medium runs.
+  - Explains how changes in inflation lead to interest rate policy changes that eliminate the short run impacts of demand-side policies.
+  
+
+---
+# Future Study
+
+- Interested in the open economy and international trade? Consider
+taking **EC380**, **EC480**, **EC481**, **EC482**, or **EC484**.
+  - **EC481** is the most associated with macroeconomics. It focuses on exchange rate regimes, international finance, and trade deficits.
+  
+--
+
+- Interested in a more thorough discussion of the business cycle and monetary policy decisions? Consider taking **EC370**, **EC470**, and **EC471**
+  - Operations of commercial banks, the Fed, and the Fed strategies of monetary and credit control, Effects of federal policies on prices, output, and employment
+
+
+
+---
+# Future Study
+
+- Interested in long run macroeconomic growth? Consider taking **EC390**, **EC490**, **EC491**
+  - the role of central planning, capital formation, population growth, agriculture, health and education, interaction between economic and cultural change, and the "North-South debate."
+
+--
+
+- Interested in the empirical side of things? Consider taking **EC422**
+  - basic techniques of economic forecasting that are typically used in a business environment.
+
+--
+
+- Interested in this class with a lot more math? Consider taking **EC413**   
+  - advanced macro theory about the determination of aggregate income, employment, unemployment, and evaluation of macroeconomic policies
+  
+  
+---
+# Online Course Evaluation
+
+- Online course valuations has been open and will close on 10:00 AM tomorrow (Aug 14)
+
+- Please log into DuckWeb to participate
+
+- This is my first time teaching EC 313. Your feedback matters a lot to me and to the future students taking this class
+
+- I would love to have comments about the things you appreciated or found valuable, as well as the suggestions for improvements.
+
+- I hope you learnt some macroeconomics tools in this class, which you can apply to the real world :)

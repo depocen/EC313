@@ -1,0 +1,521 @@
+---
+title: "EC313: Intermediate Macroeconomics"
+subtitle: "Syllabus and Chapter 1"
+author: "Xiang LI"
+date: "July 22, 2019"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      #countdown: 120000
+    css: [default, metropolis, metropolis-fonts]
+---
+
+<style>
+  .large { font-size: 200% }
+  .small { font-size: 50% }
+</style>
+
+<style type="text/css">
+.remark-slide-content {
+    font-size: 25px;
+    padding: 1em 1em 1em 1em;
+}
+</style>
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(knitr)
+library(tidyverse)
+# library(gdtools)
+# library(hrbrthemes)
+library(plotly)
+library(lubridate)
+```
+
+
+# Welcome to Intermediate Macroeconomics
+
+1. [Syllabus](#Syllabua)
+
+2. [Chapter 1](#Chapter 1)
+
+
+
+
+
+
+
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# Syllabus
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+
+
+---
+# Syllabus
+- Syllabus and Tentative schedule have been posted on Canvas
+  - classroom: MCK 125
+  - class hours: W/T/W/R 10:00-11:50am, July 22 - Aug 15
+
+- About me: 
+ - Xiang (sh ee ah ng), LI
+ - a third-year Ph.D student in Economics
+ - Research interest: empirical time series macroeconomics
+ - Email: xli4@uoregon.edu
+ - Office: PLC 420
+ - Office hour: W/T/W/R 12:00-1:00pm
+ - You are always welcome to ask questions via email or duirng office hours :)
+ 
+
+---
+# Syllabus 
+- Prerequisites: Introductory Macroeconomics (EC 202)
+
+- Textbook: Macroeconomics, by Olivier Blanchard
+
+- Tentative To be covered: 
+  - Chapter 1-2: Introduction
+  - Chapter 3-6: The short run
+  - Chapter 7-9: The medium run
+  - Chapter 22-23: Policies 
+
+---
+# Syllabus: Evaluations
+- Participation: 5%
+- In-class group work: 10%
+- Quizzes (July 25, Aug 8): 10% 
+- Midterm  (Aug 1):  35% 
+- Final (Aug 15): 40%
+
+
+
+---
+# Syllabus: Evaluations
+## Participation
+
+- I'm a big fan of asking my instructors questions!
+
+  - you can ask questions or answer questions that I ask during lectures.  
+
+  - if you are shy or simply don't like talking in front of large audiences, you have an option of coming to my offce hour with questions or comments on the material. 
+  
+- Each time you participate, you earn 2.5% of your grade, which amounts to 5% total. 
+
+
+
+---
+# Syllabus: Evaluations
+## In-class Group work
+
+- Group learning is fun and efficient!
+
+- Although you can work independently, but you are highly encouraged to discuss with your peers, contribute your thoughts and complete the work as a group. 
+
+- A group should consist of no more than three members. 
+
+- Every member of the group is expected to submit their own paperwork
+
+- Each paperwork you submit earns 1% of your grade, which amounts to 10% total.
+
+
+---
+# Syllabus: Evaluations
+## Quizzes
+
+- the first Thursday (July 25) and the third Thursday (Aug 8)
+
+- They will be administered during 15 minutes of lecture. 
+
+- No make-up in-class quizzes will be given for any reason. 
+
+
+
+---
+# Syllabus: Evaluations
+## Midterm and Final
+
+- The midterm will be given on the second Thursday (Aug 1), and the final will be given on the last Thursday (Aug 15). 
+
+- The midterm exam will tentatively test the materials that we will cover in chapter 2, 3, 4, 5, 6. 
+
+- The final exam will be more heavily weighted toward the materials that we will cover in chapter 7, 8, 9, 22, 23. 
+
+- All quizzes and exams are closed notes. 
+
+- No cheat sheet is allowed, but formula sheets will be provided. 
+
+- There will be assigned seating. 
+
+---
+# Syllabus
+
+<img src="../ch1/image/tentative.png" width=500>
+
+
+---
+# Syllabus
+
+<img src="../ch1/image/are-there-any-questions.png" width=500>
+
+- Please ask!
+
+- Please let me know anytime if you want me to repeat or clarify :) 
+
+
+---
+class: inverse, center, middle
+name: Methodology
+
+# Chapter 1
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+
+---
+# The Crisis
+
+- from 2000 to 2007 the world economy had a sustained expansion
+
+<img src="../ch1/image/fig1.png" width=800>
+
+???
+
+- advanced economies: the group of 30 or so richest countries in the world
+ 
+
+---
+# The Crisis 
+
+- housing prices declined
+
+https://www.youtube.com/watch?v=MesrrYyuoa4&fbclid=IwAR1UWNXay-CIKNJ4j_5ZiPfrkBqAvWYPQ5ck0HnsQsa2YueM0yyMk2OKZjY
+
+???
+
+- borrowers get approved for mortages even if they have low credit ratings (subprime mortgages) (rate can be adjusted)
+
+- following 2007 housing bubble, housing prices decreases and leads to higher interest rates on mortgages
+
+- when rates on the mortgages rise dramatically, subprime borrowers default on mortgages because they don't have money to pay for higher rates
+
+- banks foreclose collateral, taking back houses which are bad assets for banks
+
+- meanwhile, banks bundled and packaged the mortgages together into new securities and then sold these securities to other banks (mortgages backed securities)
+
+- hence many banks held these securities, which are assets with low values for them
+
+- bank broke: On September 15, 2008, a major bank, Lehman Brothers, went bankrupt after borroewers defaulting on the mortgages
+
+- many other banks appeared at risk of going bankrupt as well
+
+- For a few weeks, it looked as if the whole financial system might collapse
+  
+  
+---
+# The Crisis 
+
+- stock prices collapsed
+
+<img src="../ch1/image/fig2.png" width=800>
+
+???
+
+- by the end of 2008, stock prices had lost half or more of their value from their previous peak.
+
+- the crisis originated in the United States, European and emerging market stock prices decreased by as much as the U.S.
+
+
+---
+# The Crisis
+
+- financial crisis quickly turned into a major economic crisis
+  - people sharply cut consumption
+  - firms sharply cut investment
+  - 2008Q3, U.S. output growth turned negative
+
+- the U.S. crisis quickly became a world crisis
+  -  the U.S. exports less to other countries
+
+- strong monetary and fiscal policies are adopted to prop up financial markets and stimulate the economy
+  - central bank of the U.S. cut interest rates all the way down to zero
+  - U.S. government cut taxes and increased spending
+
+
+---
+# The United States
+
+<img src="../ch1/image/fig3.png" width=500>
+
+- the largest country in the world in economic terms
+
+- high standard of living 
+
+???
+
+- How big is the country from an economic point of view: output
+
+- standard of living: output per person
+
+- output: $17.4 trillion
+
+- output per person: $54,592
+
+- share of world output: 23%
+
+
+---
+# The United States
+
+<img src="../ch1/image/fig4.png" width=800>
+
+- reasonably optimistic about the U.S. economy at this point
+
+???
+
+- Growth in 2015: just a bit below the pre-crisis (1990–2007) average
+
+- Unemployment back to its pre-crisis (1990–2007) average.
+
+- Inflation is lower than pre-crisis (1990–2007) average.
+
+- having largely left the effects of the crisis behind.
+
+
+---
+# The United States - Issues
+
+- the Fed hit the zero lower bound 
+
+<img src="../ch1/image/fig5.png" width=800>
+
+???
+
+- lower rates encourage borrowing and spending, and hence stimulates economic growth
+
+- federal funds rate serves as a base for other interest rates
+
+- hence, the Fed lowers the ffr, and other market interest rates falls too
+
+- lowering it and then hit the zero bound
+
+- no way to lower it further, because the interest rates cannot be negative 
+- limit the ability of the Fed to respond to further stimulate economy
+
+
+
+
+
+---
+# The United States - Issues
+
+- low productivity growth, and inequality is growing 
+
+<img src="../ch1/image/fig6.png" width=800>
+
+???
+
+- recall EC202: growth in the long-run is determined by productivity growth
+
+- some economists: productivity growth may be underestimated. How do you measure the real value of a new smartphone relative to an older model?
+
+- some economists: the United States has entered a period of lower productivity growth, that the major gains from the current IT innovations may already have been obtained, and that progress is likely to be less rapid, at least for some time. 
+
+- Since 2000, the real earnings of workers with a high school education or less have actually decreased
+
+
+
+
+---
+# The Euro Area
+
+- In 1957, 6 European countries attempted to create a common European marketplace where people and goods could move freely
+
+- In 1999, the European Union (EU) created a common currency (the Euro) that is now used by 17 countries. These countries are known as the Euro Area.
+
+- The European Union consists of 28 countries that are committed to decreased border and trade regulations (27 with the exit of Great Britain).
+
+- Note: When we refer to the Euro Area, we are referring to the 17 countries that use the Euro as their common currency NOT the 28 countries that belong to the EU.
+
+
+
+
+
+---
+# The Euro Area
+
+- high output and high standard of living 
+
+<img src="../ch1/image/fig7.png" width=400>
+
+
+
+
+
+
+
+---
+# The Euro Area - Issues
+
+- high unemployment
+
+<img src="../ch1/image/fig8.png" width=800>
+
+???
+
+- European states protect workers too much. To prevent workers from losing their jobs, they make it expensive for firms to lay off workers. This deters firms from hiring workers in the first place, and thus increasing unemployment. 
+
+- European governments provide generous unemployment insurance. But, by doing so, they decrease the incentives for the unemployed to take jobs 
+
+
+
+
+---
+# The Euro Area - Issues
+
+- whether and how it can function efficiently as a common currency area
+  - a common currency means a common monetary policy
+  - a common monetary policy means the same interest rate across the euro countries
+
+
+???
+
+- What if one country plunges into recession while another is in the middle of an economic boom? 
+
+
+- The first country needs lower interest rates to increase spending and output; the second country needs higher interest rates to slow down its economy. 
+
+- If interest rates have to be the same in both countries, what will happen? Isn’t there the risk that one country will remain in recession for a long time or that the other will not be able to slow down its booming economy? 
+
+
+
+
+
+---
+# China, 2014
+
+- population: 1,368 million
+  - more than 4 times that of the U.S.
+  
+- output: 10.4 trillion dollars
+  - the second largest country in the world
+  - 13.5% of world output
+  - about 60% of the U.S. output 
+  
+- output per person: 7,627 dollars
+  - about 15% of that in the U.S.
+  
+- output per person measured using purchasing power parity: $ 12,100
+  - roughly 25% of that in the U.S.
+
+
+???
+
+- When comparing output per person in a rich country like the United States and a relatively poor country like China, one must be careful. 
+
+- The reason is that many goods are cheaper in poor countries. 
+
+- For example, the price of an average restaurant meal in New York City is about 20 dollars; the price of an average restaurant meal in Beijing is about 25 yuans, or, at the current exchange rate, about 4 dollars.
+
+- the standard of living measured using PPP in China is higher
+
+
+
+---
+# China
+
+<img src="../ch1/image/fig10.png" width=800>
+
+- China has been growing very rapidly for more than three decades
+
+- Chinas rapid output growth has been driven by high
+accumulation of capital and technological progress.
+  
+
+???
+
+- at 10% annual growth: output doubles every 7 years
+
+- Growth barely decreased during 2008 and 2009, and unemployment barely increased
+
+- during 2008 financial crisis, Chinese exports slowed. But this adverse effect on demand was nearly fully offset by a major fiscal expansion by the Chinese government (increase in public investment)
+
+
+
+
+
+---
+# China
+- Since 2000, China's economic growth has shown a strong performance
+- reported GDP growth rate has surpassed 8% for a decade, reaching a local peak of 14% in 2007
+
+```{r echo=FALSE, out.width = '100%', out.height='50%', fig.align = "center"}
+GDP=read.csv("../ch1/image/GDP.csv", header=TRUE, stringsAsFactors = FALSE)
+GDP<-GDP[-c(1:29),]
+GDP$X<-NULL
+date_vec1 <-seq(from = 1990, to = 2017, by = 1)
+plot1<-data.frame(date_vec1, GDP$GDP_growth)
+names(plot1)<-c("time","GDP_growth")
+# GDP_growth<-ggplot(plot1, aes(x=time, y=GDP_growth))+geom_line()+xlab(label='time')+ylab(label='GDP_growth_annual')+theme_ipsum()
+GDP_growth<-ggplot(plot1, aes(x=time, y=GDP_growth))+geom_line()+xlab(label='time')+ylab(label='GDP_growth_annual')
+GDP_growth<-ggplotly(GDP_growth)
+GDP_growth
+# knitr::include_graphics("../image/newplot3.png")
+```
+
+
+
+
+---
+# China
+
+- However, this momentum has been slowing in recent years
+- According to the IMF, China's economic growth is predicted to slow to 6.2% in 2019, and slow to 5.6% in 2023 
+
+```{r echo=FALSE, out.width = '100%', out.height='50%', fig.align = "center"}
+forecast=read.csv("../ch1/image/forecast.csv", header=TRUE, stringsAsFactors = FALSE)
+date_vec2 <-seq(from = 2015, to = 2023, by = 1)
+plot2<-data.frame(date_vec2, forecast$GDP_growth)
+names(plot2)<-c("time","GDP_growth")
+# GDP_growth_forecast<-ggplot(plot2, aes(x=time, y=GDP_growth))+geom_line()+xlab(label='time')+ylab(label='GDP_growth_forecast')+theme_ipsum()
+GDP_growth_forecast<-ggplot(plot2, aes(x=time, y=GDP_growth))+geom_line()+xlab(label='time')+ylab(label='GDP_growth_forecast')
+GDP_growth_forecast<-ggplotly(GDP_growth_forecast)
+GDP_growth_forecast
+# knitr::include_graphics("../image/newplot1.png")
+```
+
+
+https://www.youtube.com/watch?v=NqiNxTbIn-Q
+
+
+
+---
+# Worldwide
+
+- India is now growing very fast and becoming a world economic power.
+
+- Japan has done very poorly in the last two decades. Since a stock market crash in the early 1990s, Japan has been in a prolonged slump, with average output growth under 1% per year.
+
+- Latin America went from high inflation to low inflation in the 1990s, and then sustained strong growth. However, its growth has slowed
+
+- Central and Eastern Europe shifted from central planning to a market system in the early 1990s. Some countries, such as Poland, now have high growth rates; others, such as Bulgaria, are still struggling.
+
+- Africa has suffered decades of economic stagnation, but growth has been high since 2000, averaging 5.5% per year and reflecting growth in most of the countries of the continent.
+
+
+
+
+
+

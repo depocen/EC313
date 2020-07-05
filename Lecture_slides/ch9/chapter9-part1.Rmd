@@ -1,0 +1,599 @@
+---
+title: "EC313: Intermediate Macroeconomics"
+subtitle: "Chapter 9"
+author: "Xiang LI"
+date: "August 8, 2019"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      #countdown: 120000
+    css: [default, metropolis, metropolis-fonts]
+---
+
+<style>
+  .large { font-size: 200% }
+  .small { font-size: 50% }
+</style>
+
+<style type="text/css">
+.remark-slide-content {
+    font-size: 25px;
+    padding: 1em 1em 1em 1em;
+}
+</style>
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(knitr)
+library(tidyverse)
+# library(gdtools)
+# library(hrbrthemes)
+library(plotly)
+library(lubridate)
+library(kableExtra)
+library(htmlTable)
+library(dplyr)
+library(ggplot2)
+```
+
+
+# Chapter 9: From the Short to the Medium Run: the IS-LM-PC Model
+
+1. [The IS-LM-PC Model](#The IS-LM-PC Model)
+
+2. [Medium Run Equilibrium](#Medium Run Equilibrium)
+
+3. [The Business Cycle](#The Business Cycle)
+
+4. [Expectations and Deflation](#Expectations and Deflation)
+
+5. [Supply Shocks](# Supply Shocks)
+
+
+
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# The IS-LM-PC Model
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+
+---
+# The IS-LM Recap
+
+In Chapter 6, we derived the following equation for the behavior of output in the short run: 
+
+--
+
+- $IS: Y=C(Y-T)+I(Y, r+x)+G$
+
+--
+
+- $LM: r=\bar{r}$
+
+--
+
+- Combine the above equations, and we get:
+$$Y=C(Y-T)+I(Y, \bar{r}+x)+G$$
+
+
+---
+# The IS-LM Recap
+
+$$Y=C(Y-T)+I(Y, \bar{r}+x)+G$$
+
+--
+
+- $Y$: **output (production, supply, income)** 
+
+--
+
+- $C(Y-T)+I(Y, r+x)+G$: **demand**
+
+--
+
+- $C(Y-T)$: **consumption**
+  - $C$ depends on disposable income $Y-T$
+  - $T$: taxes
+  
+--
+
+- $I(Y, r+x)$: **investment**
+  - $I$ depends on output $Y$ and the real borrowing rate $\bar{r}+x$
+  - $\bar{r}$: real policy rate chosen by the central bank
+  - $x$: risk premium
+
+--
+
+- $G$: **government spending**
+
+
+
+---
+# The IS-LM Recap
+
+<img src="../ch9/image/1.png" width=500>
+
+$$IS: Y=C(Y-T)+I(Y, r+x)+G$$
+
+As we did in Chapter 6, we can draw the downward sloping IS curve implied by this IS equation between output $Y$, and the policy rate $r$, for given taxes $T$, risk premium $x$, and government spending $G$
+
+
+
+
+
+---
+# The IS-LM Recap
+
+<img src="../ch9/image/1.png" width=500>
+
+$$LM: r=\bar{r}$$
+
+We can also draw the flat LM curve implied this LM equation between output $Y$, and the policy rate $r$. Regardless of output $Y$, $r$ is equal to the real policy rate $\bar{r}$
+
+
+
+
+
+---
+# The IS-LM Recap
+
+<img src="../ch9/image/1.png" width=500>
+
+$$IS-LM: Y=C(Y-T)+I(Y, \bar{r}+x)+G$$
+
+The $Y$ solved from this equation is the equilibrium (eq.) level of output in the short run, given the real policy rate $\bar{r}$, taxes $T$, risk premium $x$, and government spending $G$
+
+
+
+
+
+
+---
+# The IS-LM-PC
+
+In Chapter 8, we derived the Phillips Curve with adaptive expectations, which relates actual inflation $\pi$, expected inflation $\pi^e$, unemployment rate $u$, and the natural rate of unemployment $u_n$: 
+
+--
+
+$$\pi - \pi^e = - \alpha (u-u_n)$$
+
+--
+
+- $u<u_n$: $\pi > \pi^e$
+
+--
+
+- $u>u_n$: $\pi < \pi^e$
+
+--
+
+- To adapt the Phillips curve into IS-LM model, we need to rewrite the Phillips curve in terms of output rather than unemployment
+
+
+---
+# The IS-LM-PC
+
+- $u$: unemployment rate 
+- $U$: unemployment
+- $N$: employment
+- $L$: labor force, $L=N+U$
+
+--
+
+By definition: <span style="color:blue"> $u = \frac{U}{L}=\frac{L-N}{L}=1-\frac{N}{L}$ </span>
+
+--
+
+Reorganizing to express $N$ as a function of $u$: <span style="color:blue"> $N = L(1-u)$ </span>
+
+--
+
+Assuming output is simply equal to employment: <span style="color:blue"> $Y=N = L(1-u)$ </span>
+
+---
+# The IS-LM-PC
+
+- $u_n$: the natural rate of unemployment (**natural rate** for short)
+
+--
+
+When the unemployment rate is equal to the natural rate, $u=u_n$, employment is <span style="color:blue"> $N_n=L(1-u_n)$ </span>, and output is <span style="color:blue"> $Y_n=L(1-u_n)$ </span>
+
+--
+
+- $N_n$: the **natural level of employment** (**natural employment** for short)
+
+--
+
+- $Y_n$: the **natural level of output** (**natural output** for short)
+
+--
+
+- $Y_n$ is also called **potential output**, because it is what the economy can potentially produce if the labor market is in eq.
+
+--
+
+The deviation of employment from its natural level is: 
+<span style="color:blue">$$Y-Y_n=L(1-u)-L(1-u_n)=-L(u-u_n)$$ </span>
+
+
+
+
+---
+# The IS-LM-PC
+
+<span style="color:blue">$$Y-Y_n=L(1-u)-L(1-u_n)=-L(u-u_n)$$ </span>
+
+--
+
+This gives us a simple relation between the deviation of output from potential and the deviation of unemployment from its natural rate.
+
+--
+
+**Output gap**: the difference between output and potential output, $Y-Y_n$ 
+
+--
+
+- $u=u_n$: $Y=Y_n$, output gap is 0
+
+--
+
+- $u>u_n$: $Y<Y_n$, output gap is negative
+
+--
+
+- $u<u_n$: $Y>Y_n$, output gap is positive
+
+--
+
+- The relation of the actual relation between output and unemployment, known as **Okun’s law**
+
+
+
+---
+# The IS-LM-PC
+
+<span style="color:blue">$$Y-Y_n=L(1-u)-L(1-u_n)=-L(u-u_n)$$ </span>
+
+--
+
+Recall the **modified** Phillips Curve developed with **adaptive** expectations: $\pi_t - \pi_{t-1} = - \alpha (u-u_n)$
+
+--
+
+Replacing $u-u_n$: <span style="color:blue"> $\pi_t - \pi_{t-1}  = \frac{\alpha}{L}(Y-Y_n)$ </span>
+
+--
+
+- $Y_t>Y_n$, positive output gap: inflation increases, $\pi_t > \pi_{t-1}$
+
+--
+
+- $Y_t<Y_n$, negative output gap: inflation decreases, $\pi_t < \pi_{t-1}$
+
+--
+
+- Let's see what this looks like on a graph.
+
+
+
+---
+# The IS-LM-PC
+
+<span style="color:blue"> $$\pi_t - \pi_{t-1} = \frac{\alpha}{L}(Y_t-Y_n)$$ </span>
+
+--
+
+**Goal**: We want to draw the relationship between output and inflation on a graph where output $Y$ is on the horizontal axis and the **change** in the inflation rate $\pi_t - \pi_{t-1}$ is on the vertical axis
+
+--
+
+**Question**: Given the above equation, is the curve upward or downward sloping?
+
+--
+
+**Answer**: The curve slopes upward. High output is associated with low unemployment. Low unemployment puts upward pressure on inflation.
+
+
+---
+# The IS-LM-PC
+
+<img src="../ch9/image/2.png" width=500>
+
+Notation: the textbook use $(-1)$ to denote the value of a variable in the previous period. $\pi(-1)$ denotes inflation last year, which can be also denoted as $\pi_{t-1}$.
+
+Note: pay attention to the scale of vertical axis. Because $\pi_t - \pi_{t-1}$ can be negative, $0$ is not at the origin!
+
+
+
+---
+# The IS-LM-PC
+
+<img src="../ch9/image/2.png" width=500>
+
+**Question**: What can we say about output when inflation is **stable**? (i.e. when is the **change** in inflation equal to zero?)
+
+
+
+---
+# The IS-LM-PC
+
+<img src="../ch9/image/2.png" width=500>
+
+**Answer**: Inflation is stable when output is at potential, $Y=Y_n$. Output being at potential means that we are at the natural rate of unemployment. Thus there is no upward or downward pressure on inflation
+
+**Conclusion**: The Phillips curve crosses the horizontal axis at potential output
+
+
+
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# Medium Run Equilibrium
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+
+---
+# Medium Run eq.
+
+In the chapter 3-6, we talked about how fluctuations in aggregate demand could lead to changes in output. We did so in a short run context where prices didn't change.
+
+--
+
+Now, policy makers still have the ability to affect output. But changing output moves it away from its natural level, which has effects on prices, or inflation.
+
+--
+
+By drawing an IS-LM graph above the Phillips Curve (PC) graph we just drew, we can examine how eq. in the IS-LM model affects changes in inflation.
+
+
+---
+# Medium Run eq.
+
+<img src="../ch9/image/3.png" width=300>
+
+- the policy rate chosen by the central bank is equal to $r$
+- associated with this interest rate, the level of output is given by $Y$
+- this level of output implies a positive change in inflation $\pi-\pi(-1)>0$
+ 
+
+---
+# Medium Run eq.
+
+<img src="../ch9/image/3.png" width=300>
+
+- Given the way we have drawn the figure, $Y$ is larger than $Y_n$, so output is above potential
+- inflation is increasing: $\pi>\pi(-1)$
+
+---
+# Medium Run eq.
+
+<img src="../ch9/image/3.png" width=300>
+
+- Put less formally, the economy is overheating, putting pressure on inflation
+- At $A$: **short-run eq.**, because both goods and financial market are in eq.
+
+---
+# Medium Run eq.
+
+<img src="../ch9/image/3.png" width=300>
+
+**Question**: What happens over time if there is no change in the policy rate, nor in any of the variables which affect the position of the IS curve, so that both IS and LM curve isn't going to be shifted? 
+
+
+---
+# Medium Run eq.
+
+<img src="../ch9/image/3.png" width=300>
+
+**Answer**: Then output remains above potential, and inflation keeps increasing
+
+
+
+
+---
+# Medium Run eq.
+
+**Question**: Is inflation likely to increase forever?
+
+--
+
+**Answer**: No! Policy makers are unlikely to allow this to happen. At some point, policy is likely to react to this increase in inflation. 
+  - In the U.S., the Fed has a dual mandate: they are tasked with keeping both inflation and unemployment low
+  - If the Fed sees inflation rise far above some target (around 2% in the U.S.), they will take action to stop inflation from increasing further.
+
+
+
+
+---
+# Group Work VIII
+
+Q1: Let's focus on the central bank and the monetary policy. Graphically show what would the central bank do so that there is no longer pressure on inflation
+
+HINT: 
+- Label variables and draw IS, LM curves on the top plot. Label the eq. point $A$, and the eq. level of output $Y$
+- Label variables and draw *constant inflation* line, and PC curve on the bottom plot. Label the potential output $Y_n$
+- Trace eq. point $A$ and eq. output $Y$ from the top plot to the bottom plot. Make sure $Y$ is larger than the $Y_n$ you just labelled.  
+- Decide how you are gonna shift the LM curve so that eq. output can be equal to the potential output $Y_n$
+
+
+
+---
+# Group Work VIII
+
+<img src="../ch9/image/4.png" width=300>
+
+- the central bank increases the policy rate to $r_n$ over time 
+- the economy moves along the IS curve up from $A$ to $A\prime$, and output decreases. As output decreases, the economy moves along the PC curve from $A$ to $A\prime$
+
+
+
+---
+# Group Work VIII
+
+<img src="../ch9/image/4.png" width=300>
+
+- Over the **medium run**, the economy converges to the natural level of output $Y_n$ and constant/stable inflation
+- This is the **medium-run eq.**: output is equal to potential, and there is no longer any pressure on inflation
+
+
+---
+# Medium Run eq.
+
+- We say that the economy is in **medium run eq.** when output is equal to potential and inflation is stable.
+
+--
+
+- In **medium run eq.**, goods market, financial market, and labor market are simultaneously in eq. 
+
+--
+
+- If out of eq., the economy moves towards medium run eq., largely because of actions of inflation-conscious central banks.
+
+--
+
+- Thus we have a special term of the medium run eq. interest rate. The interest rate $r_n$ associated with $Y_n$ is often called the **natural rate of interest**, to reflect the fact that it is associated with the natural rate of unemployment
+
+
+---
+# Medium Run eq.
+
+- In this example, inflation **increased** until there is **no CHANGE** in inflation, $\pi-\pi(-1)=0$
+
+--
+
+- This means that inflation ended at a **higher LEVEL** than it started. 
+
+--
+
+- What would the Fed need to do if it cared about keeping the inflation rate at its original eq. **LEVEL**?
+
+--
+
+- The Fed would need to increase the interest rate above $r_n$, causing inflation to decrease to an acceptable level, i.e. $\pi<\pi(-1)$
+
+
+---
+# Medium Run eq.
+
+<img src="../ch9/image/4.png" width=300>
+
+- The economy moves up from $A$ and passes $A\prime$, reaching $C$
+- In other words, if the central bank wants to achieve a **constant LEVEL** of inflation over the medium run, then the initial boom (output is larger than $Y_n$) must be followed by a recession (output is smaller than $Y_n$)
+
+
+
+
+---
+# Group Work VIII
+
+Q2: Now, suppose that the economy is initially in medium run eq., i.e. output is at potential. Assume that the government, which was running a deficit, decides to reduce it by increasing taxes. 
+
+(1) Using the IS-LM-PC model, what effect does this fiscal expansion have on **short run** output, unemployment, interest rates, and inflation?
+
+- On the top plot, label variables and draw IS, LM curves. Label the medium run eq. point $A$, and the medium run eq. level of output $Y_n$, and the medium run eq. interest rate $r_n$.
+- On the bottom plot, label variables and draw *constant inflation* line and PC curve. Label the potential output $Y_n$
+- Trace medium run eq. point $A$ and medium run eq. output $Y_n$ from the top plot to the bottom plot.  
+- How you will shift the IS curve if $T$ decreases
+
+
+
+
+---
+# Group Work VIII
+
+<img src="../ch9/image/5-1.png" width=300>
+
+- the **short-run eq.**: $A\prime$
+- output decreases from $Y_n$ to $Y\prime$
+- inflation decreases: $\pi<\pi(-1)$
+
+
+---
+# Group Work VIII
+
+<img src="../ch9/image/5-1.png" width=300>
+
+- If output was at potential to start with, the fiscal consolidation leads to a **recession**: $Y\prime < Y_n$
+
+
+---
+# Group Work VIII
+
+(2) How would the central bank react to bring the output back to potential
+
+<img src="../ch9/image/5-2.png" width=300>
+
+- the central bank would decrease the policy rate 
+
+
+---
+# Group Work VIII
+
+<img src="../ch9/image/5-2.png" width=300>
+
+- the economy moves up the PC curve until output is back to potential and inflation is stable
+- the **medium-run eq.**: $A\prime\prime$
+
+
+
+---
+# Group Work VIII
+
+Compare the old meidum-run eq. $A$ and the new medium-run eq. $A\prime\prime$: 
+
+<img src="../ch9/image/5-2.png" width=300>
+
+- $Y$ unchanged
+
+
+---
+# Group Work VIII
+
+Compare the old meidum-run eq. $A$ and the new medium-run eq. $A\prime\prime$: 
+
+<img src="../ch9/image/5-2.png" width=300>
+
+- $C(Y-T) \downarrow$: $Y$ unchanged, but $T \uparrow$
+
+
+---
+# Group Work VIII
+
+Compare the old meidum-run eq. $A$ and the new medium-run eq. $A\prime\prime$: 
+
+<img src="../ch9/image/5-2.png" width=300>
+
+- $r \downarrow$: $r_n\prime<r_n$
+
+
+---
+# Group Work VIII
+
+Compare the old meidum-run eq. $A$ and the new medium-run eq. $A\prime\prime$: 
+
+<img src="../ch9/image/5-2.png" width=300>
+
+- $I(Y, r+x) \uparrow$: $Y,x$ unchanged, but $r \downarrow$
+
+
+
+

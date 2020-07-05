@@ -1,0 +1,905 @@
+---
+title: "EC313: Intermediate Macroeconomics"
+subtitle: "Chapter 2"
+author: "Xiang LI"
+date: "July 23, 2019"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      #countdown: 120000
+    css: [default, metropolis, metropolis-fonts]
+---
+
+<style>
+  .large { font-size: 200% }
+  .small { font-size: 50% }
+</style>
+
+<style type="text/css">
+.remark-slide-content {
+    font-size: 25px;
+    padding: 1em 1em 1em 1em;
+}
+</style>
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(knitr)
+library(tidyverse)
+# library(gdtools)
+# library(hrbrthemes)
+library(plotly)
+library(lubridate)
+library(kableExtra)
+library(htmlTable)
+```
+
+
+# Chapter 2: A Tour of the Book
+
+1. [Math Prelims](#Math Prelims)
+
+2. [Macro Concepts](#Macro Concepts)
+
+3. [Correlation between Macro Variables](#Correlation between Macro Variables)
+
+4. [Time Horizon in Macroeconomics](#Time Horizon in Macroeconomics)
+
+
+
+
+
+
+
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# Math Prelims
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+
+
+
+---
+# Change in a Variable
+
+- In  economics we are often interested in the **change in a variable** over time
+  - $Y$: some variable
+  - $t$: some time
+  - $Y_t$: value of Y at time t
+  - $Y_{t-1}$: value of Y at time t-1
+
+--
+
+- $\Delta Y$: change in value of Y between time t and time t-1
+  - <span style="color:blue"> $\Delta Y = Y_t - Y_{t-1}$ </span> 
+
+--
+
+- Q: if $Y_{2014} = 100$, $Y_{2013} = 90$, what is $\Delta Y$ between 2013 and 2014?
+ - $\Delta Y = Y_{2014} - Y_{2013}=100-90=10$
+ 
+ 
+???
+
+- if the variable Y is equal to 100 in 2014 and Y was equal to 90 in 2013, then the change in Y from 2013 to 2014 is 10
+ 
+
+
+
+
+---
+# Growth in a Variable (Percent Change)
+
+- Economists often focus on using **growth** instead of **change** 
+  - growth in a variable is a relative measurement
+  
+--
+
+- growth in Y between t-1 and t: 
+ <span style="color:blue"> $$\frac{Y_t - Y_{t-1}}{Y_{t-1}}=\frac{\Delta Y}{Y_{t-1}}$$ </span>
+ 
+ 
+---
+# Group Work I
+
+Q1: if $Y_{2014} = 100$, $Y_{2013} = 90$, $X_{2014} = 30$, $X_{2013} = 20$. What is the growth in Y between 2013 and 2014? And what is the growth in $X$ between 2013 and 2014?
+
+--
+
+- growth rate in Y between 2013 and 2014 = $\frac{Y_{2014}-Y_{2013}}{Y_{2013}}=\frac{10}{90}=0.111=11.1\%$
+
+--
+
+- growth rate in X between 2013 and 2014 = $\frac{X_{2014}-X_{2013}}{X_{2013}}=\frac{10}{20}=0.50=50.0\%$
+
+--
+
+- Even though change in X = change in Y, the growth in X is way different from that in Y
+
+
+
+
+---
+class: inverse, center, middle
+name: Methodology
+
+# Macro Concepts
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+
+---
+# Aggregate Output
+
+- Prior to 1947, there was not a measure of aggregate economic activity for economists to use
+
+--
+
+-  In 1947, Simon Kuznets and Richard Stone helped to develop a detailed log of United States economic activity known as the national income and product accounts
+
+--
+
+- Their effort resulted in consistent and accurate measurements of economic activity (employment, production, growth, etc) for the United States that is still in use today
+
+--
+
+- The effort of Kuznets and Stone marks the beginning of data on **Gross Domestic Product (GDP)**, which is the measure of aggregate output
+ 
+--
+
+- When we refer to the value of output in this class (and in the news), we are almost always referring to **GDP**
+
+
+
+---
+# GDP Definition #1
+Consider an economy composed of just two firms. How would you define aggregate output in this economy?  
+
+```{r table-1, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+output <- 
+  matrix(c(NA,100,NA,200,NA,80,NA,70,NA,"NA",NA,100,NA,20,NA,30), 
+         ncol=4, byrow = TRUE)
+
+htmlTable(output,
+          #header = c(NA,NA,NA,NA),
+          rnames = c("Revenues from Sales","wage","steel purchase","profits"),
+          rgroup = c("",
+                     "Expenses",
+                     ""),
+          n.rgroup = c(1,2,1),
+          cgroup = c("Steel Company(Firm 1)", "Car Company(Firm 2)"),
+          n.cgroup = c(2,2) 
+          #caption="Basic table with both column spanners (groups) and row groups",
+          #tfoot="&dagger; A table footer commment"
+          )
+```
+
+
+---
+# GDP Definition #1
+
+```{r table-7, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+output <- 
+  matrix(c(NA,100,NA,200,NA,80,NA,70,NA,"NA",NA,100,NA,20,NA,30), 
+         ncol=4, byrow = TRUE)
+
+htmlTable(output,
+          #header = c(NA,NA,NA,NA),
+          rnames = c("Revenues from Sales","wage","steel purchase","profits"),
+          rgroup = c("",
+                     "Expenses",
+                     ""),
+          n.rgroup = c(1,2,1),
+          cgroup = c("Steel Company(Firm 1)", "Car Company(Firm 2)"),
+          n.cgroup = c(2,2) 
+          #caption="Basic table with both column spanners (groups) and row groups",
+          #tfoot="&dagger; A table footer commment"
+          )
+```
+
+--
+
+- steel is an **intermediate good** in the production of cars
+
+--
+
+- Once we count the production of cars, we do not want to count the production of the goods that went into the production of these cars
+
+---
+# GDP Definition #1
+
+```{r table-6, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+output <- 
+  matrix(c(NA,100,NA,200,NA,80,NA,70,NA,"NA",NA,100,NA,20,NA,30), 
+         ncol=4, byrow = TRUE)
+
+htmlTable(output,
+          #header = c(NA,NA,NA,NA),
+          rnames = c("Revenues from Sales","wage","steel purchase","profits"),
+          rgroup = c("",
+                     "Expenses",
+                     ""),
+          n.rgroup = c(1,2,1),
+          cgroup = c("Steel Company(Firm 1)", "Car Company(Firm 2)"),
+          n.cgroup = c(2,2) 
+          #caption="Basic table with both column spanners (groups) and row groups",
+          #tfoot="&dagger; A table footer commment"
+          )
+```
+
+--
+
+- GDP for this 2-firm economy is $200
+
+--
+
+- GDP Definition #1: GDP is the Value of the **Final** Goods and Services produced in the economy during a given period
+  
+  
+  
+---
+# GDP Definition #2
+
+```{r table-2, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+output <- 
+  matrix(c(NA,100,NA,200,NA,80,NA,70,NA,"NA",NA,100,NA,20,NA,30), 
+         ncol=4, byrow = TRUE)
+
+htmlTable(output,
+          #header = c(NA,NA,NA,NA),
+          rnames = c("Revenues from Sales","wage","steel purchase","profits"),
+          rgroup = c("",
+                     "Expenses",
+                     ""),
+          n.rgroup = c(1,2,1),
+          cgroup = c("Steel Company(Firm 1)", "Car Company(Firm 2)"),
+          n.cgroup = c(2,2) 
+          #caption="Basic table with both column spanners (groups) and row groups",
+          #tfoot="&dagger; A table footer commment"
+          )
+```
+
+--
+
+- the steel company does not use intermediate goods
+
+--
+
+- the value added for the steel company: the value of the steel it produces, $100
+
+
+---
+# GDP Definition #2
+
+```{r table-8, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+output <- 
+  matrix(c(NA,100,NA,200,NA,80,NA,70,NA,"NA",NA,100,NA,20,NA,30), 
+         ncol=4, byrow = TRUE)
+
+htmlTable(output,
+          #header = c(NA,NA,NA,NA),
+          rnames = c("Revenues from Sales","wage","steel purchase","profits"),
+          rgroup = c("",
+                     "Expenses",
+                     ""),
+          n.rgroup = c(1,2,1),
+          cgroup = c("Steel Company(Firm 1)", "Car Company(Firm 2)"),
+          n.cgroup = c(2,2) 
+          #caption="Basic table with both column spanners (groups) and row groups",
+          #tfoot="&dagger; A table footer commment"
+          )
+```
+
+--
+
+- The car company uses steel as an intermediate good
+
+--
+
+- the value added for the car company: 200 - 100 = 100
+
+
+---
+# GDP Definition #2
+
+```{r table-9, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+output <- 
+  matrix(c(NA,100,NA,200,NA,80,NA,70,NA,"NA",NA,100,NA,20,NA,30), 
+         ncol=4, byrow = TRUE)
+
+htmlTable(output,
+          #header = c(NA,NA,NA,NA),
+          rnames = c("Revenues from Sales","wage","steel purchase","profits"),
+          rgroup = c("",
+                     "Expenses",
+                     ""),
+          n.rgroup = c(1,2,1),
+          cgroup = c("Steel Company(Firm 1)", "Car Company(Firm 2)"),
+          n.cgroup = c(2,2) 
+          #caption="Basic table with both column spanners (groups) and row groups",
+          #tfoot="&dagger; A table footer commment"
+          )
+```
+
+--
+
+- GDP for this 2-firm economy is the sum of **Value Added**: 100 + 100= $200
+
+--
+
+- GDP Definition #2: GDP Is the Sum of **Value Added** in the Economy during a Given Period
+
+
+
+  
+---
+# GDP Definition #3
+
+```{r table-3, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+output <- 
+  matrix(c(NA,100,NA,200,NA,80,NA,70,NA,"NA",NA,100,NA,20,NA,30), 
+         ncol=4, byrow = TRUE)
+
+htmlTable(output,
+          #header = c(NA,NA,NA,NA),
+          rnames = c("Revenues from Sales","wage","steel purchase","profits"),
+          rgroup = c("",
+                     "Expenses",
+                     ""),
+          n.rgroup = c(1,2,1),
+          cgroup = c("Steel Company(Firm 1)", "Car Company(Firm 2)"),
+          n.cgroup = c(2,2) 
+          #caption="Basic table with both column spanners (groups) and row groups",
+          #tfoot="&dagger; A table footer commment"
+          )
+```
+
+- Of the $100 of value added by the steel manufacturer
+  - $80 goes to workers (labor income)
+  - $20 goes to the steel manufacturer (capital income)
+  
+
+---
+# GDP Definition #3
+
+```{r table-10, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+output <- 
+  matrix(c(NA,100,NA,200,NA,80,NA,70,NA,"NA",NA,100,NA,20,NA,30), 
+         ncol=4, byrow = TRUE)
+
+htmlTable(output,
+          #header = c(NA,NA,NA,NA),
+          rnames = c("Revenues from Sales","wage","steel purchase","profits"),
+          rgroup = c("",
+                     "Expenses",
+                     ""),
+          n.rgroup = c(1,2,1),
+          cgroup = c("Steel Company(Firm 1)", "Car Company(Firm 2)"),
+          n.cgroup = c(2,2) 
+          #caption="Basic table with both column spanners (groups) and row groups",
+          #tfoot="&dagger; A table footer commment"
+          )
+```
+
+-  Of the $100 of value added by the car manufacturer
+  - $70 goes to workers (labor income)
+  - $30 goes to the care manufacture (capital income)
+  
+  
+---
+# GDP Definition #3
+
+- For the economy as a whole, labor income is equal to 80 + 70, capital income is equal to 20 + 30. The sum of labor income and capital income is therefore equal to, again $200
+
+- GDP Definition #3: GDP Is the **Sum of Incomes** in the Economy during a Given Period
+
+
+
+---
+# Nominal and Real GDP
+
+- In the 1960:
+  - One could buy a cheeseburger, fries and a coke for 50 cents
+  - The price of a gallon of gas was 25 cents
+  - Average annual income was $5,000
+  
+--
+
+- Today: 
+  - you would pay about $5 for the same order in McDonalds
+  - you pay about $2.78 for a gallon of gas in Oregon
+  - average income is over $50,000
+  
+--
+
+- although prices have grown tremendously since 1960, so has income! 
+
+- What we should really care about is the relative (**real**) price of goods, not the stated (**nominal**) price
+
+
+
+---
+# Nominal and Real GDP
+
+- **Nominal GDP**: The sum of quantities of final goods produced multiplied by their **current** price
+
+--
+
+- nominal GDP increases over time for two reasons:
+  - First, the **production** (**quantities**) of most goods increases over time.
+  - Second, the **price** of most goods also increases over time.
+
+--
+
+- what we care about is the production (quantities), not the price
+
+--
+
+- we need to eliminate the effect of increasing prices on our measure of GDP
+
+--
+
+- **real GDP**: the sum of quantities of final goods produced multiplied by
+**constant** prices, rather than **current** prices
+
+---
+# Group Work I 
+
+Q2: Fill in the blanks :) 
+
+```{r table-4, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+require(pander)
+panderOptions('table.split.table', Inf)
+#set.caption("My great data")
+my.data <- "
+  Year | Quantity of Cars  | Price of cars | Nominal GDP | Real GDP in 2009 dollars
+  2008 | 10                | $20,000       |             |
+  2009 | 12                | $24,000       |             |  
+  2010 | 13                | $26,000       |             |  "
+df <- read.delim(textConnection(my.data),header=FALSE,sep="|",strip.white=TRUE,stringsAsFactors=FALSE)
+names(df) <- unname(as.list(df[1,])) # put headers on
+df <- df[-1,] # remove first row
+row.names(df)<-NULL
+pander(df, style = 'rmarkdown')
+```
+
+- nominal GDP in year t: quantity of goods in year t $\times$ price in year t
+- real GDP in year t in 2009 dollars: quantity of goods in year t $\times$ price in 2009
+
+
+---
+# Group Work I 
+
+```{r table-5, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+require(pander)
+panderOptions('table.split.table', Inf)
+#set.caption("My great data")
+my.data <- "
+  Year | Quantity of Cars  | Price of cars | Nominal GDP | Real GDP in 2009 dollars
+  2008 | 10                | $20,000       |$200,000     | $240,000
+  2009 | 12                | $24,000       |$288,000     | $288,000  
+  2010 | 13                | $26,000       |$338,000     | $312,000"
+df <- read.delim(textConnection(my.data),header=FALSE,sep="|",strip.white=TRUE,stringsAsFactors=FALSE)
+names(df) <- unname(as.list(df[1,])) # put headers on
+df <- df[-1,] # remove first row
+row.names(df)<-NULL
+pander(df, style = 'rmarkdown')
+```
+
+--
+
+- price in 2009 are used as the common price
+  - hence year 2009 is called base year
+  - in base year, real GDP = nominal GDP
+  
+---
+# Nominal and Real GDP
+  
+Evolution of both nominal GDP and real GDP since 1960: 
+
+<img src="../ch2/image/1.png" width=600>
+
+- here, 2009 is used as base year: two lines intersect in 2009, implying that nominal GDP and real GDP equal in 2009
+
+
+---
+# Nominal and Real GDP
+
+<img src="../ch2/image/1.png" width=600>
+
+- real GDP in 2014 was about 5.1 times its level of 1960, but clearly much less than the 32-fold increase in nominal GDP over the same period
+- The difference comes from the increase in prices over the period
+
+
+---
+# Nominal and Real GDP
+- evolution of nominal U.S. GDP and real U.S. GDP since 1960 shows that nominal GDP growth overstate increases in output over time
+
+- real GDP growth accounts for increases in production, NOT increases in the price level
+
+- in this course, unless indicated otherwise, GDP will refer to real GDP
+
+- nominal GDP in year t: 
+<span style="color:blue"> $$\$Y_t$$ </span>
+- real GDP in year t: 
+<span style="color:blue"> $$Y_t$$ </span>
+
+
+
+---
+- **real GDP per person**: $\frac{Y_t}{population}$
+
+- real GDP per person measures the average standard of living of the country 
+
+- **GDP growth**: $\frac{Y_t-Y_{t-1}}{Y_{t-1}}$
+
+- **expansions**: periods of positive GDP growth 
+
+- **recessions**: periods of negative GDP growth 
+
+
+
+---
+# Growth Rate of U.S. GDP, 1960–2014
+
+<img src="../ch2/image/2.png" width=600>
+
+-  the U.S. economy has gone through a series of expansions, interrupted by short recessions 
+- you can see the effects of the recent crisis: zero growth in 2008, and a large negative growth rate in 2009
+
+
+---
+# Growth Rate of U.S. GDP, 2019-
+
+https://fred.stlouisfed.org/series/GDPC1
+
+<img src="../ch2/image/Rplot.png" width=600>
+
+
+
+
+
+---
+# The Inflation Rate
+
+- **GDP deflator in year t**: 
+<span style="color:blue"> $$P_t = \frac{nGDP}{rGDP}=\frac{ \${Y_t}}{Y_t}$$ </span>
+
+--
+
+- for base year: GDP deflator always equal 1
+  
+--
+
+Nominal GDP is equal to the GDP deflator times real GDP: 
+<span style="color:blue"> $$\${Y_t} = P_t Y_t$$ </span>
+
+--
+
+- GDP deflator $P_t$ is an indicator of the average price level of all final goods **produced** over time
+
+
+---
+# The Inflation Rate
+- **Inflation**: a sustained rise in the general level of the price level
+
+--
+
+- **inflation rate**: the rate at which the general level of prices increases over time
+
+<span style="color:blue"> $$\pi_t = \frac{P_t-P_{t-1}}{P_{t-1}}$$ </span>
+
+
+
+---
+# The Inflation Rate
+
+- we have seen: 
+
+<span style="color:blue"> $$\${Y_t} = P_t Y_t$$ </span>
+
+<span style="color:blue"> $$\pi_t = \frac{P_t-P_{t-1}}{P_{t-1}}$$ </span>
+
+--
+
+- recall, nominal GDP increases over time for two reasons:
+  - the **production** (**quantities**) of most goods increases over time
+  - the **price** of most goods also increases over time
+
+--
+
+- the rate of growth of nominal GDP is equal to the rate of inflation plus the rate of growth of real GDP
+
+--
+
+- growth rate of nominal GDP = growth rate of $P_t$ + growth rate of $Y_t$ = $\pi_t$ + growth rate of $Y_t$
+
+
+
+
+
+---
+# The Inflation Rate
+
+- recall, GDP deflator $P_t$ is an indicator of the average price level of all final goods **produced** over time
+
+--
+
+- what about the average price level of **consumption**, or, equivalently, the **cost of living**?
+
+--
+
+- The set of goods produced in the economy is not the same as the set of goods purchased by consumers
+  -  Some of the goods in GDP are sold not to consumers but to firms (machine tools, for example), to the government, or to foreigners.
+  -  Some of the goods bought by consumers are not produced domestically but are imported from abroad.
+
+--
+
+- CPI: a measure of the average price of consumption goods
+
+
+---
+# The Inflation Rate
+- CPI have been published monthly in the U.S. since 1917 (GDP deflator are published quarterly).
+
+--
+
+- CPI gives a dollar cost of a consumption basket of a typical urban consumer for 211 items in 38 cities (page 68: https://www.bls.gov/opub/hom/pdf/cpihom.pdf)
+
+--
+
+- Unlike the GDP deflator, for which we choose our baseline year, the CPI uses 1982-1984 prices as a baseline
+
+--
+
+- As an index, we set CPI=100 for 1982-1984. Today, the value of the CPI index is 242.35
+
+--
+
+- it cost more than twice as much in dollars to purchase the same consumption basket than in 1982–1984
+
+
+---
+# The Inflation Rate
+We have seen 2 indexs of aggrgate pricel level: GDP deflator, and CPI
+
+<img src="../ch2/image/3.png" width=600>
+
+- The CPI and the GDP deflator move together most of the time
+
+
+---
+# The Inflation Rate
+
+<img src="../ch2/image/3.png" width=600>
+
+- In 1979 and 1980, the increase in the CPI was significantly larger than the increase in the GDP deflator. 
+
+
+---
+# The Inflation Rate
+- GDP deflator is the price of goods **produced** in the United States, whereas the CPI is the price of goods **consumed** in the United States. 
+
+--
+
+- when the price of imported goods increases relative to the price of goods produced in the United States, the CPI increases faster than the GDP deflator.
+
+--
+
+- This is precisely what happened in 1979 and 1980. The price of oil doubled.
+
+--
+
+- the United States is a producer of oil, but it produces less than it consumes (it was and still is an oil importer)
+
+
+
+---
+# Unemployment
+- **employment** (denoted **N**): number of people who have a job
+
+--
+
+- **unemployment** (denoted **U**): number of people who do not have a job **AND** are looking for one
+
+--
+
+- **labor force** (denoted **L**): 
+
+<span style="color:blue"> $$L=N+U$$ </span>
+
+--
+
+- **unemployment rate** (denoted **u**): 
+
+<span style="color:blue">  $$ u = \frac{U}{L}$$ </span>
+
+
+---
+# Unemployment
+- Most rich countries rely on large surveys of households to compute the unemployment rate
+
+--
+
+- The U.S. Current Population Survey (CPS) relies on interviews of 60,000 households every month
+  - A person is unemployed if he or she does not have a job **AND** has been looking for a job in the last four weeks
+  
+--
+
+- Those who do not have a job and are *not* looking for one are counted as *unemploed*, and hence are *not in the labor force*
+  - they are called **discouraged workers**
+
+
+---
+# Unemployment
+- an extreme example: if all workers without a job gave up looking for one, the unemployment rate would go to zero
+
+--
+
+- in practice, when the economy slows down, we typically observe both an increase in unemployment and an increase in the number of people who drop out of the labor force 
+  - $U \uparrow$, $L \downarrow$, so $u=\frac{U}{L} \uparrow$
+  
+--
+
+- **participation rate**: $\frac{L}{population}$
+  
+--
+
+- a higher unemployment rate is typically associated with a lower participation rate
+  - $L \downarrow$ and population is fixed
+
+
+
+---
+# U.S. Unemployment Rate, 1960–2014
+the evolution of unemployment in the United States since 1960: 
+
+<img src="../ch2/image/4.png" width=600>
+
+- Since 1960, the U.S. unemployment rate has fluctuated between 3 and 10 percent, going up during recessions and down during expansions
+
+
+---
+# U.S. Unemployment Rate, 1960–2014
+
+<img src="../ch2/image/4.png" width=600>
+
+- you can see the effect of the recent crisis, with the unemployment rate reaching a peak at nearly 10% in 2010, the highest such rate since the 1980s.
+
+
+
+---
+# Group Work I
+
+Q3: Suppose a country using the United States’ system of calculating official unemployment statistics has 100 million people, of whom 50 million are working age. Of these 50 million, 20 million have jobs. Of the remainder: 10 million are actively searching for jobs; 10 million would like jobs but are not searching; and 10 million do not want jobs at all
+  
+- What is the value of the labor force? What is the official unemployment rate?
+
+--
+
+- Employment N = 20 million. Unemployment U = 10 million. Labor force: L = N + U = 30 million
+
+--
+
+- The official unemployment rate: 10/30 = 0.33 = 33%
+
+
+
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# Correlation between Macro Variables
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+---
+# Okun's Law
+change in the unemployment rate on the vertical axis against the rate of growth of output on the horizontal axis for the U.S. since 1960: 
+
+<img src="../ch2/image/5.png" width=500>
+
+- The line is downward sloping and fits the cloud of points quite well
+
+---
+# Okun's Law
+
+<img src="../ch2/image/5.png" width=500>
+
+- Okun's Law: **Higher output growth leads to a decrease in unemployment**
+
+
+---
+- Okun's Law: negative relationship between output growth and unemployment
+
+- what about relationship between unemployment and inflation?
+
+- with strong enough output growth, unemployment becomes very low; demand is fueled and the economy is likely to overheat; and this will lead to upward pressure on inflation
+
+
+
+---
+# The Phillips Curve
+
+change in the inflation rate on the vertical axis against the unemployment rate on the horizontal axis, for the U.S. since 1960:
+
+<img src="../ch2/image/6.png" width=600>
+
+---
+# The Phillips Curve
+
+<img src="../ch2/image/6.png" width=600>
+
+- Phillips Curve: **higher unemployment leads, on average, to a decrease in inflation, and vice versa**
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# Time Horizon in Macroeconomics
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+
+---
+# The Short Run
+
+- What determines the level of aggregate output in an economy? 
+
+- In the **short run** (e.g., a few years), year-to-year movements
+in output are primarily driven by movements in demand
+
+--
+
+- factors that affect demand range from consumer confidence to gov-ernment spending to interest rates
+
+--
+
+- **Chapter 3-6**: The short run and the role of **demand**
+  
+  
+  
+---
+# The Medium Run
+- In the **medium run** (e.g., a decade), the economy tends to
+return to the level of output determined by the supply side — how much the economy can produce
+
+--
+
+- factors that affect supply include how advanced the technology of the country is, how much capital it is using, and the size and the skills of its labor force
+
+--
+
+- **Chapters 7-9**: The medium run and the **supply** side
+
+
+---
+# The Long Run
+- In the long run (a few decades or more), the economy relies
+on its ability to innovate and introduce new technologies, how much people save, the quality of the countys education system, the quality of the government, etc
+
+--
+
+- Chapters 10-13: Not in the scope of this cours
+
+ 

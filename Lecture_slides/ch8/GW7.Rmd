@@ -1,0 +1,93 @@
+---
+title: "Group Work VII"
+author: "Xiang LI"
+date: "8/7/2019"
+header-includes:
+    - \usepackage{tikz}
+    - \usetikzlibrary{arrows,calc}
+    - \usepackage{relsize}
+    - \usetikzlibrary{decorations.pathreplacing}
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\textbf{Name:}\makebox[2in]{\hrulefill} 
+&nbsp; 
+\textbf{UO ID:}\makebox[2in]{\hrulefill}
+&nbsp; 
+\vspace{.3in}
+
+Wage-Setting relation is $W=P^e_tF(u_t,z)$, and Price-Setting is $P_t=(1+m)W$. Derive the original and modified Phillips Curve, and derive the natural rate of unemployment from the Phillips Curve
+
+#### First, we derive the theoretical Phillips Curve.
+
+(1) according to WS relation and PS relation, find the relationship between prices $P_t$ and expected prices $P_t^e$
+
+\vspace{.5in}
+
+(2) given the form for the function F being $F(u_t,z)=1-\alpha u_t + z$, simplify the relationship you found 
+
+\vspace{.5in}
+
+(3) the function you have found so far represents the relation between price, expected prices, and unemployment rate. Convert this to the relation between inflation, expected inflation, and the unemployment rate. (HINT: $1+\pi_t = \frac{P_t}{P_{t-1}}, 1+\pi_t^e = \frac{P_t^e}{P_{t-1}}$)
+
+\vspace{.5in}
+
+(4) The theoretical Phillips Curve can be found as: 
+
+\vspace{.5in}
+
+
+\vspace{.3in}
+#### Second, we derive the function for expected inflation. We start with static expectations, and then move to the more generalized adaptive expectations.
+
+
+(5) with static expectations, write down the function for $\pi_t^e$ 
+
+\vspace{.5in}
+
+(6) with static expectations, write down the function for $\pi_{t-1}^e$
+
+\vspace{.5in}
+
+(7) according to adaptive expectations, $\pi_t^e$ is a combination of $\pi_{t-1}$ and $\pi_{t-1}^e$. Adaptive expectations incorporate the past inflation and the static expectation formed in the past. Write down the function for $\pi_t^e$
+
+\vspace{.5in}
+
+\vspace{.3in}
+#### Third, we derive the original and modified Phillips Curve under adaptive expectations.
+
+
+(8) to get the theoretical Phillips Curve with the adaptive expectations, plug function for $\pi_t^e$ in the theoretical Phillips Curve you found in (4)
+
+\vspace{.5in}
+
+(9) set $\theta=0$ to get the original Phillips curve 
+
+\vspace{.5in}
+
+(10) set $\theta=1$ to get the modified Phillips curve 
+
+\vspace{.5in}
+
+\vspace{.3in}
+#### Last, we derive the natural rate of unemployment with the Phillips Curve
+
+(11) with the theoretical Phillips curve you have found in (4), The natural rate of unemployment is \textbf{the unemployment rate such that} the actual inflation rate is equal to the expected inflation rate. Solve for $u_n$
+
+\vspace{.5in}
+
+
+(12) with the theoretical Phillips curve you have found in (4), find the relationship among $\pi_t$, $\pi_t^e$, $u_t$, $u_n$
+
+\vspace{.5in}
+
+(13) update the relationship among $\pi_t$, $\pi_t^e$, $u_t$, $u_n$ when $\theta=1$
+
+\vspace{.5in}
+
+
+

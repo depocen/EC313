@@ -1,0 +1,826 @@
+---
+title: "EC313: Intermediate Macroeconomics"
+subtitle: "Chapter 7"
+author: "Xiang LI"
+date: "August 6, 2019"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      #countdown: 120000
+    css: [default, metropolis, metropolis-fonts]
+---
+
+<style>
+  .large { font-size: 200% }
+  .small { font-size: 50% }
+</style>
+
+<style type="text/css">
+.remark-slide-content {
+    font-size: 25px;
+    padding: 1em 1em 1em 1em;
+}
+</style>
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(knitr)
+library(tidyverse)
+# library(gdtools)
+# library(hrbrthemes)
+library(plotly)
+library(lubridate)
+library(kableExtra)
+library(htmlTable)
+library(dplyr)
+library(ggplot2)
+```
+
+
+# Chapter 7: The Labor Market
+
+1. [The Labor Market](#The Labor Market)
+
+2. [Unemployment](#Unemployment)
+
+3. [Wages](#Wages)
+
+4. [Prices](#Prices)
+
+5. [The Natural Rate of Unemoloyment](#The Natural Rate of Unemoloyment)
+
+
+
+
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# The Labor Market
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+
+---
+# The Labor Market
+
+In the short run models we have considered thus far (Ch. 3-6), we assumed that the price, $P$, was fixed and firms will supply any level of output at at this prics (recall that we have never seen variable $P$ showing up in any models so far)
+
+--
+
+- However, prices isn't fixed
+
+--
+
+- prices $P$ should be treated a variable too
+
+
+
+
+---
+# The Labor Market
+
+- What happens to prices over time when firms increase
+output?
+
+--
+
+- firms increase output $\implies$
+
+--
+
+- More workers are hired $\implies$
+
+--
+
+- As more workers are hired, unemployment falls $\implies$
+
+--
+
+- As unemployment falls, it's more difficult for firms to find acceptable replacement workers; and at the same time, it's easier for workers to find other jobs $\implies$
+
+--
+
+- workers can ask for higher wages, so wages rise $\implies$
+
+--
+
+- As total wages rise, production costs rise $\implies$
+
+--
+
+- As production costs rise, prices increase!
+
+
+
+
+---
+# The Labor Market
+
+In the medium run, we need to 
+
+- abandon the assumption that prices are fixed
+
+- and model the relationship between the price level $P$ and wages $W$ to show how prices adjust over time
+
+- and how this affects output
+
+
+---
+# Some Definitions
+
+- **Population**: The total total number of people that are residents of
+a country
+
+--
+
+- **Non-institutionalized Civilian Population**: The total civilian
+population that is available for work, calculated as total population
+minus individuals under the age of 16, in prison, or in the armed forces
+
+--
+
+Non-institutionalized Civilian Population consists of two parts: 
+- out of the labor force
+- civilian **labor force (L)**: The sum of non-institutionalize individuals either working or looking for work
+  - **employment (N)**: number of people who have a job
+  - **unemployment (U)**: number of people who do not have a job AND are looking for one
+  - $L=N+U$ 
+
+
+
+---
+Population, labor force, employment, and unemployment in the U.S. (in millions), 2014: 
+
+<img src="../ch7/image/1.png" width=500>
+
+
+
+
+---
+# Some Definitions
+
+- **Participation Rate**: The ratio of labor force to non-institutionalized civilian population
+
+--
+
+- Participation Rate is the ratio of individuals *working or trying to work* to all individuals *capable of working* 
+
+--
+
+- **Separation**: when someone is fired or quits their job
+
+--
+
+- **Unemployment Rate (u)**: The ratio of unemployed individuals to the total labor force 
+
+- $u=\frac{U}{U+N}=\frac{1}{1+\frac{N}{U}}$
+
+- when $\frac{N}{U} \downarrow$: $u \uparrow$ 
+
+
+---
+# When/Why is Unemployment High?
+
+- When will $\frac{N}{U} \downarrow$ so that $u \uparrow$?
+
+--
+
+**Separations and Hires are high**: $U \uparrow, N \uparrow$, but $U$ rises more
+- if people are moving in and out of unemployment quickly the unemployment rate will appear to be high. The average duration of unemployment will be **short**, but a large number of people with experience short periods of unemployment
+
+--
+
+**Separations and Hires are low**: $U \downarrow, N \downarrow$, but $N$ falls more
+- in this situation, the duration of unemployment is long and the economy is **stagnant**. A small number of people are unemployed for a long time
+  
+--
+
+To understand which scenario is most likely for a given unemployment rate, we must analyze the data!
+
+
+---
+# U.S. Labor Market Features
+In the United States, the data are available from a *monthly* survey called the Current Population Survey (CPS). 
+- Average Monthly Flows between Employment, Unemployment, and Non-participation in the United States, 1996 to 2014 (Millions): 
+
+<img src="../ch7/image/2.png" width=400>
+
+
+---
+# U.S. Labor Market Feature I
+**The flows of workers in and out of employment are large**
+- 8.2 million separations each month
+  - 3.0 million change jobs 
+  - 3.4 million move from employment to out of the labor force
+  - 1.8 million move from employment to unemployment 
+- on average, in the U.S, about 60000 workers become unemployed per day
+
+<img src="../ch7/image/2.png" width=300>
+
+
+
+---
+# U.S. Labor Market Feature II
+**The flows in and out of unemployment are large relative to the number of unemployed**
+- 3.9 million: the average monthly flow out of unemployment 
+  - 2.0 million people get a job
+  - 1.9 million stop searching for a job and drop out of the labor force
+  
+<img src="../ch7/image/2.png" width=300>
+  
+  
+---
+# U.S. Labor Market Feature II (cont'd)
+**The flows in and out of unemployment are large relative to the number of unemployed**
+-  the proportion of unemployed leaving unemployment equals 3.9/8.8 or about 44% each month
+- the average **duration of unemployment**, which is the average length of time people spend unemployed, is between two and three months
+
+<img src="../ch7/image/2.png" width=300>
+
+
+---
+# U.S. Labor Market Feature II (cont'd)
+- unemployment in the United States is a quick transition rather than the *stagnant* type 
+- In many European countries, the average duration is much longer than in the United States
+- In the United States, when unemployment is high, such as was the case in the crisis, the average duration of unemployment becomes much longer
+
+
+---
+# U.S. Labor Market Feature III
+** The flows in and out of the labor force are also surprisingly large**
+- 5.3 (3.4 plus 1.9) million workers drop out of the labor force 
+- 5.7 join the labor force (3.7 plus 2.0)
+- among those classified as out of the labor force, a large proportion report that although they are not looking, they “want a job”
+- They are in effect **discouraged workers**: will take the job if they find one
+
+<img src="../ch7/image/2.png" width=300>
+
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# Unemployment
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+
+---
+# Movements in Unemployment
+the average value of the U.S. unemployment rate over the year since 1948 (shaded areas: recessions): 
+
+<img src="../ch7/image/3.png" width=600>
+
+- has fluctuated between 3 and 10%
+- are closely associated with recessions and expansions: unemployment rate tend to rise during recessions and fall during expansions
+
+
+
+---
+# Movements in Unemployment
+
+How firms can decrease their employment in response to a decrease in demand? 
+
+--
+
+- hire fewer new workers
+  - the chance that an unemployed worker will find a job diminishes
+
+--
+
+- lay off the workers who are currently employed
+  - employed workers are at a higher risk of losing their job
+
+--
+
+Higher unemployment is associated with both a lower chance of finding a job if one is unemployed and a higher chance of losing it if one is employed
+
+
+---
+# Movements in Unemployment
+
+<img src="../ch7/image/4.png" width=600>
+
+- on the left vertical axis: the unemployment rate 
+- on the right vertical axis: the proportion of unemployed workers finding a job each month 
+
+
+
+---
+# Movements in Unemployment
+
+<img src="../ch7/image/4.png" width=600>
+
+- When unemployment is higher, the proportion of unemployed finding jobs within one month is lower (Note that the scale on the right is an inverse scale)
+- Higher unemployment is associated with both a lower chance of finding a job if one is unemployed
+
+
+
+---
+# Movements in Unemployment
+
+<img src="../ch7/image/5.png" width=600>
+
+- on the left vertical axis: the unemployment rate 
+- on the right vertical axis: the monthly seperation rate from employment
+
+
+---
+# Movements in Unemployment
+
+<img src="../ch7/image/5.png" width=600>
+
+- Higher unemployment implies a higher separation rate 
+- Higher unemployment is associated with a higher chance of losing it if one is employed
+
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# Wages
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+---
+# How Are Wages Determined?
+
+- Sometimes wages are set by **collective bargaining**: bargaining between a union (or group of unions) and a firm (or industry)
+  - In the U.S., only 10% of workers have wages set by collective bargaining
+  - In much of Europe, collective bargaining plays a much bigger role in wage determination
+
+--
+
+- In the U.S., most workers have their wages set by **individual bargaining**
+  - The more skills a job requires, the more bargaining power individuals have
+  - College graduates have a greater ability to negotiate their contracts than workers in retail or food services
+
+
+
+---
+# How Are Wages Determined?
+
+How can we create a general model of wage determination given these large differences across countries and workers?
+
+--
+
+We focus on two facts and build our model from here:
+- Workers have a **reservation wage**, which the lowest wage workers would accept to do a job. Workers can use some bargaining power to obtain wages above their reservation wages
+- Wages are related to labor market conditions: **the lower the unemployment rate, the higher the wages**
+
+
+
+
+---
+# Bargaining Power
+
+**Bargaining Power**: a worker's ability to negotiate his or her wage
+
+--
+
+How much **bargaining power** workers have depends on two factors:
+- How costly it would be for the firm to replace the worker if he or she quit
+- How hard would it be for the worker to find a new job if he or she quit
+  
+--
+
+The more costly it is to replace a worker and the more easily a worker could find a new job, the more bargaining power that
+individual has
+- This is why superstar athletes are able to negotiate enormous contracts - they are hard to replace and they could find a new job easily - while Gap retail employees - easy to replace and few outside options - do not
+ 
+ 
+---
+# Bargaining Power
+
+What type of jobs typically have the highest bargaining power?
+
+--
+
+- High skill jobs (either requiring a lot of education or a specialized skill set) that require a high degree of job specific training have the highest bargaining power (like computer programming for a specific company, using and fixing heavy machinery, or many jobs in the health industry)
+
+--
+
+- Low skill jobs with little training have the least bargaining power (like McDonalds employees, janitorial jobs, low level construction work)
+
+
+
+---
+# Bargaining Power
+
+What other factors impact bargaining power?
+
+--
+
+- When the unemployment rate is low, it is more difficult for firms to find acceptable replacement workers. At the same time, it is easier for workers to find other jobs
+
+--
+
+- **when unemployment is lower, bargaining power is higher, so are wages**
+
+
+
+
+<!---
+# Efficency Wages
+
+Even in a world in which workers have no bargaining power, why might firms want to pay workers above their reservation wage?
+
+- Paying workers above their reservation wage might inspire loyalty
+(harder to find a job that pays as well). This reduces employee
+turnover.
+
+- Paying workers more makes them feel better about their jobs and
+(in theory) makes them work harder.
+
+- Economists call the theories that link the productivity or the efficiency of workers to the wage they are paid efficiency wage theories. 
+
+Like theories based on bargaining, efficiency wage theories suggest that wages depend on both the nature of the job and on labor-market conditions.
+
+- Firms, such as high-tech firms, that see employee morale and commitment as essential to the quality of their work will pay more than firms in sectors where workers’ activities are more routine.
+
+-  Labor-market conditions will affect the wage. If unemployment is low, then it's easy to find a new job. Paying individuals above their reservation wage makes it harder for them to find a better paying job even when unemployment is low. 
+
+In summary, efficiency wage theories also suggests that **lower unemployment leads to higher wages** 
+--->
+
+
+
+---
+# Wages, Prices, and Unemployment
+
+<span style="color:blue">  $$W = P^e F(u,z)$$ </span>
+
+--
+
+This means Wage $W$ is a function of:
+- Expected prices $P^e$
+- The unemployment rate $u$ 
+- Other factors $z$
+
+--
+
+We just discussed: **when unemployment is lower, bargaining power is higher, so are wages**. This is why $W$ is **inversely** related to $u$
+
+--
+
+- Why do expected prices $P^e$ affect wages? What is other factor $z$, and how does $z$ affect wages
+
+
+---
+# Wages, Prices, and Unemployment
+
+<span style="color:blue">  $$W = P^e F(u,z)$$ </span>
+
+Why do prices affect wage?
+
+--
+
+- The price level affects nominal wages because individuals care
+about their RELATIVE income
+
+- If all prices double, workers need their wages to double in order
+to buy the same goods as before.
+
+- If firms expect the price of the goods they sell to double, they will be willing to double the nominal wage
+
+Therefore, both workers and firms care about **Real Wage**, $\frac{W}{P}$. Obviously, prices $P$ affects real wage $\frac{W}{P}$
+
+
+---
+# Wages, Prices, and Unemployment
+
+<span style="color:blue">  $$W = P^e F(u,z)$$ </span>
+
+Why do we use expected prices $P^e$?
+
+- Because wages are set in nominal terms (dollars) and when they are set, we may not know the relevant price level. So workers form their expectation of the pricel level in the future, and the expected price will affect wages
+
+- Example: suppose you sign a 3 year contract at a given wage. If you expect prices to double over the next 3 years, you will ask for a different wage than if you don't expect prices to change at all
+
+
+
+---
+# Wages, Prices, and Unemployment
+
+<span style="color:blue">  $$W = P^e F(u,z)$$ </span>
+
+What is $z$?
+
+- $z$ is a stand-in for any other factors that might **positively** affect wage
+
+- Example 1: **Unemployment insurance** 
+  - If unemployment benefits are high, then being unemployed relative to working is less harmful, thus workers will demand a higher wage because their outside option has improved
+
+
+
+---
+# Wages, Prices, and Unemployment
+
+<span style="color:blue">  $$W = P^e F(u,z)$$ </span>
+
+- Example 2: An increase in the **minimum wage** may increase not only the minimum wage itself, but also wages just above the minimum wage, leading to an increase in the average wage $W$
+
+- Example 3: **employment protection**, which makes it more expensive for firms to lay off workers. Such a change is likely to increase the bargaining power of workers covered by this protection (laying them off and hiring other workers is now costlier for firms), increasing the wage $W$
+
+
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# Prices
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+
+---
+# Price Determination
+
+The prices that a firm sets depends on the costs they face. These costs depend on the production function
+
+--
+
+- **Production Function**: the relation between **inputs** used in production and the quantity of **output** produced
+
+--
+
+- Assumption 1: labor $N$ is the only input factor of production
+
+- Assumption 2: **labor productivity**, which is output per worker, is constant (denoted by $A$)
+
+--
+
+- Thus, the production function is: $Y=A*N$
+
+
+
+---
+# Price Determination
+
+- Assuming labor is the only input factor of production and output per worker is constant are all very big assumptions
+
+--
+
+- In reality, we need to worry about input such as capital (machines and factories...) and raw materials(oil...). 
+
+--
+
+- Moreover, there is technological progress. Labor productivity $A$ is not constant but steadily increases over time. 
+
+--
+
+- We shall introduce these complications later. 
+
+
+---
+# Price Determination
+
+Given our assumption $A$ is constant, we can simply assume $A = 1$
+
+--
+
+- production function: $Y=N$
+
+--
+
+- the cost of producing 1 more unit of output $Y$ is exactly the wage $W$ 
+
+--
+
+- That is, the marginal cost of production is $W$, and marginal revenue is $P$
+
+--
+
+- Under perfect competition, marginal cost equals marginal revenue: $W=P$
+
+--
+
+- In reality, we allow for the possibility of imperfect competition: $P=(1+m)W$, where m is called the **markup**
+
+--
+
+- If firms are perfectly competitive, then $m = 0, P = W$
+
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# The Natural Rate of Unemoloyment
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+
+
+---
+# Wage Setting Relation (WS)
+
+We have seen:
+
+- $Y=N$, because $A$ is assumed to be constant 1
+
+--
+
+- $P=(1+m)W$, because we allow for the possibility that firms hold monopoly power (imperfect competition)
+
+--
+
+- real wage is what workers and firms care about, defined as $\frac{W}{P}$
+
+--
+
+- If we further simplify by assuming $P^e=P$: 
+
+--
+
+<span style="color:blue">  $$W = P F(u,z)$$ </span>
+
+--
+
+<span style="color:blue">  $$\frac{W}{P} = F(u,z)$$ </span>
+
+
+---
+# Wage Setting Relation (WS)
+
+- If $u$ increases, what happens to $\frac{W}{P}$?
+
+--
+
+- Higher unemployment means less bargaining power and less bargaining power means lower wages
+
+--
+
+- Real Wage $\frac{W}{P}$ decreases when unemployment $u$ increases
+
+--
+
+<span style="color:blue">  $$\frac{W}{P} = F \underbrace{(u,z)}_{(-,+)}$$ </span>
+
+---
+# Wage Setting Relation (WS)
+
+<span style="color:blue">  $$\frac{W}{P} = F \underbrace{(u,z)}_{(-,+)}$$ </span>
+
+The relation between the real wage and the rate of unemployment: **the higher the unemployment rate, the lower the real wage chosen by wage setters**
+
+--
+
+- This is called the **Wage Setting (WS) Relation**
+
+--
+
+- If we draw this relation of $\frac{W}{P}$ against $u$, i.e. if $\frac{W}{P}$ is measured on the vertical axis, and $u$ is measured on the horizontal axis, what whould the curve look like? 
+
+--
+
+- Should be a downward–sloping curve 
+
+
+
+
+
+---
+# Price-Setting Relation (PS)
+
+Divide both sides of $P = (1 + m)W$ by the price level and then re-arrange:
+
+<span style="color:blue">  $$\frac{W}{P} = \frac{1}{1+m}$$ </span>
+
+--
+
+- If the markup $m$ increases, what happens to $\frac{W}{P}$?
+
+--
+
+- An increase in the markup $m$ leads all the firms to increase their prices $P$ given the wage $W$ they have to pay. So all prices have increased. You have the same amount of money $W$ but now everything is more expensive
+
+--
+
+- Real wage $\frac{W}{P}$ falls when the markup $m$ increases
+
+
+
+
+
+---
+# Price-Setting Relation (PS)
+
+<span style="color:blue">  $$\frac{W}{P} = \frac{1}{1+m}$$ </span>
+
+The relationship between the real wage and the markup is called **Price Setting Relation**
+
+--
+
+- Does the real wage depend on the unemployment rate? 
+
+--
+
+- If the real wage is measured on the vertical axis and the unemployment rate is measured on the horizontal axis, what would **Price Setting Relation** look like?
+
+--
+
+- Price Setting (PS) relation should be a flat line
+
+
+---
+# Labor Market Equilibrium 
+
+<img src="../ch7/image/6.png" width=500>
+
+- the real wage: on the vertical axis
+- the unemployment rate: on the horizontal axis
+- WS relation: a downward–sloping curve 
+- PS relation: a flat line
+
+
+
+---
+# Labor Market Equilibrium 
+Equilibrium in the labor market requires that the real wage chosen in wage setting be equal to the real wage implied by price setting (point A)
+
+<img src="../ch7/image/6.png" width=400>
+
+- **equilibrium unemployment rate**: $u_n$, can be solved from $F(u_n,z) = \frac{1}{1+m}$ 
+- $u_n$: **the natural rate of unemployment**, **the structural rate of unemployment**
+
+
+---
+# Group Work VI
+
+- PS relation $\frac{W}{P} = \frac{1}{1+m}$
+- WS relation $\frac{W}{P} = F \underbrace{(u,z)}_{(-,+)}$
+
+Q1: What happens to the natural rate of unemployment $u_n$ and the real wage if unemployment benefits increase?
+
+HINT: 
+- unemployment benefits $z$ increases
+- PS relation is not affected by $z$
+- WS relation is affected: Fixing $u$, does a higher $z$ leads to a lower or a higher $\frac{W}{P}$?
+- How would you shift WS curve?
+
+
+
+---
+# Group Work VI 
+
+<img src="../ch7/image/7.png" width=400>
+
+- At a fixed unemployment rate $u$, higher unemployment benefits $z$ lead to a higher real wage $\frac{W}{P}$
+- WS shifts upward
+- Compared with the old equilibirum $A$, at $A\prime$, unemployment rate higher, and the real wage is the same
+
+
+
+
+---
+# Group Work VI
+
+- PS relation $\frac{W}{P} = \frac{1}{1+m}$
+- WS relation $\frac{W}{P} = F \underbrace{(u,z)}_{(-,+)}$
+
+Q2: What happens to the natural rate of unemployment unemployment $u_n$ and the real wage if markup $m$ increases? (This happens when there is a less stringent enforcement of existing antitrust legislation, which allows firms to collude more easily and increase their market power)
+  
+HINT:
+- $m$ increases
+- WS relation is not affected by $m$
+- PS relation is affected: fixing $u$, does a higher $m$ leads to a lower or a higher $\frac{W}{P}$?
+- How would you shift PS curve?
+
+
+---
+# Group Work VI
+
+<img src="../ch7/image/8.png" width=400>
+
+- At a fixed unemployment rate $u$, higher $m$ decreases the real wage $\frac{W}{P}$ 
+- PS shifts downwards
+- Compared with the old equilibirum $A$, at the new equilibrium $A\prime$, the natural rate of unemployment is higher, and real wage is lower
+
+
+
+
+
+

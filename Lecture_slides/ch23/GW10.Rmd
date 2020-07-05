@@ -1,0 +1,44 @@
+---
+title: "Group Work X"
+author: "Xiang LI, 8/13/2019"
+date: 
+header-includes:
+    - \usepackage{tikz}
+    - \usetikzlibrary{arrows,calc}
+    - \usepackage{relsize}
+    - \usetikzlibrary{decorations.pathreplacing}
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\textbf{Name:}\makebox[2in]{\hrulefill} 
+&nbsp; 
+\textbf{UO ID:}\makebox[2in]{\hrulefill}
+
+
+Q1: from Chapter 5, the real money supply (the left side) must be equal to the real demand for money (the right side): $\frac{M}{P}=YL(i)$. Let's use the following form for the right side: $YL(i)=2Y-8000i$, meaning $\frac{M}{P}=2Y-8000i$
+
+(1) If $Y=1000, i=0.2$, what is the real money demand? What is real money supply? 
+
+\vspace{1in}
+
+(2) Given $Y$, what is the relationship between the real money supply $\frac{M}{P}$ and the interest rate $i$?
+
+\vspace{1in}
+
+(3) If, as a result of the introduction of credit cards, the real demand for money halves, meaning $\frac{M}{P}=\frac{1}{2}YL(i)$. Given $Y=1000$ and the real money supply you have obtained in the previous part, what must the interest rate be in the **short run** equilibrium? Keep in mind that in the **short run, $P$ does not change**
+
+\vspace{1in}
+
+(4) Given output $Y$, does the relation you found in part 2 still holds? 
+
+\vspace{1in}
+
+(5) In the **medium run, $P$ can change**. Given output $Y$, interest rate $i$, nominal money supply $M$, after the real demand for money halves, how must $P$ adjust in the **medium run** equilibrium? 
+
+\vspace{1in}
+
+(6) Does the **positive relation** between the **money supply** and the **inflation** in the medium run still hold?

@@ -1,0 +1,330 @@
+---
+title: "EC313: Intermediate Macroeconomics"
+subtitle: "Chapter 4"
+author: "Xiang LI"
+date: "July 25, 2019"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      #countdown: 120000
+    css: [default, metropolis, metropolis-fonts]
+---
+
+<style>
+  .large { font-size: 200% }
+  .small { font-size: 50% }
+</style>
+
+<style type="text/css">
+.remark-slide-content {
+    font-size: 25px;
+    padding: 1em 1em 1em 1em;
+}
+</style>
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(knitr)
+library(tidyverse)
+# library(gdtools)
+# library(hrbrthemes)
+library(plotly)
+library(lubridate)
+library(kableExtra)
+library(htmlTable)
+library(dplyr)
+library(ggplot2)
+```
+
+
+# Chapter 4: Financial Markets I
+
+1. [The Demand for Money](#The Demand for Money)
+
+2. [Determining the Interest Rate](#Determining the Interest Rate)
+
+
+
+
+
+
+
+
+
+
+---
+Why study financial markets?
+
+--
+
+- In order to understand how the interest rate is determined in the short run!
+
+
+--
+
+- The goods market we outlined in Chapter 3 did not include an interests rate, but in the real world, the interest rate is mentioned in the news almost every
+day!
+
+--
+
+- The Goods Market model does not have a role for a Central Bank like the Federal Reserve
+
+--
+
+- In short; we study financial markets to understand a realistic element of our economic activity!
+
+
+
+---
+In chapter 4: 
+
+- Ignore all financial assets except for **bonds** and **money** (meaning we ignore houses, stock investments, etc)
+
+--
+
+- bonds: A financial asset that represents a debt contract between the issuer (borrower) and the buyer (lender)
+
+--
+
+- When you buy a bond with a face value (principal) F = \$1000 issued by the US government, you lend $1, 000 to the US government
+
+
+
+
+---
+- As a borrower, the US government will pay you interest. If the annual **interest rate** is 10%, each year you would receive $100 = 10% ∗ 1000
+
+--
+
+- **interest rate**: price of money
+
+--
+
+- The interest rate will be determined by equilibrium in the money market: **Money Supply = Money Demand**
+
+
+
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# The Demand for Money
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+
+---
+# The Demand for Money
+
+- In order to describe money market equilibrium, we first must understand the demand for money.
+
+--
+
+- **Money** is the sum of currency and checkable deposits
+  - **Currency**: paper money, coins, etc
+  - **Checkable Deposits**: deposits you have stored with a bank
+  
+--
+
+- Money is used to make transactions, but it does not earn interest
+
+--
+
+- **Bonds** pay interest rates but cannot be used for transactions
+
+--
+
+- We assume there is only one type of bond, which pays positive interest rate $i$
+  
+  
+---
+# The Demand for Money
+
+- Why hold a mixture of bonds and money?
+
+--
+
+- First, I need to make transactions! Ex: I buy coffee almost every day. I cannot use
+bonds to buy coffee, so I make sure that I have some money
+
+--
+
+- Second, thankfully, I do not spend ALL of my money on coffee. If I’m not using all of my money, I should buy bonds so that I can earn interest.
+
+
+
+---
+# The Demand for Money
+
+- What determines my proportion of bond holdings to money holdings?
+
+--
+
+- First, *level of transactions*
+  - the more purchases I make, the more money (and fewer bonds) I will hold (for a fixed interest rate)
+  
+--
+
+- Second, *interest rate on bonds*
+  - the higher the interest rate on bonds, the more bonds and less money I will hold (for a fixed level of transactions)
+  
+
+  
+---
+# The Demand for Money
+
+- A higher interest rate means the opportunity cost of holding money has
+increased
+
+--
+
+- Back to the US government bond example: If interest rate increases to
+20% per year, you would receive $200 a year. You might want to consider holding more bonds instead of money
+ 
+--
+
+- bid to buy U.S. federal government bonds (https://www.treasurydirect.gov/indiv/research/indepth/tbonds/res_tbond_buy.htm)
+
+
+---
+# Deriving Demand for Money
+
+- Money Demand is denoted by $M^D$: 
+<span style="color:blue"> $$M^D = \$ Y \times L(i)$$ </span>
+- nominal income: $Y
+- interest rate: $i$ 
+  
+--
+
+- why does nominal income affect $M^D$?
+
+--
+
+- nominal income is proportional to the level of transactions, and hence determines money holdings
+
+
+---
+# Deriving Demand for Money
+
+- why does $i$ affect $M^D$?
+
+--
+
+- $i$ determines holdings of bond, and hence affect money holdings 
+
+--
+
+- Do you think $L(i)$ is increasing or decreasing in $i$? 
+
+--
+
+-  An increase in the interest rate decreases the demand for money, as people put more of their wealth into bonds
+
+
+
+---
+# Deriving Demand for Money
+
+<span style="color:blue"> $$M^D = \$ Y \times L(i)$$ </span>
+
+In summary: 
+
+--
+
+- First, the demand for money $M^D$ increases in proportion to nominal income
+
+--
+
+- Second, the demand for money  $M^D$ depends **negatively** on the interest rate $i$
+
+--
+
+- How to graphically express the relationship between $M^D$ and $i$, given a level of nominal income?
+
+---
+# Deriving Demand for Money
+
+<span style="color:blue"> $$M^D = \$ Y \times L(i)$$ </span>
+
+- interest rate $i$ is measured on the vertical axis
+- demand for money is measured on the horizontal axis 
+- The relation between the demand for money $M^D$ and the interest rate $i$ **for a given level of nominal income** is represented by the $M^d$ curve
+
+<img src="../ch4/image/1.png" width=400>
+
+
+
+---
+# Deriving Demand for Money
+
+<img src="../ch4/image/1.png" width=400>
+
+- What happens when the **interest rate** increases or decreases in our graph?
+
+--
+
+- We **move along** the curve $M^D$
+
+
+---
+# Deriving Demand for Money
+
+<img src="../ch4/image/2.png" width=400>
+
+- What happens when **nominal income** increases(decreases) in our graph?
+
+--
+
+- We **shift** the $M^D$ curve to the right(left)
+
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# Determining the Interest Rate
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+
+---
+# Supply of Money
+
+In the real world, there are two types of money: currency and checkable deposits. 
+
+--
+
+- for simplicity, we assume that the only money in the economy is currency
+
+--
+
+- **Currency**: Money supplied by central banks. This is the paper (or coin) money that we use on a daily basis
+
+--
+
+- Currency is supplied by the Federal Reserve in the U.S.
+
+
+---
+# Supply of Money
+
+- We have outlined the money demand equation $M^D$, we must now
+characterize money supply $M^s$
+
+- The Money Supply is characterized by: 
+<span style="color:blue"> $$M^s = M$$ </span>
+
+
+

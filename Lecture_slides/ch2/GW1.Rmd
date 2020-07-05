@@ -1,0 +1,62 @@
+---
+title: "Group Work I"
+author: "Xiang LI"
+date: "7/23/2019"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\textbf{Name:}\makebox[2in]{\hrulefill} 
+&nbsp; 
+\textbf{UO ID:}\makebox[2in]{\hrulefill}
+&nbsp; 
+
+
+Q1: if $Y_{2014} = 100$, $Y_{2013} = 90$, $X_{2014} = 30$, $X_{2013} = 20$. What is the growth in Y between 2013 and 2014? And what is the growth in $X$ between 2013 and 2014?
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+Q2: Fill in the blanks. 
+
+```{r table-4, echo=FALSE, message=FALSE, warnings=FALSE, results='asis'}
+require(pander)
+panderOptions('table.split.table', Inf)
+#set.caption("My great data")
+my.data <- "
+  Year | Quantity of Cars  | Price of cars | Nominal GDP | Real GDP in 2009 dollars
+  2008 | 10                | $20,000       |             |
+  2009 | 12                | $24,000       |             |  
+  2010 | 13                | $26,000       |             |  "
+df <- read.delim(textConnection(my.data),header=FALSE,sep="|",strip.white=TRUE,stringsAsFactors=FALSE)
+names(df) <- unname(as.list(df[1,])) # put headers on
+df <- df[-1,] # remove first row
+row.names(df)<-NULL
+pander(df, style = 'rmarkdown')
+```
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+Q3: Suppose a country using the United States’ system of calculating official unemployment statistics has 100 million people, of whom 50 million are working age. Of these 50 million, 20 million have jobs. Of the remainder: 10 million are actively searching for jobs; 10 million would like jobs but are not searching; and 10 million do not want jobs at all. What is the value of the labor force? What is the official unemployment rate?

@@ -1,0 +1,1200 @@
+---
+title: "EC313: Intermediate Macroeconomics"
+subtitle: "Chapter 3"
+author: "Xiang LI"
+date: "July 24, 2019"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      #countdown: 120000
+    css: [default, metropolis, metropolis-fonts]
+---
+
+<style>
+  .large { font-size: 200% }
+  .small { font-size: 50% }
+</style>
+
+<style type="text/css">
+.remark-slide-content {
+    font-size: 25px;
+    padding: 1em 1em 1em 1em;
+}
+</style>
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(knitr)
+library(tidyverse)
+# library(gdtools)
+# library(hrbrthemes)
+library(plotly)
+library(lubridate)
+library(kableExtra)
+library(htmlTable)
+library(dplyr)
+library(ggplot2)
+```
+
+
+# Chapter 3: The Goods Market
+
+1. [The Composition of GDP](#The Composition of GDP)
+
+2. [The Demand for Goods](#The Demand for Goods)
+
+3. [The Determination of Equilibrium Output](#The Determination of Equilibrium Output)
+
+
+
+
+
+
+
+
+
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# The Composition of GDP
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+ 
+ 
+---
+# Consumption (C)
+
+- the goods and services purchased by consumers
+- the largest component of GDP
+
+
+
+---
+# Investment (I)
+
+- also called **fixed investment** 
+
+--
+
+- Composed of nonresidential and residential investment
+  - **Nonresidential investment**: purchases by firms of new plants or new machines
+  - **Residential investment**: purchases by people of new houses or apartments
+  
+
+--
+
+- Firms buy machines or plants to produce output in the future. People buy houses or apartments to get housing services in the future. 
+
+
+
+
+
+---
+# Government Spending (G)
+
+- The purchases of goods and services by the federal, state, and local governments.
+  - e.g. airplanes to office equipment, services provided by government employees, ...
+
+--
+
+- G does **not** include:
+  - government transfers, like Medicare, food stamps, or social security payments
+  - interest payments on the government debt
+
+
+
+---
+# Exports (X) and Imports (IM)
+
+- Exports: the purchases of U.S. goods and services by foreigners
+
+--
+
+- imports: the purchases of foreign goods and services by U.S. consumers, U.S. firms, and the U.S. government
+
+--
+
+- **net exports** (also called **trade balance**): $X-IM$
+  
+- **trade surplus**: $X > IM$
+
+- **trade deficit**: $X < IM$
+
+--
+
+- Do you think America typically has a trade surplus or a trade deficit? (https://fred.stlouisfed.org/series/BOPGSTB)
+
+
+
+---
+- inventory investment: 
+  - the difference between goods produced and goods
+sold in a given year
+  - A positive inventory investment means production was higher than sales in a given year
+  - is typically small and can be ignored
+  
+  
+  
+---
+if ignoring inventory investment,<span style="color:blue"> $Y=C+I+G+X-IM$ </span> 
+
+```{r table-1, echo=FALSE, message=FALSE, results='asis', warnings=FALSE}
+library(kableExtra)
+output <- data.frame(matrix(NA, nrow=8, ncol=3))
+colnames(output)<-c("", "Billions of Dollars", "percent of GDP")
+output[1,]<-c("", "14,660", "100%")
+output[2,]<-c("", "10,348", "70.5%")
+output[3,]<-c("Nonresidential", "1,415", "9.7%")
+output[4,]<-c("Residential", "341", "2.3%")
+output[5,]<-c("", "3,001", "20.4%")
+output[6,]<-c("Exports(X)", "1,838", "12.5%")
+output[7,]<-c("Imports(IM)", "-2,354", "-16%")
+output[8,]<-c("", "71", "0.5%")
+
+output %>%
+  kable() %>%
+  kable_styling( font_size = 12) %>%
+  pack_rows("GDP(Y)", 1,1) %>%
+  pack_rows("Consumption(C)", 2,2) %>%
+  pack_rows("Invsetment(I)", 3,4) %>%
+  pack_rows("Government spending(G)", 5,5) %>%
+  pack_rows("Net Export(X-IM)",6,7) %>%
+  pack_rows("Inventory", 8,8)
+```
+
+
+
+
+---
+class: inverse, center, middle
+name: Methodology
+
+# The Demand for Goods
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+
+
+
+
+
+---
+# Total Demand for Goods
+
+- Denote the total demand for goods by $Z$: <span style="color:blue"> $Z \equiv C+I+G+X-IM$ </span> 
+
+--
+
+- $\equiv$: this equation is an *identity*
+
+--
+
+-  It *defines* $Z$ as the sum of consumption, plus investment, plus government spending, plus exports, minus imports
+
+--
+
+- Here, we are trying to model the demand of human beings for goods 
+
+--
+
+- How can we possibly represent all of human behavior (the goal of economics) with equations?
+
+--
+
+- We can’t! So we make assumptions!
+
+---
+# Total Demand for Goods
+
+- Assumption 1: "the" good
+  - all firms produce the same good, which can then be used by consumers for consumption, by firms for investment, or by the government
+  
+--
+
+- With this (big) simplification, we need to look at only one market — the market for “the” good — and think about what determines supply and demand in that market
+
+
+---
+- Assumption 2: firms are willing to supply any amount of the good at a given price level 
+  
+--
+
+- This assumption allows us to focus on the role demand plays in the determination of output, and ignore the supply
+
+--
+
+- Assumption 3: closed economy
+  - $X = 0, IM = 0$
+
+--
+
+- this assumption will also simplify our discussion because we won’t have to think about what determines exports and imports.
+
+
+--
+
+
+- the demand for goods: <span style="color:blue"> $Z \equiv C+I+G$ </span>
+
+
+
+---
+# Consumption (C)
+
+What is the most important determinant of consumption?
+
+--
+
+- **disposable income**: income that remains once consumers have received transfers from the government and paid their taxes
+
+--
+
+- $C = C(Y_D)$
+  - $C$: consumption
+  - $Y_D$: disposable income 
+  
+--
+
+- **when disposable income increases, so does consumption**
+  - this **positive linear relation** between $C$ and $Y_D$ can be characterized by: 
+  
+<span style="color:blue"> $$C=c_0+c_1 \times Y_D$$ </span>
+
+
+---
+# Consumption (C)
+<span style="color:blue"> $$C=c_0+c_1 \times Y_D$$ </span>
+
+--
+
+- $c_1$: **propensity to consume**
+  - the change $C$ resulting from an additional dollar of $Y_D$
+  
+--
+
+- $c_1$ is positive
+  - An increase in $Y_D$ is likely to lead to an increase in $C$
+  
+--
+  
+- $c_1$ is less than 1
+  - People are likely to consume only part of any increase in $Y_D$ and save the rest
+ 
+
+---
+# Consumption (C)
+<span style="color:blue"> $$C=c_0+c_1 \times Y_D$$ </span>
+
+- if $Y_D=0$, then $C=c_0$
+
+--
+
+- $c_0$: what people would consume if their $Y_D$ were equal to zero
+
+- $c_0$ is positive
+  - with or without income, people still need to eat! 
+
+--
+
+- How to consume without income?
+
+--
+
+- because people can sell their assets or borrow 
+
+
+---
+# Consumption (C)
+consumption function: <span style="color:blue"> $C=c_0+c_1 \times Y_D$ </span>
+
+```{r echo=FALSE, fig.height=4, fig.width=7, message=FALSE, results='asis', warnings=FALSE}
+plot_labels <- tibble(label = c("c[0]", "slope: c[1]"),
+                          x = c(0.5, 4),
+                          y = c(2, 5))
+production <- Hmisc::bezier(x = c(0, 9),
+                        y = c(2, 4)) %>% as_tibble()
+ggplot(mapping=aes(x = x, y = y)) + 
+  geom_path(data = production, color = "#808080", size = 1) + 
+  theme_classic() + 
+  coord_equal()+
+  scale_x_continuous(expand = c(0, 0)) + scale_y_continuous(expand = c(0, 2))+
+  xlab("Disposable Income") + ylab("Consumpotion")+
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE, size=5) +
+  theme(axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank())
+```
+
+- linear relation: the relation between $C$ and $Y_D$ is represented by a straight line 
+
+
+
+---
+# Consumption (C)
+
+<span style="color:blue"> $$C=c_0+c_1 \times Y_D$$ </span>
+
+- intercept with the vertical axis: $c_0$
+
+--
+  
+- slope is $c_1$, and is less than 1
+  - this straight line is flatter than a 45-degree line
+  
+--
+
+- if the value of $c_0$ **increases**(**decreases**), then this straight line shifts **up**(**down**) by the same amount
+  
+  
+---
+# Consumption (C)
+
+- define disposal income $Y_D$: <span style="color:blue"> $Y_D \equiv Y-T$ </span>
+  - $Y$: income
+  - $T$: taxes 
+  
+--
+  
+- rewrite  $C=c_0+c_1 \times Y_D$ as: <span style="color:blue"> $$C=c_0+c_1 \times (Y-T)$$ </span>
+
+--
+
+- consumption $C$ is a function of income $Y$ and taxes $T$
+  - Higher income $Y$ increases consumption $C$, but less than one for one
+  - Higher taxes $T$ decrease consumption $C$, also less than one for one
+
+
+
+---
+# Investment (I)
+
+- we take investment as given to keep our model simple: <span style="color:blue"> $I=\bar{I}$ </span>
+
+--
+
+- when we try to study of the effects of changes in production $Y$, we assume that changes in $Y$ will not affect investment
+  
+--
+
+- **exogenous variables**: variables are not explained within the model but are instead taken as given
+
+--
+
+-  In Chapter 5 we will introduce a more realistic treatment of investment, and drop the bar from $\bar{I}$ :) 
+  
+  
+
+
+---
+# Government Spending (G)
+
+- In our models, government behavior is entirely defined by Taxes $T$ and Government Spending $G$
+
+--
+
+- **fiscal policy**: the choice of Taxes $T$ and Government Spending $G$ by the government
+
+--
+
+- Again, to keep our model simple, we take Taxes $T$ and Government Spending $G$ as exogenous and given 
+
+--
+
+- Because we will (nearly always) take $G$ and $T$ as given, we won’t use a bar to denote their values :)
+
+--
+
+- **exogenous variables**: so far, we have $\bar{I}, T, G$
+
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# The Determination of Equilibrium Output
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+
+---
+# Demand for Goods
+
+- we have seen: $Z \equiv C+I+G$
+
+--
+
+- rewrite $C$ as $c_0+c_1 \times (Y-T)$: 
+
+  $$Z \equiv c_0+c_1 \times (Y-T)+I+G$$
+  
+--
+
+- rewite $I$ as $\bar{I}$: 
+
+<span style="color:blue"> $$Z \equiv c_0+c_1 \times (Y-T)+\bar{I}+G$$  </span>
+
+--
+
+- the demand for goods $Z$ depends on income $Y$, taxes $T$, investment $\bar{I}$ and government spending $G$
+
+
+
+---
+# Equilibrium in the Goods Market 
+
+- **equilibrium** in the goods market requires that the **production** (or, the **supply**) of the good $Y$ equals the **demand** for the good $Z$
+
+--
+
+- equilibirum condition equation: $Y=Z$ 
+
+--
+
+- rewrite $Z$ as $\equiv c_0+c_1 \times (Y-T)+\bar{I}+G$: 
+
+<span style="color:blue"> $$Y = c_0+c_1 \times (Y-T)+\bar{I}+G$$  </span>
+
+---
+# Equilibrium in the Goods Market 
+<span style="color:blue"> $$Y = c_0+c_1 \times (Y-T)+\bar{I}+G$$  </span>
+
+-  **In equilibrium**, **production** $Y$ (the left-hand-side (LHS) of the equation), is equal to demand (the right-hand-side(RHS)). Demand in turn depends on **income** $Y$, which is itself equal to production
+
+--
+
+- Why can we use the same symbol $Y$ for production and income?
+
+--
+
+- recall Chapter 2, we looked at GDP either from the production side or from the income side
+
+--
+
+- Production and income are identically equal
+
+
+---
+# Equilibrium in the Goods Market
+
+<span style="color:blue"> $$Y = c_0+c_1 \times (Y-T)+\bar{I}+G$$ </span>
+
+- If equilibrium output $Y$ is what we want to solve for, and $Y$ is on
+both sides of our equation, what do we do?
+  - Using Algebra
+  - Using Graphs
+
+  
+  
+---
+# Equilibrium: Using Algebra
+
+- $Y = c_0+c_1 \times (Y-T)+\bar{I}+G$
+
+--
+
+- $Y= c_0 + c_1 Y -c_1 T + \bar{I} + G$
+
+--
+
+- $(1-c_1) Y = c_0 + \bar{I} +G -c_1 T$
+
+--
+
+- solve for output $Y$: 
+
+<span style="color:blue"> $$Y = \frac{1}{1-c_1}[c_0 + \bar{I} +G -c_1 T]$$ </span>
+
+--
+
+- at equilibirum, the level of output $Y$ equals $\frac{1}{1-c_1}[c_0 + \bar{I} +G -c_1 T]$, so that production equals demand
+
+
+---
+# Equilibrium: Using Algebra
+
+<span style="color:blue"> $$Y = \frac{1}{1-c_1}[c_0 + \bar{I} +G -c_1 T]$$ </span>
+
+- here, the equilibrium level of variable $Y$ depends on other variables in the model, i.e. $c_1$, $c_0$, $\bar{I}$, $G$, $T$; therefore, $Y$ is called **endogenous variabele**
+
+--
+
+- variables $\bar{I}$, $G$, $T$ are **exogenous variable**, because the level of them are taken as given
+
+--
+
+- variables $c_0$, $c_1$ characterize the relationships among endogenous and exogenous variabele, and called **parameters**
+
+
+---
+# Equilibrium: Using Algebra
+
+<span style="color:blue"> $$Y = \frac{1}{1-c_1}[c_0 + \bar{I} +G -c_1 T]$$ </span>
+
+- $[c_0 + \bar{I} +G -c_1 T]$: **Autonomous spending** 
+  - part of the demand for goods that does not depend on output $Y$
+  
+--
+
+- $c_0 > 0$
+
+--
+
+- $\bar{I} > 0$
+
+--
+
+- sign of $G-c_1T$ is uncertain 
+
+--
+
+- what is the sign of autonomous spending?
+
+
+---
+# Equilibrium: Using Algebra
+
+<span style="color:blue"> $$[c_0 + \bar{I} +G -c_1 T]$$ </span>
+
+- the government is running a **balanced budget** when $T=G$
+
+--
+
+- when $T=G$: 
+  - $c_0 + \bar{I} + G -c_1 T = c_0 + \bar{I} + (1-c_1)G$
+  - because we have assumed that $c_1 < 1$
+  - and since $c_0 > 0$ and $\bar{I} > 0$
+  - autonomous spending is positive
+
+  
+---
+# Equilibrium: Using Algebra
+<span style="color:blue"> $$[c_0 + \bar{I} +G -c_1 T]$$ </span>
+
+-  the government is running a **budget deficit** when $T<G$
+  - when $T<G$, autonomous spending is positive (why?)
+  
+--
+  
+- the government is running a **budget surplus** when $T>G$
+  - when $T>G$, sign of autonomous spending is ambiguous (why?) 
+
+--
+
+- Only if the government were running a very large budget surplus — if taxes were much larger than government spending — could autonomous spending be negative
+
+
+---
+# Equilibrium: Using Algebra
+
+<span style="color:blue"> $$Y = \frac{1}{1-c_1}[c_0 + \bar{I} +G -c_1 T]$$ </span>
+
+- we have seens that the propensity to consume $0<c_1<1$
+
+- hence $\frac{1}{1-c_1}>1$
+
+- for this reason, $\frac{1}{1-c_1}$ is called **multiplier**, because it **multiplies** autonomous spending $[c_0 + \bar{I} +G -c_1 T]$ 
+
+
+---
+# Equilibrium: Using Algebra
+<span style="color:blue"> $$Y = \frac{1}{1-c_1}[c_0 + \bar{I} +G -c_1 T]$$ </span>
+
+_Example_: if $c_0$ increases by 1 billion dollars, how much will output $Y$ increases? 
+
+--
+
+- $\Delta Y = \Delta c_0 \times multiplier = 1 \times \frac{1}{1-c_1}> 1$
+
+--
+
+- here, autonomous spending increases by 1 billion, but output increases by more than 1 billions!
+
+--
+
+- a multiplier greater than 1 implies that, in equilibrium, output increases (or decreases) more than the increase (or decrease) in autonomous spending!
+
+---
+# Equilibrium: Using Algebra
+
+<span style="color:blue"> $$Y = \frac{1}{1-c_1}[c_0 + \bar{I} +G -c_1 T]$$ </span>
+
+_Example_: if $c_1=0.6$, and $c_0$ increases by 1 billion dollars, how much will output $Y$ increases? 
+
+--
+
+- $\Delta Y = \Delta c_0 \times multiplier = 1(billion)  \times \frac{1}{1-0.6}= 2.5(billion)$
+
+--
+
+- here, autonomous spending increases by 1 billion, but output increases by 2.5 billions!
+
+
+
+---
+# Equilibrium: Using Algebra
+_Example_: Government spending increases by 500 million dollars and $c_1 = 0.5$. Solve for the change in equilibrium output associated with this increase in government spending.
+
+--
+
+- $\Delta Y = \Delta G \times multiplier = 500 \times \frac{1}{1-0.5}=500 \times 2=1000 (million)$
+
+--
+
+- any change in autonomous spending — from a change in investment, to a change in government spending, to a change in taxes — will change output by more than its direct effect on autonomous spending
+
+
+
+---
+# Group Work II
+Q1: suppose $c_0=100, c_1=0.6, \bar{I}=150, G=150, T=100$. 
+
+- What is equilibrium output?
+
+--
+
+- $Y=\frac{1}{1-c_1}(c_0+G+\bar{I}-c_1 T)$
+
+- $Y=\frac{1}{1-0.6}(100+150+150-0.6*100)$
+
+- $Y=2.5*340=850$
+
+
+---
+# Group Work II (cont'd)
+Q1: suppose $c_0=100, c_1=0.6, \bar{I}=150, G=150, T=100$.
+
+- What is disposable income?
+
+--
+
+- $Y_D = Y-T=850-100=750$
+
+--
+
+- What is consumption?
+
+--
+
+- $C=c_0+c_1 Y_D = 100+0.6*750=550$
+
+
+
+---
+# Group Work II (cont'd)
+Q1: suppose $c_0=100, c_1=0.6, \bar{I}=150, G=150, T=100$.
+
+- If $c_0$ decreases to 50, what is the change in equilibrium output?
+
+--
+
+- $\Delta Y = (\frac{1}{1-0.6}) \times \Delta c_0=2.5*(-50)=-125$
+
+--
+
+- What is demand when $c_0=100$? Does it equal output?
+
+--
+
+- Yes, in equilibrium, $Z=Y$ so $Y=850$
+
+
+
+---
+# Equilibrium: Using Graph
+
+First, plotting production as a function of income: 
+
+--
+
+- measure production on the vertical axis, and measure income on
+the horizontal axis
+
+--
+
+- recall that production and income are identically equal
+
+--
+
+- hence, the relation between production $Y$ and income $Y$ is the 45-degree line, the line with a slope equal to 1
+
+
+---
+# Equilibrium: Using Graph
+**slope equals 1**
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, results='asis', warnings=FALSE}
+plot_labels <- tibble(label = c("production"),
+                          x = c(8),
+                          y = c(8))
+production <- Hmisc::bezier(x = c(1, 9),
+                        y = c(1, 9)) %>% as_tibble()
+ggplot(mapping=aes(x = x, y = y)) + 
+  geom_path(data = production, color = "#808080", size = 1) + 
+  theme_classic() + 
+  coord_equal()+
+  scale_x_continuous(expand = c(0, 0)) + scale_y_continuous(expand = c(0, 0))+
+  xlab("Income Y") + ylab("Production Y")+
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE, size=5) +
+  theme(axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank())
+```
+
+---
+# Equilibrium: Using Graph
+
+Second, plot demand as a function of income:
+
+--
+
+- measure demand on the vertical axis, and measure income on
+the horizontal axis
+
+--
+
+- recall that: $Z = (c_0 + \bar{I}+ G - c_1 T)+ c_1 Y$, and $0<c_1<1$
+
+--
+
+- the relationship between demand $Z$ and income $Y$ is a line that is upward sloping but has a slope of less than 1
+
+---
+# Equilibrium: Using Graph
+
+- slope is $c_1$, which is between 0 and 1**
+- intercept is $c_0 + \bar{I}+ G - c_1 T)$
+
+```{r, echo=FALSE, echo=FALSE, message=FALSE, results='asis', warnings=FALSE}
+plot_labels <- tibble(label = c("demand"),
+                          x = c(4),
+                          y = c(3))
+demand <- Hmisc::bezier(x = c(0, 9),
+                        y = c(1, 4)) %>% as_tibble()
+ggplot(mapping=aes(x = x, y = y)) + 
+  geom_path(data = demand, color = "#FF66B2", size = 1) + 
+  theme_classic() + 
+  coord_equal()+
+  scale_x_continuous(expand = c(0, 0)) + scale_y_continuous(expand = c(0, 2))+
+  xlab("Income Y") + ylab("Demand Z")+
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE, size=5) +
+  theme(axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank())
+```
+
+
+
+---
+# Equilibrium: Using Graph
+at point $A_1$: in equilibrium, production equals demand
+- equilibrium output occurs at the intersection of the 45-degree line and the demand function
+
+<img src="../ch3/image/2.png" width=500>
+
+
+```{r echo=FALSE, fig.height=5, fig.width=12, message=FALSE, results='asis', warnings=FALSE}
+# plot_labels <- tibble(label = c("production", "demand", "ZZ[1]", "A[1]", "Y[1]", "Y[1]"),
+#                           x = c(8, 9, 10, 3.7, 3.3, 0.3),
+#                           y = c(8, 4, 5, 3.2, 0.3, 3.3))
+# production <- Hmisc::bezier(x = c(0, 9),
+#                         y = c(0, 9)) %>% as_tibble()
+# demand <- Hmisc::bezier(x = c(1, 11),
+#                         y = c(3, 5)) %>% as_tibble()
+# dash1<-Hmisc::bezier(x=c(3.5, 3.5),
+#                         y=c(0, 3.5)) %>% as_tibble()
+# dash2<-Hmisc::bezier(x=c(6, 6),
+#                         y=c(0, 6)) %>% as_tibble()
+# dash3<-Hmisc::bezier(x=c(0, 3.5),
+#                         y=c(3.5, 3.5)) %>% as_tibble()
+# dash4<-Hmisc::bezier(x=c(0, 6),
+#                      y=c(6, 6)) %>% as_tibble()
+# 
+# ggplot(mapping=aes(x = x, y = y)) + 
+#   geom_path(data = production, color = "#808080", size = 1) + 
+#   geom_path(data = demand, color = "#FF66B2", size = 1) +
+#   geom_path(data = dash1, size = 0.5, linetype = "dashed") + 
+#   geom_path(data = dash3, size = 0.5, linetype = "dashed") + 
+#   theme_classic() + 
+#   coord_equal()+
+#   scale_x_continuous(expand = c(0, 0)) + scale_y_continuous(expand = c(0, 0))+
+#   xlab("Income Y") + ylab("Production Y, Demand Z")+
+#   geom_text(data = plot_labels,
+#             aes(x = x, y = y, label = label), parse = TRUE, size=7) +
+#   theme(axis.text.x=element_blank(),
+#         axis.ticks.x=element_blank(),
+#         axis.text.y=element_blank(),
+#         axis.ticks.y=element_blank())
+```
+
+
+---
+# Equilibrium: Using Graph
+To the left of $A_1$, demand exceeds production; to the right of $A_1$, production exceeds demand
+
+<img src="../ch3/image/2.png" width=500>
+
+```{r echo=FALSE, fig.height=5, fig.width=12, message=FALSE, results='asis', warnings=FALSE}
+# plot_labels <- tibble(label = c("production", "demand", "ZZ[1]", "A[1]", "Y[1]", "Y[1]"),
+#                           x = c(8, 9, 10, 3.7, 3.3, 0.3),
+#                           y = c(8, 4, 5, 3.2, 0.3, 3.3))
+# production <- Hmisc::bezier(x = c(0, 9),
+#                         y = c(0, 9)) %>% as_tibble()
+# demand <- Hmisc::bezier(x = c(1, 11),
+#                         y = c(3, 5)) %>% as_tibble()
+# dash1<-Hmisc::bezier(x=c(3.5, 3.5),
+#                         y=c(0, 3.5)) %>% as_tibble()
+# dash2<-Hmisc::bezier(x=c(6, 6),
+#                         y=c(0, 6)) %>% as_tibble()
+# dash3<-Hmisc::bezier(x=c(0, 3.5),
+#                         y=c(3.5, 3.5)) %>% as_tibble()
+# dash4<-Hmisc::bezier(x=c(0, 6),
+#                      y=c(6, 6)) %>% as_tibble()
+# 
+# ggplot(mapping=aes(x = x, y = y)) + 
+#   geom_path(data = production, color = "#808080", size = 1) + 
+#   geom_path(data = demand, color = "#FF66B2", size = 1) +
+#   geom_path(data = dash1, size = 0.5, linetype = "dashed") + 
+#   geom_path(data = dash3, size = 0.5, linetype = "dashed") + 
+#   theme_classic() + 
+#   coord_equal()+
+#   scale_x_continuous(expand = c(0, 0)) + scale_y_continuous(expand = c(0, 0))+
+#   xlab("Income Y") + ylab("Production Y, Demand Z")+
+#   geom_text(data = plot_labels,
+#             aes(x = x, y = y, label = label), parse = TRUE, size=7) +
+#   theme(axis.text.x=element_blank(),
+#         axis.ticks.x=element_blank(),
+#         axis.text.y=element_blank(),
+#         axis.ticks.y=element_blank())
+```
+
+---
+# Equilibrium: Using Graph
+Suppose $c_0$ increases by 1 billion dollars: 
+- $Z = (c_0 + \bar{I}+ G - c_1 T)+ c_1 Y$ will increase by 1 billion dollars 
+- the demand curve shifts up by $1 billion 
+
+```{r echo=FALSE, fig.height=5, fig.width=12, message=FALSE, results='asis', warnings=FALSE}
+plot_labels <- tibble(label = c("production", "demand", "ZZ[1]", "ZZ[2]", "A[1]", "A[2]", "Y[1]", "Y[1]", "Y[2]", "Y[2]"),
+                          x = c(8, 9, 10, 10, 3.7, 6.2, 3.3, 0.3, 6.3, 0.3),
+                          y = c(8, 4, 5, 7, 3.2, 5.7, 0.3, 3.3, 0.3, 6.3))
+production <- Hmisc::bezier(x = c(0, 9),
+                        y = c(0, 9)) %>% as_tibble()
+demand <- Hmisc::bezier(x = c(1, 11),
+                        y = c(3, 5)) %>% as_tibble()
+demand_new<-Hmisc::bezier(x=c(1, 11),
+                        y=c(5, 7)) %>% as_tibble()
+dash1<-Hmisc::bezier(x=c(3.5, 3.5),
+                        y=c(0, 5.5)) %>% as_tibble()
+dash2<-Hmisc::bezier(x=c(6, 6),
+                        y=c(0, 6)) %>% as_tibble()
+dash3<-Hmisc::bezier(x=c(0, 3.5),
+                        y=c(3.5, 3.5)) %>% as_tibble()
+dash4<-Hmisc::bezier(x=c(0, 6),
+                     y=c(6, 6)) %>% as_tibble()
+
+ggplot(mapping=aes(x = x, y = y)) + 
+  geom_path(data = production, color = "#808080", size = 1) + 
+  geom_path(data = demand, color = "#FF66B2", size = 1) +
+  geom_path(data = demand_new, color = "#FF66B2", size = 0.5, linetype = "dashed") + 
+  geom_path(data = dash1, size = 0.5, linetype = "dashed") + 
+  geom_path(data = dash2, size = 0.5, linetype = "dashed") + 
+  geom_path(data = dash3, size = 0.5, linetype = "dashed") + 
+  geom_path(data = dash4, size = 0.5, linetype = "dashed") + 
+  theme_classic() + 
+  coord_equal()+
+  scale_x_continuous(expand = c(0, 0)) + scale_y_continuous(expand = c(0, 0))+
+  xlab("Income Y") + ylab("Production Y, Demand Z")+
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE, size=7) +
+  theme(axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank())
+```
+
+---
+# Equilibrium: Using Graph
+- new equilibrium: $A_2$
+- new equilibirum output: $Y_2$
+- increase in output: $Y_2-Y_1$
+
+```{r echo=FALSE, fig.height=5, fig.width=12, message=FALSE, results='asis', warnings=FALSE}
+plot_labels <- tibble(label = c("production", "demand", "ZZ[1]", "ZZ[2]", "A[1]", "A[2]", "Y[1]", "Y[1]", "Y[2]", "Y[2]"),
+                          x = c(8, 9, 10, 10, 3.7, 6.2, 3.3, 0.3, 6.3, 0.3),
+                          y = c(8, 4, 5, 7, 3.2, 5.7, 0.3, 3.3, 0.3, 6.3))
+production <- Hmisc::bezier(x = c(0, 9),
+                        y = c(0, 9)) %>% as_tibble()
+demand <- Hmisc::bezier(x = c(1, 11),
+                        y = c(3, 5)) %>% as_tibble()
+demand_new<-Hmisc::bezier(x=c(1, 11),
+                        y=c(5, 7)) %>% as_tibble()
+dash1<-Hmisc::bezier(x=c(3.5, 3.5),
+                        y=c(0, 5.5)) %>% as_tibble()
+dash2<-Hmisc::bezier(x=c(6, 6),
+                        y=c(0, 6)) %>% as_tibble()
+dash3<-Hmisc::bezier(x=c(0, 3.5),
+                        y=c(3.5, 3.5)) %>% as_tibble()
+dash4<-Hmisc::bezier(x=c(0, 6),
+                     y=c(6, 6)) %>% as_tibble()
+
+ggplot(mapping=aes(x = x, y = y)) + 
+  geom_path(data = production, color = "#808080", size = 1) + 
+  geom_path(data = demand, color = "#FF66B2", size = 1) +
+  geom_path(data = demand_new, color = "#FF66B2", size = 0.5, linetype = "dashed") + 
+  geom_path(data = dash1, size = 0.5, linetype = "dashed") + 
+  geom_path(data = dash2, size = 0.5, linetype = "dashed") + 
+  geom_path(data = dash3, size = 0.5, linetype = "dashed") + 
+  geom_path(data = dash4, size = 0.5, linetype = "dashed") + 
+  theme_classic() + 
+  coord_equal()+
+  scale_x_continuous(expand = c(0, 0)) + scale_y_continuous(expand = c(0, 0))+
+  xlab("Income Y") + ylab("Production Y, Demand Z")+
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE, size=7) +
+  theme(axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank())
+```
+
+
+---
+# Equilibrium: Using Graph
+- $\Delta c_0=1$
+- $\Delta Y = \Delta c_0 \times \frac{1}{1-c_1}= 1 \times \frac{1}{1-c_1} >1$
+- multiplier effect: $\Delta Y > \Delta c_0$
+- distance between $Y_1$ and $Y_2$ is larger than the shift of demand curve (distance between $A_1$ and $B$)
+
+```{r echo=FALSE, fig.height=5, fig.width=12, message=FALSE, results='asis', warnings=FALSE}
+plot_labels <- tibble(label = c("production", "demand", "ZZ[1]", "ZZ[2]", "A[1]", "A[2]", "Y[1]", "Y[1]", "Y[2]", "Y[2]", "B"),
+                          x = c(8, 9, 10, 10, 3.7, 6.2, 3.3, 0.3, 6.3, 0.3, 3.5),
+                          y = c(8, 4, 5, 7, 3.2, 5.7, 0.3, 3.3, 0.3, 6.3, 5.6))
+production <- Hmisc::bezier(x = c(0, 9),
+                        y = c(0, 9)) %>% as_tibble()
+demand <- Hmisc::bezier(x = c(1, 11),
+                        y = c(3, 5)) %>% as_tibble()
+demand_new<-Hmisc::bezier(x=c(1, 11),
+                        y=c(5, 7)) %>% as_tibble()
+dash1<-Hmisc::bezier(x=c(3.5, 3.5),
+                        y=c(0, 5.5)) %>% as_tibble()
+dash2<-Hmisc::bezier(x=c(6, 6),
+                        y=c(0, 6)) %>% as_tibble()
+dash3<-Hmisc::bezier(x=c(0, 3.5),
+                        y=c(3.5, 3.5)) %>% as_tibble()
+dash4<-Hmisc::bezier(x=c(0, 6),
+                     y=c(6, 6)) %>% as_tibble()
+
+ggplot(mapping=aes(x = x, y = y)) + 
+  geom_path(data = production, color = "#808080", size = 1) + 
+  geom_path(data = demand, color = "#FF66B2", size = 1) +
+  geom_path(data = demand_new, color = "#FF66B2", size = 0.5, linetype = "dashed") + 
+  geom_path(data = dash1, size = 0.5, linetype = "dashed") + 
+  geom_path(data = dash2, size = 0.5, linetype = "dashed") + 
+  geom_path(data = dash3, size = 0.5, linetype = "dashed") + 
+  geom_path(data = dash4, size = 0.5, linetype = "dashed") + 
+  theme_classic() + 
+  coord_equal()+
+  scale_x_continuous(expand = c(0, 0)) + scale_y_continuous(expand = c(0, 0))+
+  xlab("Income Y") + ylab("Production Y, Demand Z")+
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE, size=7) +
+  theme(axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank())
+```
+
+---
+# Equilibrium
+<span style="color:blue"> $$Y = \frac{1}{1-c_1}[c_0 + \bar{I} + G -c_1 T]$$ </span>
+
+- The size of the multiplier $\frac{1}{1-c_1}$ is directly related to the value of the propensity to consume $c_1$
+
+--
+
+- The higher the propensity to consume, the higher the multiplier
+
+--
+
+- A reasonable estimate of the propensity to consume in the United States today is around 0.6
+
+--
+
+- This implies that the multiplier is equal to $\frac{1}{1-c_1}=\frac{1}{1-0.6}=2.5$
+
+
+
+---
+# Group Work II
+Q2: Government spending **decreases** by $500 million. (1) Graphically show the impact of this reduction of government spending on equilibrium output. 
+
+--
+
+HINT: 
+- step 1, label y-axis varibale and x-axis variable: production $Y$ and demand $Z$; income $Y$
+- step 2, plotting production $Y$ as a function of income $Y$: $Y=Y$
+- step 3, plot demand $Z$ as a function of income $Y$: $Z = (c_0 + \bar{I}+ G - c_1 T)+ c_1 Y$
+- step 4, decide how demand (ZZ) curve is affected by this event
+
+
+
+
+---
+# Group Work II (cont'd)
+- ZZ curve shifts **down** by $500 million: 
+
+```{r echo=FALSE, fig.height=5, fig.width=12, message=FALSE, results='asis', warnings=FALSE}
+plot_labels <- tibble(label = c("production", "demand", "ZZ[2]", "ZZ[1]", "A[2]", "A[1]", "Y[2]", "Y[2]", "Y[1]", "Y[1]"),
+                          x = c(8, 9, 10, 10, 3.7, 6.2, 3.3, 0.3, 6.3, 0.3),
+                          y = c(8, 4, 5, 7, 3.2, 5.7, 0.3, 3.3, 0.3, 6.3))
+production <- Hmisc::bezier(x = c(0, 9),
+                        y = c(0, 9)) %>% as_tibble()
+demand <- Hmisc::bezier(x = c(1, 11),
+                        y = c(3, 5)) %>% as_tibble()
+demand_new<-Hmisc::bezier(x=c(1, 11),
+                        y=c(5, 7)) %>% as_tibble()
+dash1<-Hmisc::bezier(x=c(3.5, 3.5),
+                        y=c(0, 5.5)) %>% as_tibble()
+dash2<-Hmisc::bezier(x=c(6, 6),
+                        y=c(0, 6)) %>% as_tibble()
+dash3<-Hmisc::bezier(x=c(0, 3.5),
+                        y=c(3.5, 3.5)) %>% as_tibble()
+dash4<-Hmisc::bezier(x=c(0, 6),
+                     y=c(6, 6)) %>% as_tibble()
+
+ggplot(mapping=aes(x = x, y = y)) + 
+  geom_path(data = production, color = "#808080", size = 1) + 
+  geom_path(data = demand, color = "#FF66B2", size = 1, linetype = "dashed") +
+  geom_path(data = demand_new, color = "#FF66B2", size = 0.5) + 
+  geom_path(data = dash1, size = 0.5, linetype = "dashed") + 
+  geom_path(data = dash2, size = 0.5, linetype = "dashed") + 
+  geom_path(data = dash3, size = 0.5, linetype = "dashed") + 
+  geom_path(data = dash4, size = 0.5, linetype = "dashed") + 
+  theme_classic() + 
+  coord_equal()+
+  scale_x_continuous(expand = c(0, 0)) + scale_y_continuous(expand = c(0, 0))+
+  xlab("Income Y") + ylab("Production Y, Demand Z")+
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE, size=7) +
+  theme(axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank())
+```
+
+
+
+
+---
+# Group Work II (cont'd)
+Q2: Government spending decreases by $500 million. (2) Graphically explain the multiplier effect of this reduction of government spending. 
+
+--
+
+HINT:
+- at equilibirum, the level of output $Y = \frac{1}{1-c_1}[c_0 + \bar{I} +G -c_1 T]$
+- hence, $\Delta Y = \frac{1}{1-c_1} \times \Delta G$
+- multiplier effect: $\Delta Y$ > $\Delta G$ (why?)
+- how to graphically represent $\Delta G$ in your graph? 
+- how to graphically represent $\Delta Y$ in your graph?
+
+
+---
+# Group Work II (cont'd)
+
+- multiplier effect: distance between $A_2$ and $B$ is smaller than $|Y_2-Y_1|$
+
+```{r echo=FALSE, fig.height=5, fig.width=12, message=FALSE, results='asis', warnings=FALSE}
+plot_labels <- tibble(label = c("production", "demand", "ZZ[2]", "ZZ[1]", "A[2]", "A[1]", "Y[2]", "Y[2]", "Y[1]", "Y[1]", "B"),
+                          x = c(8, 9, 10, 10, 3.7, 6.2, 3.3, 0.3, 6.3, 0.3, 3.5),
+                          y = c(8, 4, 5, 7, 3.2, 5.7, 0.3, 3.3, 0.3, 6.3, 5.6))
+production <- Hmisc::bezier(x = c(0, 9),
+                        y = c(0, 9)) %>% as_tibble()
+demand <- Hmisc::bezier(x = c(1, 11),
+                        y = c(3, 5)) %>% as_tibble()
+demand_new<-Hmisc::bezier(x=c(1, 11),
+                        y=c(5, 7)) %>% as_tibble()
+dash1<-Hmisc::bezier(x=c(3.5, 3.5),
+                        y=c(0, 5.5)) %>% as_tibble()
+dash2<-Hmisc::bezier(x=c(6, 6),
+                        y=c(0, 6)) %>% as_tibble()
+dash3<-Hmisc::bezier(x=c(0, 3.5),
+                        y=c(3.5, 3.5)) %>% as_tibble()
+dash4<-Hmisc::bezier(x=c(0, 6),
+                     y=c(6, 6)) %>% as_tibble()
+
+ggplot(mapping=aes(x = x, y = y)) + 
+  geom_path(data = production, color = "#808080", size = 1) + 
+  geom_path(data = demand_new, color = "#FF66B2", size = 1) +
+  geom_path(data = demand, color = "#FF66B2", size = 0.5, linetype = "dashed") + 
+  geom_path(data = dash1, size = 0.5, linetype = "dashed") + 
+  geom_path(data = dash2, size = 0.5, linetype = "dashed") + 
+  geom_path(data = dash3, size = 0.5, linetype = "dashed") + 
+  geom_path(data = dash4, size = 0.5, linetype = "dashed") + 
+  theme_classic() + 
+  coord_equal()+
+  scale_x_continuous(expand = c(0, 0)) + scale_y_continuous(expand = c(0, 0))+
+  xlab("Income Y") + ylab("Production Y, Demand Z")+
+  geom_text(data = plot_labels,
+            aes(x = x, y = y, label = label), parse = TRUE, size=7) +
+  theme(axis.text.x=element_blank(),
+        axis.ticks.x=element_blank(),
+        axis.text.y=element_blank(),
+        axis.ticks.y=element_blank())
+```
+
+
+
+
+
+
+<!--
+# Fears of Another Great Depression
+
+$C=c_0+c_1Y_D$
+
+Why did consumption, and especially, consumption of durables, decrease at the end of 2008 despite relatively small changes in disposable income $Y_D$? 
+
+<img src="../ch3/image/3.png" width=600>
+
+- Total consumption decreased, and consumption of durables collapsed
+
+- on September 15, 2008, Lehman Brothers went bankrupt
+
+- in the ensuing weeks, it appeared that many more banks might follow suit and the financial system might collapse
+
+- Even though people still had their job and received monthly income, the events reminded them of the stories of the Great Depression 
+
+- worried that you might become unemployed or that your income might decline in the future, you would probably cut consumption even if your disposable income had not yet changed
+
+<img src="../ch3/image/4.png" width=600>
+
+- the series that gives the number of searches for “Great Depression” peaked in October 2008 
+
+- play with Google Trend: https://trends.google.com/trends/?geo=US
+
+- forecast "now" with Google Trend and Search: https://static.googleusercontent.com/media/research.google.com/en//archive/papers/initialclaimsUS.pdf
+-->
+
+

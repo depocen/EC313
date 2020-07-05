@@ -1,0 +1,853 @@
+---
+title: "EC313: Intermediate Macroeconomics"
+subtitle: "Chapter 5"
+author: "Xiang LI"
+date: "July 29, 2019"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      #countdown: 120000
+    css: [default, metropolis, metropolis-fonts]
+  
+---
+
+<style>
+  .large { font-size: 200% }
+  .small { font-size: 50% }
+</style>
+
+<style type="text/css">
+.remark-slide-content {
+    font-size: 25px;
+    padding: 1em 1em 1em 1em;
+}
+</style>
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(knitr)
+library(tidyverse)
+# library(gdtools)
+# library(hrbrthemes)
+library(plotly)
+library(lubridate)
+library(kableExtra)
+library(htmlTable)
+library(dplyr)
+library(ggplot2)
+```
+
+# Chapter 5
+## Goods and Financial Markets; IS-LM Model
+
+1. [The Goods Markets: IS Relation](#The Goods Markets: IS Relation)
+
+2. [The Financial Market: LM Relation](#The Financial Market: LM Relation)
+
+3. [Putting the IS and the LM Relations Together](#Putting the IS and the LM Relations Together)
+
+4. [Policy Mix](#Policy Mix)
+
+
+
+
+
+---
+Today we will outline the famous **IS-LM** Model of short-run economic behavior
+
+--
+
+- This model was developed by John Maynard Keynes in his seminal work, the _General Theory, 1936_
+
+--
+
+- In 1937, John Hicks and Alvin Hansen began to formalize (mathematically and graphically) the concepts outlined by Keynes
+
+--
+
+- Until the mid 1970's, this was the model of **Short-Run** economic behavior used to quantify the effects of Fiscal and Monetary Policy
+
+
+
+---
+Defining the Short Run:
+
+--
+
+- The **Short Run** is a period of time over which **the price level is fixed**
+
+--
+
+- This means, in the **short run**, prices do not change
+
+--
+
+- Our analysis of both the goods market and the financial market have been performed in the short run. 
+
+
+
+---
+We will combine the Goods Market and the Money Market to develop the **IS-LM** relationship
+
+--
+
+- Money Market model(interest rate - Money demand/money supply system): output (or production) of goods is exogenous and interest rates are endogenously determined
+
+--
+
+- Goods Market model (goods supply Y/ goods demand Z - income Y system): interest rates are exogenous and output (or production) of goods is determined endogenously
+
+--
+
+- by combining goods and money markets, we can simultaneously determine output output and interest rate in short run equilibrium!
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# The Goods Markets: IS Relation
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+
+---
+# Determining Output
+Recall Chapter 3: 
+
+--
+
+- Goods Market Equilibrium is given by Production = Income = Demand, or $Y$ = $Z$.
+
+--
+
+- Demand $Z$ is a function of Consumption $C(Y_D)$, Government Spending $G$, and Investment $I$, where Consumption is a function of Disposable Income $Y - T$. 
+
+--
+
+- $$Z \equiv  C(Y - T) + \bar{I} + G $$
+
+
+---
+# Determining Output
+$$Z \equiv  C(Y - T) + \bar{I} + G $$
+
+--
+
+- investment $\bar{I}$ was assumed to be constant (exogenous)
+  - the **interest rate** did not affect the demand for goods
+  
+--
+  
+- Our first task in this chapter is to abandon this simplification and introduce the interest rate in our model of equilibrium in the goods market.
+
+--
+
+- now, investment is no longer exogenous! 
+
+---
+# Determining Output
+If sales are very high, will firms invest more or less in capital?
+
+--
+
+- They will invest more!
+
+--
+
+- therefore, if ignoring inventory investment, the level of sales equal to the level of production
+
+--
+
+- Investment is an **increasing** function of production $Y$
+
+
+---
+# Determining Output
+If the interest rate (the price firms pay to borrow money) is low, will firms invest more or less in capital?
+
+--
+
+- Firms will invest more if the cost of borrowing ($i$) is low!
+
+--
+
+- Investment is a **decreasing** function of the interest rate $i$
+
+--
+
+-  investment I depends on production $Y$ and the interest
+rate $i$:  <span style="color:blue"> $$I = I(Y, i) $$ </span>
+
+--
+
+- here, interest rate $i$ as determined as in Chapter 4 (bonds/money market equilibrium)
+
+
+---
+# Determining Output
+<span style="color:blue"> $$Z = C(Y - T) + I(Y, i) + G$$ </span>
+
+--
+
+- Equilibrium in the goods market is given by $Z = Y$
+
+--
+
+<span style="color:blue"> $$Y = C(Y - T) + I(Y, i) + G$$ </span>
+
+--
+
+- this is known as the **IS-Relation**
+
+
+---
+# Determining Output
+For a given level of $i$, demand $Z=C(Y - T) + I(Y, i) + G$ is an increasing function of output $Y$:
+
+--
+
+- output $Y \uparrow$ $\implies$ income $Y \uparrow$ $\implies$ disposable income $Y-T \uparrow$ $\implies$ consumption $C(Y-T) \uparrow$ (recall chapter 3)
+
+--
+
+- output $Y \uparrow$ $\implies$ Investment $I(Y,i) \uparrow$ (this is new in this chapter)
+
+--
+
+- in short, output $Y \uparrow$ $\implies$ demand $Z \uparrow$
+
+
+---
+# Determining Output
+This relation between **demand** and **output**, **for a given interest rate**, is represented by the **upward-sloping** curve $ZZ$ **flatter** than the 45-degree line
+
+<img src="../ch5/image/1.png" width=400>
+
+- $Y$ on the horizontal axis and $i$ on the vertical axis
+
+
+
+---
+# Determining Output
+<img src="../ch5/image/1.png" width=400>
+
+- Equilibrium in the goods market: demand for goods equals output
+- at point A: the intersection of ZZ and the 45-degree line 
+- Y: equilibrium level of output 
+- if we assume linearity for $C(Y - T)$ and $I(Y, i)$, ZZ will be a straight line
+
+
+
+---
+# Determining Output
+
+- **Chapter 3**: Demand $Z$ was a linear function of output
+
+- **Chapter 5**: Demand $Z$ is not necessarily a linear function of output
+
+--
+
+
+- **Chapter 3**: The slope of $ZZ$ is the marginal propensity to consume $c_1$, which is less than 1 by assumption
+
+- **Chapter 5**: The slope of $ZZ$ at a given point is assumed to be less than 1
+
+
+---
+# Determining Output
+
+- **Chapter 3**: Investment was exogenous and did not depend on $Y$
+
+- **Chapter 5**: Investmentdepends on $Y$, so both consumption and investment increase with output
+
+--
+
+- **Chapter 3**: We could solve for equilibrium $Y$ algebraically and graphically
+
+- **Chapter 5**: We can only solve for equilibrium $Y$ graphically! (unless we are given the form of $C(Y - T)$ and $I(Y, i)$)
+
+
+
+
+
+---
+# Deriving the IS Curve
+<span style="color:blue"> $$Z = C(Y - T) + I(Y, i) + G$$ </span>
+
+Recall: The demand curve $ZZ$ is drawn for **some fixed interest rate**
+
+--
+
+- There are infinitely many demand curves we could have drawn, each corresponding to a different interest rate
+
+--
+
+- We want to draw a relationship between the interest rate and output when the interest rate changes
+
+--
+
+- let's derive the IS curve with our peers
+
+
+
+---
+# Group Work IV
+Q1: deriving IS curve as instructed by the following steps
+
+- step 1: in the top plot for Goods Market, label variables in x- and y- axis; draw demand curve $ZZ$ and production curve; draw the Goods Market Equilibrium, and label as point $A$; label the equilibrium level of output as $Y$
+
+- step 2: in the bottom plot, we will derive IS curve. First, label $Y$ on the horizontal axis and $i$ on the vertical axis
+
+- step 3:Trace equilibrium $Y$ down to the lower graph and choose some arbitrary interest rate $i$ to correspond to this value of $Y$ (recall: the demand curve is drawn for some _arbitrary interest rate_)
+
+
+---
+# Group Work IV (cont'd)
+Now, suppose the interest rate increases from $i$ to $i\prime$
+
+- step 4: investment will fall, therefore $ZZ$ will shift down to $ZZ\prime$. At $ZZ'$, label a new equilibrium point in the goods market $A'$ and a new equilibrium output $Y'$
+
+- step 5: Trace $Y'$ down to the lower graph and find the point matching the higher interest rate $i'$ to $Y'$.
+
+- step 6: Do this for several different interest rates and you can fill in the entire IS curve
+
+
+---
+# Group Work IV (cont'd)
+<img src="../ch5/image/2.png" width=350>
+
+
+
+---
+# Driving the IS Curve 
+**IS curve**: the downward–sloping curve in plot (b), representing the relationship between interest rate and output 
+
+<img src="../ch5/image/3.png" width=400>
+
+
+
+
+
+---
+# Shifting the IS Curve
+We have just seen that the IS curve can be derived by varying $i$ and graphing the corresponding change in equilibrium $Y$. This was all done for some fixed values of $T$ and $G$.
+
+--
+
+- What if $T$ or $G$ change? 
+
+--
+
+- The IS curve SHIFTS
+
+
+
+
+---
+# Shifting the IS Curve
+$T \uparrow$ $\implies$ $Y_D (=Y-T) \downarrow$ $\implies$ $C \downarrow$ $\implies$ demand $Z \downarrow$ $\implies$ equilibirum ooutput $Y \downarrow$ 
+
+--
+
+- for a **fixed** level of $i$, we now have lower $Y$
+
+--
+
+- Thus, the IS curve **shifts LEFT/DOWN**
+
+--
+
+- Any factor that, for a given interest rate, decreases equilibrium output $Y$ in the goods market will shift the IS curve left/down
+
+--
+
+- Any factor that, for a given interest rate, increases equilibrium $Y$ in the goods market will shift the IS curve right/up
+
+
+
+---
+# Shifting the IS Curve
+If $T \uparrow$: 
+
+<img src="../ch5/image/4.png" width=400>
+
+
+---
+# IS Curve Recap
+
+- The **IS curve** is the relation between **interest rates** and **output** in the goods market
+
+--
+
+- The IS curve shows the value of equilibrium output associated with **ANY** possible interest rate
+
+--
+
+- **Any** point on the IS curve represents an **equilibrium in the Goods Market**.
+
+--
+
+- The IS curve is affected by $Y , G, i ,$ and $T$
+  - Changes in $i$ and $Y$ represent movements **along** the IS curve.
+  - Changes in $G$ and $T$ represent **shifts** of the IS curve.
+
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# The Financial Market: LM Relation
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+
+
+---
+Recall chapter 4
+
+- money demand is given by $$M^d = \$Y \times L(i)$$
+
+- Money Supply is exogenously determined by the Central Bank: $M^s = M$
+
+- Thus, the Money Market equilibrium is given by: $$M = \$Y \times L(i)$$
+
+- this is a relation between money, nominal income, and the interest rate
+
+
+
+
+---
+- Recall chapter 2: The GDP deflator is given by $$Y = \frac{\$Y}{P}$$
+
+- we have seen the Money Market equilibrium: $$M = \$Y \times L(i)$$
+
+- divide both sides by the price level $P$, and then rewrite RHS using definition of GDP deflator 
+
+
+---
+<span style="color:blue"> $$\frac{M}{P}=Y L(i)$$ </span>
+
+- $Y$: real income 
+
+- $\frac{M}{P}$: **real money supply**
+  - the money stock in terms of quantity of goods, not dollars
+  
+- $Y L(i)$: **real money demand**
+  - depends on real income $Y$ and the interest rate $i$
+  
+--
+  
+- money market equilibirum condition in real terms: real money supply = real money demand 
+
+--
+
+- This equation is known as the **LM Relation**
+
+
+---
+Recall chapter 4: how does monetary policy function?
+
+--
+
+- if the central bank wanna achieve a lower interest rate, it will increase money supply by purchasing bonds from the public (expansionary monetary policy)
+
+--
+
+- if the central bank wanna achieve a higher interest rate, it will decrease money supply by selling bonds from the public (contractionary monetary policy)
+
+
+
+---
+# Deriving the LM Curve
+
+- The central bank picks a target interest rate, called $\bar{i}$; 
+
+--
+
+- in order to achieve this target, the central bank adjusts the money supply (via monetary policy such as open market operation) such that $i=\bar{i}$, regardless of what $Y$ is
+
+--
+
+- what does this look ike on a graph with axes $Y$ and $i$
+
+---
+# Deriving the LM Curve
+LM curve: a horizontal line at the value of the interest rate $\bar{i}$ chosen by the central bank.
+
+<img src="../ch5/image/5.png" width=500>
+
+
+---
+# LM Curve Recap
+
+- The LM curve is the relation between the interest rate and output
+in the Money Market.
+
+
+--
+
+- The LM curve shows the value of the equilibrium interest rate
+associated with ANY possible level of output.
+
+--
+
+- Any point on the LM curve represents an equilibrium in the Money
+Market.
+
+--
+
+- The LM curve is a flat line because we assume that the central bank
+adjusts the real money supply to achieve its target rate.
+
+--
+
+- The LM curve SHIFTS up (down) when the central bank increases (decreases) the target rate.
+
+
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# Putting the IS and the LM Relations Together
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+
+
+---
+<span style="color:blue"> $$Y=C(Y-T)+I(Y,i)+G$$ </span>
+<span style="color:blue"> $$i=\bar{i}$$ </span>
+
+<img src="../ch5/image/6.png" width=400>
+
+- Output (or production, income) is measured on the horizontal axis
+- The interest rate is measured on the vertical axis
+
+
+---
+<img src="../ch5/image/6.png" width=400>
+
+- Any point on the downward-sloping IS curve corresponds to equilibrium in the goods
+- Any point on the horizontal LM curve corresponds to equilibrium in financial markets
+- Only at point A are both equilibrium conditions satisfied
+
+
+---
+# Fiscal Policy
+Recall chapter 3: budget deficit = G-T
+
+
+--
+
+- **fiscal contraction/consolidation**: an decreases in the budget deficit 
+  - e.g. increasing taxes while keeping government spending unchanged
+  - e.g. decreasing government spending while keeping taxes unchanged
+  - e.g. increasing taxes and decreasing government spending
+  
+--
+  
+- **fiscal expansion**: an increase in the deficit
+  - e.g. increasing government spending while keeping taxes unchanged
+  - e.g. decreasing taxes while keeping government spending unchanged
+  - e.g. decreasing taxes and increasing government spending
+  
+--
+
+- What are the effects of a fiscal contraction on output and on the interest rate?
+
+
+
+---
+# Group Work IV
+Q2: What are the effects of an increased taxes on output and on the interest rate?
+
+HINT:
+
+Goods market and IS curve: $Y=C(Y-T)+I(Y,i)+G$
+- Increased $T$ leads to decreased demand $Z=C(Y-T)+I(Y,i)+G$
+- For every value of $i$ , equilibrium output $Y$ is now lower
+- How is IS curve affected?
+
+Money market and LM curve: $i=\bar{i}$
+- A change in taxes does not affect the target interest rate
+- How is LM curve affected?
+
+
+---
+# Group Work IV (cont'd)
+IS curve Shifts Left, and LM curve is unaffected
+
+<img src="../ch5/image/7.png" width=400>
+
+- move along LM curve to the new equilibirum: lower $Y$, but same $i$ 
+
+
+
+---
+# Group Work IV (cont'd)
+(here, $G$ assumde to be unchanged) $T$ $\uparrow$: 
+
+--
+
+- $Y_D$ $\downarrow$
+
+--
+
+- $C$ $\downarrow$
+
+--
+
+- output $Y$ and income $Y$ $\downarrow$ (through the multiplier)
+
+--
+
+- $I$ $\downarrow$
+
+--
+
+- but $i$ unchanged (here, by assumption, as we are looking at a change only in fiscal policy, the central bank does not change the interest rate)
+
+
+---
+# Fiscal Policy Recap
+- We start in equilibrium in the IS-LM model which implies equilibrium in the goods and money market.
+
+
+--
+
+- There is some shock to either T or G. This shock leads to a change in goods demand and thus a shift in the IS curve.
+
+
+--
+
+- In the money market, this shock has no impact at first, as G and T are not in the LM relation.
+
+--
+
+- The change in income from the fiscal shock changes money
+demand, but because the central bank is interest rate targeting, it adjusts the real money supply to keep interest rates constant.
+
+
+---
+# Monetary Policy
+- **monetary expansion**: the central bank decreases the target interest rate
+  -  to do so, it increases the money supply through open market purchase
+
+- **monetary contraction/tightening**: an increase in the target interest rate
+  -  to do so, it decreases the money supply through open market sell
+  
+--
+  
+- What are the effects of a monetary expansion on output and on the interest rate?
+
+
+---
+# Group Work IV
+Q3: What are the effects of a monetary expansion on output and on the interest rate?
+
+HINT:  
+Goods Market and IS: $Y=C(Y-T)+I(Y,i)+G$
+- A change in the level of $i$ does not change the relationship between $i$ and $Y$ given by the IS curve.
+- How is IS curve affected?
+
+Money market and LM curve: $i=\bar{i}$
+- The LM curve describes the relationship between the target
+interest rate and output
+- How is LM curve affected?
+
+
+
+---
+# Group Work IV (cont'd)
+M curve Shifts down, and IS curve is unaffected
+
+<img src="../ch5/image/8.png" width=400>
+
+- move along IS curve to the new equilibirum: higher $Y$, and lower $i$ 
+
+
+---
+# Group Work IV (cont'd)
+(here, $T$ and $G$ are assumed to be unchanged) $\bar{i}$ $\downarrow$: 
+
+--
+
+- $I$ $\uparrow$
+
+--
+
+- demand $Z$ and output $Y$ $\uparrow$
+
+--
+
+- $Y_D$ $\uparrow$
+
+--
+
+- $C$ $\uparrow$
+
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# Policy Mix
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+
+---
+# Policy Mix
+**Policy Mix**: the combination of monetary and fiscal policy
+
+
+--
+
+- In the real world, monetary and fiscal policy are often jointly employed to reach a specific policy target
+
+--
+
+- Recall: Monetary policy and Fiscal policy can either be expansionary or contractionary
+  - **Expansionary** policies increase equilibrium output
+  - **Contractionary** policies decrease equilibrium output
+
+
+
+---
+# Policy Mix - Example I
+Suppose the economy is in a recession and output is too low
+
+--
+
+- Then, both fiscal and monetary policies can be used to increase output
+
+<img src="../ch5/image/9.png" width=400>
+
+
+---
+# 2001 U.S. Recession
+a recession started in March 2001 and ended in December 2001
+
+<img src="../ch5/image/10.png" width=400>
+
+
+---
+# 2001 U.S. Recession: Cause
+- rate of investment had been very high from 1995 to 2000
+
+- In 2001, it became clear to firms that they had been overly optimistic and had invested too much
+
+-  This led them to cut back on investment, leading to a decrease in demand and, through the multiplier, a decrease in GDP
+
+---
+# 2001 U.S. Recession: Policies 
+feeling that the economy was slowing down, the Fed started decreasing the target interest rate (federal funds rate) aggressively
+
+<img src="../ch5/image/11.png" width=400>
+
+
+
+---
+# 2001 U.S. Recession: Policies 
+- George Bush: cut tax rates
+- the event of 9/11: increase in spending (defense and homeland security)
+
+<img src="../ch5/image/12.png" width=400>
+
+- large and persistent budget deficits
+
+
+
+---
+# Policy Mix - Example II
+- Sometimes, the right policy mix is to use the two policies in opposite directions
+
+--
+
+- Suppose the government is running a large budget deficit and would like to reduce it, but does not want to trigger a recession
+
+--
+
+- How would you mix the policies?
+
+--
+
+- to combine a fiscal consolidation with a monetary expansion
+
+
+
+---
+# Policy Mix - Example II
+- initial euiquilibrium: point A
+- Output is thought to be at the right level, but the budget deficit, $T-G$, is too large. 
+
+<img src="../ch5/image/13.png" width=400>
+
+
+---
+# Policy Mix - Example II
+-  If the government reduces the deficit, say by increasing $T$ or by decreasing $G$ (or both)
+
+<img src="../ch5/image/13.png" width=400>
+
+- equiibirum: $A\prime$, $Y\prime < Y$
+- the reduction in the deficit will lead to a recession 
+
+
+
+---
+# Policy Mix
+- however, the recession can be avoided if monetary policy is also used
+-  If the central bank reduces the interest rate 
+
+<img src="../ch5/image/13.png" width=400>
+
+- equilibrium: $A\prime \prime$, $Y\prime \prime=Y$
+- The combination of both policies thus allows for the reduction in the deficit, but without a recession
+
+
+---
+# Policy Mix
+
+<img src="../ch5/image/13.png" width=400>
+
+- What happens to consumption and investment in this case?
+
+
+---
+# Policy Mix
+If the reduction takes the form of a decrease in government spending rather than an increase in taxes: 
+
+--
+
+- income is unchanged, $Y\prime \prime=Y$
+- disposable income is unchanged, $Y\prime \prime -T = Y-T$
+- and so consumption is unchanged
+
+--
+
+If the reduction takes the form of an increase in income taxes:
+- $Y\prime \prime=Y$, but $T$ increases: disposable income is lower 
+- and so is consumption
+
+--
+
+What happens to investment is unambiguous: Unchanged output and a lower interest rate implies higher investment

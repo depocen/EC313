@@ -1,0 +1,818 @@
+---
+title: "EC313: Intermediate Macroeconomics"
+subtitle: "Chapter 8"
+author: "Xiang LI"
+date: "August 7, 2019"
+output:
+  xaringan::moon_reader:
+    lib_dir: libs
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      countIncrementalSlides: false
+      #countdown: 120000
+    css: [default, metropolis, metropolis-fonts]
+---
+
+<style>
+  .large { font-size: 200% }
+  .small { font-size: 50% }
+</style>
+
+<style type="text/css">
+.remark-slide-content {
+    font-size: 25px;
+    padding: 1em 1em 1em 1em;
+}
+</style>
+
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+library(knitr)
+library(tidyverse)
+# library(gdtools)
+# library(hrbrthemes)
+library(plotly)
+library(lubridate)
+library(kableExtra)
+library(htmlTable)
+library(dplyr)
+library(ggplot2)
+```
+
+
+# Chapter 8: The Phillips Curve, the Natural Rate of Unemployment, and Inflation 
+
+1. [The Phillips Curve](#The Phillips Curve)
+
+
+2. [Common Models of Inflation Expectations](#Common Models of Inflation Expectations)
+
+3. [The Phillips Curve and the Natural Rate of Unemployment](#The Phillips Curve and the Natural Rate of Unemployment)
+
+
+
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# The Phillips Curve (PC)
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+
+---
+# The Phillips Curve (PC)
+
+- In 1958, A.W. Phillips plotted the historical relationship between the inflation rate and the unemployment rate in the United Kingdom between 1861 and 1957
+
+--
+
+- He found strong evidence of a negative relationship between inflation and unemployment
+
+--
+
+- That is, when inflation is high, unemployment is low. And when inflation is low, unemployment is high
+
+--
+
+- In 1960, Paul Samuelson and Robert Solow found evidence of the same relationship using U.S. data
+
+--
+
+**The Phillips Curve**: the negative relationship between the inflation rate
+and unemployment.
+
+
+
+---
+# The Phillips Curve (PC)
+
+Inflation versus Unemployment in the United States, 1900–1960: 
+
+<img src="../ch8/image/1.png" width=500>
+
+During the period 1900–1960 in the United States, a low unemployment rate was typi-cally associated with a high inflation rate, and a high un-employment rate was typically associated with a low or neg-ative inflation rate.
+
+
+
+---
+# The Phillips Curve (PC)
+
+Policy Implicaiton: 
+
+- Economists observed the Phillips Curve and concluded governments could pursue inflationary policies to reduce unemployment and increase output permanently
+
+--
+
+Failure of the Phillips Curve: 
+
+- In the 1970s the Phillips Curve relation broke down: Industrial countries (like the U.S. and the U.K.) experienced high unemployment and high inflation. How did this happen?
+  - People began to change their expectations of inflation
+  - Additionally, the oil crisis shocked prices and therefore decreased output and increased the inflation rate simultaneously
+  - We'll get back to this later in our discussion of the IS-LM-PC model
+
+
+---
+# Theoretical Phillips Curve
+
+Recall chapter 2: The empirical Phillips Curve relates **inflation** and **unemployment** using observational data
+
+--
+
+Recall chapter 7: (assuming $m$ and $z$ are constant over time)
+- WS relation: $W=P^e_t F(u_t,z)$
+- PS relation: $P_t=(1+m)W$
+
+--
+
+If assume $P_t=P^e_t$: the natural rate of unemployment $u_n$ at year t can be solved from $F(u_n,z)=\frac{1}{1+m}$
+
+--
+
+In Chapter 8, we do not impose this assumption: $P_t=P^e_t (1+m)F(u_t,z)$
+
+- $P^e \uparrow \implies W \uparrow \implies P \uparrow$ 
+
+- $u \uparrow \implies W \downarrow \implies P$
+
+
+
+---
+# Theoretical Phillips Curve
+
+- $P_t=P^e_t(1+m)F(u_t,z)$
+
+--
+
+- It will be convenient to assume a specific form for the function F: $F(u_t,z)=1-\alpha u_t +z$
+  - the higher the unemployment rate, the lower is the wage
+  - the higher z (e.g., the more generous unemployment benefits are), the higher is the wage
+
+--
+
+- The parameter $\alpha$ captures the **strength** of the effect of **unemployment** on the **wage**
+
+--
+
+- $P_t = P^e_t (1+m) (1-\alpha u_t +z)$ 
+
+
+---
+# Theoretical Phillips Curve
+
+<span style="color:blue">  $$P_t = P^e_t (1+m) (1-\alpha u_t +z)$$ </span>
+
+--
+
+- This gives us a relation between **the price level, the expected price level, and the unemployment rate**
+
+--
+
+- Our goal is to derive a relation between **inflation, expected inflation, and the unemployment rate**
+
+--
+
+- Recall chapter 2: $\pi_t = \frac{P_t - P_{t-1}}{P_{t-1}}=\frac{P_t}{P_{t-1}}-1$
+
+--
+
+- $1+\pi_t = \frac{P_t}{P_{t-1}}$
+
+--
+
+- We can perform the same analysis for $\pi^e_t$
+
+--
+
+- $1+\pi_t^e = \frac{P_t^e}{P_{t-1}}$
+
+
+---
+# Theoretical Phillips Curve
+
+<span style="color:blue"> $$P_t = P^e_t (1+m) (1-\alpha u_t +z)$$ </span>
+
+--
+
+- To get a relationship between inflation and unemployment (the Phillips Curve), we  divide both sides by $P_{t-1}$: $$\frac{P_t}{P_{t-1}} = \frac{P^e_t}{P_{t-1}} (1+m) (1-\alpha u_t +z)$$
+
+--
+
+- Subbing in $1+\pi_t = \frac{P_t}{P_{t-1}}$ and $1+\pi_t^e = \frac{P_t^e}{P_{t-1}}$, we get: $$1+\pi_t = (1+\pi_t^e) (1+m) (1-\alpha u_t +z)$$
+
+--
+
+- Using some mathematical wizardry, we find that the above equation is approximately equal to: 
+<span style="color:blue"> $$\pi_t = \pi_t^e +(m+z)-\alpha u_t$$ </span>
+
+
+
+
+
+---
+# Theoretical Phillips Curve
+
+<span style="color:blue"> $$\pi_t = \pi_t^e +(m+z)-\alpha u_t$$ </span>
+
+This equation is called **the Phillips Curve**
+
+--
+
+The Phillips Curve has three primary properties:
+
+--
+
+- expected inflation $\pi^e \uparrow$ $\implies$ actual inflation $\pi \uparrow$ 
+
+--
+
+- Given expected inflation $\pi^e$: $m \uparrow$ or $z \uparrow$ $\implies$ $\pi \uparrow$
+
+--
+
+- Given expected inflation $\pi^e$: $u \downarrow$ $\implies$ $\pi \uparrow$
+
+--
+
+- **the level of inflation** and **the unemployment rate** are **negatively** correlated (just like Phillips observed)
+
+
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# Common Models of Inflation Expectations
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+
+---
+# Common Models of Inflation Expectations
+
+## Static Expectations
+
+<span style="color:blue"> $$\pi_t^e = \bar{\pi}$$ </span>
+
+- That is, I expect that inflation will always be the same, regardless of what inflation has been recently
+
+--
+
+## Adaptive Expectations
+
+<span style="color:blue"> $\pi^e_t$ is a combination of $\pi_{t-1}$ and $\pi^e_{t-1}$</span>
+
+- That is, I expect inflation to be similar to what it was last period, but I don't entirely throw out my previous reasoning for choosing the inflation rate
+
+
+
+---
+# Common Models of Inflation Expectations
+
+## Rational Expectations
+
+<span style="color:blue"> $\pi^e_t$ is the true, statistical expectation of $\pi_t$ </span>
+
+- That is, I know the entire distribution of possible inflation rates and the probabilities of each of these rates occurring, and I can calculate the true expected inflation rate
+
+- Modern Macroeconomic Modeling almost entirely relies on Rational Expectations
+
+
+
+---
+# The Original Phillips Curve
+
+- When the Phillips curve was being developed, economists thought that economic agents expected inflation to be roughly constant
+
+--
+
+- Thus, we begin by assuming static expectations for inflation, which implies that inflation doesn't change: $\pi_t^e = \bar{\pi}$
+
+--
+
+- Recall: $\pi_t = \pi_t^e +(m+z)-\alpha u_t$
+
+--
+
+- Subbing in for $\pi_t^e$ yields: 
+
+<span style="color:blue"> $$\pi_t = \bar{\pi} +(m+z)-\alpha u_t$$ </span>
+
+--
+
+- We call this **the Original Phillips Curve**, because this is how it was originally developed and it tended to hold true during the 1960's
+
+
+
+---
+# The Original Phillips Curve
+
+How does **lower unemployment** lead to **higher inflation** in the Original Phillips Curve?
+
+--
+
+- Because lower unemployment generates the **wage-price spiral**
+  - Low unemployment raises nominal wages (via more bargaining power) $\implies$
+  - Higher wages lead to higher costs, which cause firms to increase prices $\implies$
+  - In response to higher prices, expected prices increase so workers ask for additional increase in nominal wage $\implies$
+  - This additional increase in wage increases costs, so firms increase prices again 
+  - This process repeats itself...
+
+
+
+---
+# The Original Phillips Curve
+
+Inflation versus Unemployment in the United States, 1948–1969: 
+
+<img src="../ch8/image/2.png" width=500>
+
+- The steady decline in the U.S. unemployment rate through-out the 1960s was associated with a steady increase in the inflation rate
+- But, in the 1970's, this negative relation between inflation and the unemployment rate broke down!
+
+
+
+---
+# The Original Phillips Curve
+
+Inflation versus Unemployment in the United States, 1970–2014:
+
+<img src="../ch8/image/3.png" width=500>
+
+- The points are scattered in a roughly symmetric cloud
+- There is no longer any visible relation between the unemployment rate and the inflation rate
+
+
+
+---
+# The Breakdown of the Original PC
+
+Why did the Original Phillips Curve fail in the 1970s in the U.S?
+
+--
+
+- **Oil Crisis**: the oil crisis of the 1970s increased **non-labor** costs. This led to a price increase, but **not** an increase in labor income. Therefore, consumers consumed less and output fell. This fall in output generated high unemployment
+
+--
+
+- **Wage Setters changed their inflation expectations**
+  - In the 1970s, inflation became *more persistent*
+  - High inflation in one year became more likely to be followed by high inflation the next year
+  - Thus, assuming $\pi^e_t=\bar{\pi}$ was no longer rational when $\pi_t > \bar{\pi}$ for many years
+  - As a result, agents began to believe that inflation today would lead to
+inflation tomorrow
+
+
+
+---
+# The Breakdown of the Original PC
+
+<img src="../ch8/image/4.png" width=500>
+
+- Before 1960, inflation was fairly volatile but centered around an average of 1%
+- Thus, before 1960, assuming that prices would be the same as they were the previous period was a reasonable assumption
+
+
+---
+# The Breakdown of the Original PC
+
+<img src="../ch8/image/4.png" width=500>
+
+- Since the 1960s, the U.S. inflation rate inflation has been steadily trending upwards
+- Inflation has become more **persistent**: A high inflation rate this year is more likely to be followed by a high inflation rate next year
+
+
+
+
+
+
+
+---
+# Inflation Persistence
+
+- Therefore, intelligent agents (people) revised their expectations of inflation to include **persistence**
+
+--
+
+- $\pi^e_t$ is now a function of previous inflation
+
+<span style="color:blue"> $$\pi_t^e = (1-\theta) \bar{\pi}+\theta \pi_{t-1}$$ </span>
+
+--
+
+- Expected inflation this year depends partly on a constant value $\bar{\pi}$, with weight $1-\theta$, and partly on inflation last year $\pi_{t-1}$ with weight $\theta$
+
+
+
+---
+# Inflation Persistence
+
+<span style="color:blue"> $$\pi_t^e = (1-\theta) \bar{\pi}+\theta \pi_{t-1}$$ </span>
+
+- The higher the value of $\theta$, the more last year’s inflation leads workers and firms to revise their expectations of what inflation will be this year, and so the higher is the expected inflation rate
+
+--
+
+- We can then think of what happened in the 1970s as an increase in the value of $\theta$ over time
+
+--
+
+- Recall **adaptive expectations**: $\pi^e_t$ is a combination of $\pi_{t-1}$ and $\pi^e_{t-1}$
+
+
+---
+# The Modified Phillips Curve
+
+- We have seen $\pi_t^e = (1-\theta) \bar{\pi}+\theta \pi_{t-1}$
+
+--
+
+- Recall: $\pi_t = \pi_t^e +(m+z)-\alpha u_t$
+
+--
+
+- Subbing in for $\pi_t^e$ yields: 
+<span style="color:blue"> $$\pi_t = (1-\theta) \bar{\pi}+\theta \pi_{t-1} +(m+z)-\alpha u_t$$ </span>
+
+
+---
+# The Modified Phillips Curve
+
+<span style="color:blue"> $$\pi_t = (1-\theta) \bar{\pi}+\theta \pi_{t-1} +(m+z)-\alpha u_t$$ </span>
+
+--
+
+- when $\theta=0$: we get the original Phillips curve $\pi_t = \bar{\pi}+(m+z)-\alpha u_t$
+  - the **LEVEL** of inflation and unemployment were negatively correlated
+  - High unemployment leads to low inflation; low unemployment leads to increasing inflation
+
+--
+
+- when $\theta=1$: $\pi_t - \pi_{t-1} = (m+z)-\alpha u_t$
+  - The unemployment rate affects NOT the inflation rate, but rather the **CHANGE** in the inflation rate
+  - High unemployment leads to **decreasing** inflation; low unemployment leads to **increasing** inflation
+  
+  
+---
+# The Modified Phillips Curve
+
+- The Phillips Curve: $\pi_t = \pi_t^e + (m+z) -\alpha u_t$
+- With Inflation Persistence, the Pillips Curve becomes: $\pi_t = (1-\theta) \bar{\pi}+\theta \pi_{t-1} +(m+z)-\alpha u_t$
+
+--
+
+BEFORE 1970:
+- static expectation held, $\pi_t^e= \bar{\pi}$
+- $\theta=0$
+- The Pillips Curve becomes: $\pi_t = \bar{\pi}+(m+z)-\alpha u_t$ 
+- The simple **negative** relation between the unemployment rate and the **level** of inflation rate held
+- This is called the **original Phillips Curve**
+
+
+---
+# The Modified Phillips Curve
+
+- The Phillips Curve: $\pi_t = \pi_t^e + (m+z) -\alpha u_t$
+- With Inflation Persistence, the Pillips Curve becomes: $\pi_t = (1-\theta) \bar{\pi}+\theta \pi_{t-1} +(m+z)-\alpha u_t$
+
+--
+
+AFTER 1970:
+- adaptive expectation held, $\pi_t^e= \pi_{t-1}$
+- $\theta=1$ 
+- The Pillips Curve becomes: $\pi_t = \pi_{t-1} + (m+z)-\alpha u_t$
+- The simple negative relation between $u_n$ and $pi_t$ broke
+- But a new **negative** relation between the unemployment rate and the **change** in the inflation rate emerged
+- This is called the **modified Phillips Curve**
+
+
+---
+# The Modified Phillips Curve
+
+**Change** in Inflation versus Unemployment in the United States, 1970–2014:
+
+<img src="../ch8/image/5.png" width=500>
+
+- The line that best fits the scatter of points for the period is given by $\pi_t-\pi_{t-1}=3\%-0.5 u_t$
+- For low unemployment, the **change** in inflation is positive. For high unemployment, the **change** in inflation is negative
+
+
+---
+# Recap
+
+- The **Phillips Curve**: $\pi_t = \pi_t^e + (m+z) -\alpha u_t$
+
+--
+
+- Using adaptive expectations instead of static expectations, we shift from the original Phillips Curve to the Modified Phillips Curve
+
+--
+
+- The **original Phillips Curve**: $\pi_t = \bar{\pi} +(m+z)-\alpha u_t$
+
+- The **modified Phillips Curve**:  $\pi_t = \pi_{t-1} + (m+z)-\alpha u_t$
+
+--
+
+- The modified Phillips Curve is also called the **expectations-augmented Phillips curve** to indicate that $\pi_{t-1}$ stands for expected inflation
+
+--
+
+- The modified Phillips Curve is also called the **accelerationist Phillips curve** to indicate that a low unemployment rate leads to an increase in the inflation rate and thus an acceleration of the price level
+
+
+
+
+---
+class: inverse, center, middle
+name: Motivation
+
+# The Phillips Curve and the Natural Rate of Unemployment
+
+
+<html><div style='float:left'></div><hr color='#EB811B' size=1px width=796px></html>
+
+
+---
+Recall chapter 7: 
+- WS relation: $W=P^e F(u,z)$
+- PS relation: $P=(1+m)W$
+- the natural rate of unemployment $u_n$ is such that WS relation equals PS relation
+
+--
+
+- Question: in chapter 7, what did we have to assume about prices in order to solve for $u_n$ according to $F(u_n, z)=\frac{1}{1+m}$?
+
+--
+
+- Answer: we assumed $P = P^e$
+
+
+---
+- The natural rate of unemployment is the unemployment rate at which the actual price level is equal to the expected price level
+
+--
+
+- $P_t = P_t^e \iff \pi_t = \pi_t^e$
+
+--
+
+- The natural rate of unemployment is the unemployment rate such that the actual inflation rate is equal to the expected inflation rate
+
+--
+
+- for any expectation regime, we have seen the Phillips Curve: $\pi_t = \pi_t^e + (m+z) -\alpha u_t$
+
+--
+
+- when $\pi_t = \pi_t^e$, the unemployment rate solved from the above equation is $u_n$
+
+--
+
+- therefore, $u_n$ can be solved from $0=(m+z) - \alpha u_n$
+
+
+
+---
+<span style="color:blue"> $$u_n = \frac{m+z}{\alpha}$$ </span>
+
+- $m$: markup 
+- $z$: labor market characteristics
+- $\alpha$: the degree to which unemployment affects inflation
+
+--
+
+- The natural rate of unemployment $u_n$ is entirely determined by $m$, $z$, and $\alpha$
+
+
+
+
+---
+- For any expectation regime, the Phillips Curve is: $\pi_t = \pi_t^e + (m+z) -\alpha u_t$
+
+--
+
+- $\pi_t - \pi_t^e = (m+z) -\alpha u_t$
+
+--
+
+- Pulling $-\alpha$ out of the right hand side: $\pi_t - \pi_t^e = -\alpha (u_t-\frac{m+z}{\alpha})$
+
+--
+
+- Subbing in for $u_n = \frac{m+z}{\alpha}$:
+<span style="color:blue"> $$\pi_t - \pi_t^e = -\alpha(u_t -u_n )$$ </span>
+
+--
+
+- A special case of adaptive expectations is $\theta=1$ and $\pi^e=\pi_{t-1}$
+
+--
+
+- under this special case, we can get: 
+<span style="color:blue"> $$\pi_t - \pi_{t-1} = -\alpha(u_t -u_n)$$ </span>
+
+
+
+---
+<span style="color:blue"> $$\pi_t - \pi_{t-1} = -\alpha(u_t -u_n)$$ </span>
+
+- This equation gives us another way of thinking about the Phillips curve
+
+--
+
+- The change in the inflation rate $\pi_t - \pi_{t-1}$ depends on the difference between the actual and the natural unemployment rates $u_t -u_n$
+
+--
+
+- When the actual unemployment rate is higher than the natural unemployment rate, the inflation rate decreases
+
+--
+
+- when the actual unemployment rate is lower than the natural unemployment rate, the inflation rate increases
+
+
+---
+
+<span style="color:blue"> $$\pi_t - \pi_{t-1} = -\alpha(u_t -u_n)$$ </span>
+
+- This equation also gives us another way of thinking about the natural rate of unemployment
+
+--
+
+- when $\pi_t = \pi_{t-1}$ (i.e. constant inflation rate), we have $u_n =u_t$
+
+--
+
+- The natural rate of unemployment is the rate of unemployment required to
+keep the inflation rate constant
+
+--
+
+- This is why the natural rate is also called the **non-accelerating inflation rate of unemployment (NAIRU)**
+
+
+---
+What has been the natural rate of unemployment in the U.S. since 1970?
+  - Put another way: What has been the unemployment rate that, on average, has led to constant inflation?
+
+<img src="../ch8/image/5.png" width=500>
+
+---
+
+<img src="../ch8/image/5.png" width=400>
+
+- the estimated relation between the change in inflation and the unemployment rate since 1970 is: $\pi_t-\pi_{t-1}=3\%-0.5 u_t$
+- Setting the change in inflation equal to 0 in the left of the equation implies a value for $u_n$: $\frac{3\%}{0.5}=6\%$
+- The evidence suggests that, since 1970 in the U.S, the average rate of unemployment required to keep inflation constant has been equal to 6%
+
+
+
+---
+# Group Work VII
+
+Wage-Setting relation is $W=P^e_tF(u_t,z)$, and Price-Setting is $P_t=(1+m)W$. Derive the original and modified Phillips Curve, and derive the natural rate of unemployment from the Phillips Curve
+
+(1) First, we derive the theoretical Phillips Curve
+
+--
+
+Step 1: according to WS relation and PS relation, find the relationship between prices $P_t$ and expected prices $P^e_t$
+
+--
+
+- $P_t = P_t^e (1+m)F(u_t,z)$
+
+--
+
+Step 2: given the form for the function F being $F(u_t,z)=1-\alpha u_t + z$, simplify the relationship you found 
+
+--
+
+- $P_t = P_t^e (1+m)(1-\alpha u + z)$
+
+
+---
+# Group Work VII (cont'd)
+
+Step 3: the function you have found so far represents the relation between price, expected prices, and unemployment rate. Convert this to the relation between inflation, expected inflation, and the unemployment rate. (HINT: $1+\pi_t = \frac{P_t}{P_{t-1}}, 1+\pi_t^e = \frac{P_t^e}{P_{t-1}}$)
+
+--
+
+- $\frac{P_t}{P_{t-1}} = \frac{P^e_t}{P_{t-1}} (1+m) (1-\alpha u_t +z)$
+
+- $1+\pi_t = (1+\pi_t^e) (1+m) (1-\alpha u_t +z)$
+
+--
+
+Step 4: the theoretical Phillips Curve can be found as: 
+
+--
+
+- $\pi_t = \pi_t^e + (m+z) -\alpha u$
+
+
+---
+# Group Work VII (cont'd)
+
+(2) Second, we derive the function for expected inflation. We start with static expectations, and then move to the more generalized adaptive expectations.
+
+Step 5:  write down the function for $\pi_t^e$ with static expectations
+
+--
+
+- $\pi_t^e = \bar{\pi}$
+
+--
+
+Step 6: with static expectations, write down the function for $\pi_{t-1}^e$
+
+--
+
+- $\pi_{t-1}^e = \bar{\pi}$
+
+
+---
+# Group Work VII (cont'd)
+
+Step 7:  according to adaptive expectations, $\pi_t^e$ is a combination of $\pi_{t-1}$ and $\pi_{t-1}^e$. Adaptive expectations incorporate the past inflation and the static expectation formed in the past. Write down the function for $\pi_t^e$
+
+--
+
+- $\pi_t^e = (1-\theta) \bar{\pi}+\theta \pi_{t-1}$
+
+
+
+---
+# Group Work VII (cont'd)
+
+(3) Third, we derive the original and modified Phillips Curve under adaptive expectations.
+
+Step 8: to get the theoretical Phillips Curve with the adaptive expectations, plug function for $\pi_t^e$ in the theoretical Phillips Curve you found in step 4
+
+--
+
+- $\pi_t = (1-\theta) \bar{\pi}+\theta \pi_{t-1} +(m+z)-\alpha u_t$
+
+--
+
+Step 9: set $\theta=0$ to get the original Phillips curve 
+
+--
+
+- $\pi_t = \bar{\pi} +(m+z)-\alpha u_t$
+
+--
+
+Step 10: set $\theta=1$ to get the modified Phillips curve 
+
+--
+
+- $\pi_t = \pi_{t-1} +(m+z)-\alpha u_t$
+
+
+---
+# Group Work VII (cont'd)
+
+(4) Last, we derive the natural rate of unemployment with the Phillips Curve
+
+Step 11: with the theoretical Phillips curve you have found in (4), The natural rate of unemployment is **the unemployment rate such that** the actual inflation rate is equal to the expected inflation rate. Solve for $u_n$
+
+--
+
+- $\pi_t = \pi_t^e + (m+z) - \alpha u_t$
+
+- when $\pi_t = \pi_t^e$: $u_n = \frac{m+z}{\alpha}$
+
+--
+
+Step 12: with the theoretical Phillips curve you have found in (4), find the relationship among $\pi_t$, $\pi_t^e$, $u_t$, $u_n$
+
+--
+
+- $\pi_t - \pi^e_t = -\alpha(u_t - \frac{m+z}{\alpha})$
+
+- $\pi_t - \pi_t^e =-\alpha(u_t - u_n)$
+
+
+---
+# Group Work VII (cont'd)
+
+Step 13: update the relationship among $\pi_t$, $\pi_t^e$, $u_t$, $u_n$ when $\theta=1$
+
+--
+
+- when $\theta=1$: $\pi^e_t = \pi_{t-1}$
+
+- $\pi_t - \pi_{t-1} =-\alpha(u_t - u_n)$
+
+

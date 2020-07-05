@@ -1,0 +1,53 @@
+---
+title: "Group Work II"
+author: "Xiang LI"
+date: "7/24/2019"
+header-includes:
+    - \usepackage{tikz}
+    - \usetikzlibrary{arrows,calc}
+    - \usepackage{relsize}
+    - \usetikzlibrary{decorations.pathreplacing}
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+\textbf{Name:}\makebox[2in]{\hrulefill} 
+&nbsp; 
+\textbf{UO ID:}\makebox[2in]{\hrulefill}
+&nbsp; 
+
+
+Q1: suppose $c_0=100, c_1=0.6, \bar{I}=150, G=150, T=100$.
+
+(1) What is equilibrium output?
+\vspace{.3in}
+
+(2) What is disposable income?
+\vspace{.3in}
+
+(3) What is consumption?
+\vspace{.3in}
+
+(4) If $c_0$ decreases to 50, what is the change in equilibrium output?
+\vspace{.3in}
+
+(5) What is demand when $_0=100$? Does it equal output?
+\vspace{.3in}
+
+
+
+Q2: Government spending **decreases** by $500 million. 
+
+(1) Graphically show the impact of this reduction of government spending on equilibrium output. 
+
+(2) Graphically explain the multiplier effect of this reduction of government spending.
+
+\begin{tikzpicture}[scale=1.1]
+\draw [thick] (-0.5,0)-- (0,0) -- (5.5,0);
+\node [below] at (4.5,-0.2)  {};
+\draw [thick] (0,-0.5)-- (0,0) -- (0,5.5);
+\node [above] at (0,5.5)  {};
+\end{tikzpicture}
